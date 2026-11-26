@@ -1,0 +1,20 @@
+{
+  "name": "场景6b：非法输入——航警多边形只有 2 个顶点",
+  "rocket_label": "长征二号丁",
+  "site_label": "太原 LC-9",
+  "t0_text": "2026-11-18T22:50:00Z",
+  "notams_text": "A9999/26 NOTAMN\nA)ZXXX B)2611182243 C)2611182305\nE) DANGER AREA ESTABLISHED BOUNDED BY: N333400E1103100-N333200E1104400. VERTICAL LIMITS:SFC-UNL.\n",
+  "modules": {
+    "dem": false,
+    "invert": false,
+    "export": true,
+    "window": true,
+    "sky": false,
+    "appear": false,
+    "map": false,
+    "mc": false,
+    "kml": false,
+    "qc": true,
+    "report": true
+  }
+}

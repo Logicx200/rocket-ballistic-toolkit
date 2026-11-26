@@ -1,0 +1,9 @@
+{
+ "mode": "coarse",
+ "note": "sample",
+ "coarse_dem": "F:\\DeepSeek工作区\\火箭弹道工具箱_V4.0\\app\\data\\china_dem_0p02.npz",
+ "coarse_available": true,
+ "warning": "未找到 SRTM 瓦片，已回退 0.02° 粗 DEM（约 2 km），首次出现时刻精度约 ±数十秒",
+ "dem_dir": "F:\\DeepSeek工作区\\火箭弹道工具箱_V4.0\\engine\\data\\dem",
+ "updated_utc": "2026-11-26T19:02:49Z"
+}

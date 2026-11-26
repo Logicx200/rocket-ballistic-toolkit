@@ -1,0 +1,4305 @@
+{
+  "schema": "rocketkit.rockets.v1",
+  "updated": "2026-11-23",
+  "note": "运载火箭内置库。三份真实历史任务配置（CZ-2D 遥106 / CZ-2F/G 遥二十四 / CZ-6A 遥29）的 vehicle 参数直接复用、未改数值；其余型号的分级推进剂/干重多数未公开，按公开起飞质量与同级锚点比例拆分（工程估值，见各条 note 与 confidence）。ascent_cda_scale 按三份历史锚点的等效上升段 CdA 标定（3.35 m 级约 17-25 m²、5 m 级约 40 m²、固体小火箭按迎风面积等比缩小），以保证同类箭型阻力量级一致；三份锚点保持其历史配置原值。guidance_defaults 中 azimuth_deg 一律为 null（运行时按发射场→落区方位自动计算）；制导参数运行时会自动反演。liftoff_mass_kg 为本库 vehicle 质量账目求和值（与公开起飞质量对照见 note）。字段 sites 与 launch_sites 内容相同（INTERFACES 用 sites，任务书用 launch_sites，两者都提供以免读错）。",
+  "sources": [
+    {
+      "url": "F:/DeepSeek工作区/火箭弹道工具箱_v2.0/config.json",
+      "note": "CZ-2D 遥106 历史任务配置（车辆/制导/残骸完整参数）",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "F:/DeepSeek工作区/弹道仿真工作区/2026.11.25 CZ2-F/config.json",
+      "note": "CZ-2F/G 遥二十四 历史任务配置（车辆/制导/残骸完整参数）",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "F:/DeepSeek工作区/弹道仿真工作区/2026.11.27 CZ6-A/config.json",
+      "note": "CZ-6A 遥29 历史任务配置（车辆/制导/残骸完整参数）",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Long_March_2C",
+      "note": "长征二号丙：质量/运力/分级推进剂/发动机",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Long_March_3B",
+      "note": "长征三号乙：质量/运力/分级与助推器",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Long_March_4B",
+      "note": "长征四号乙：质量/运力/分级",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Long_March_5",
+      "note": "长征五号：质量/运力/芯级与助推器数据",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Long_March_6",
+      "note": "长征六号：质量/运力/发动机",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Long_March_7",
+      "note": "长征七号：构型/运力/发动机",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Long_March_8",
+      "note": "长征八号：质量/运力/构型",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Long_March_11",
+      "note": "长征十一号：固体火箭构型",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Long_March_12",
+      "note": "长征十二号：构型/运力",
+      "accessed": "2026-11-23"
+    }
+  ],
+  "rockets": [
+    {
+      "id": "cz2c",
+      "name": "长征二号丙（CZ-2C）",
+      "aliases": [
+        "长征二号丙",
+        "长二丙",
+        "长二C",
+        "CZ-2C",
+        "LM-2C",
+        "Chang Zheng 2C",
+        "Long March 2C"
+      ],
+      "class": "中型两级常温液体运载火箭",
+      "liftoff_mass_kg": 231720.0,
+      "leo_kg": 3850,
+      "sso_kg": 1400,
+      "default_payload_kg": 1400,
+      "typical_orbits": [
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "jq_sls2_94",
+        "jq_sls1_921",
+        "ty_lc9",
+        "ty_lc7",
+        "xc_lc3"
+      ],
+      "launch_sites": [
+        "jq_sls2_94",
+        "jq_sls1_921",
+        "ty_lc9",
+        "ty_lc7",
+        "xc_lc3"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 8.0,
+        "t_p": 172.0,
+        "pitch_power": 1.02,
+        "t_fairing": 200.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 250.0,
+        "payload_kg": 1400.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 8600.0,
+            "prop_kg": 162706.0,
+            "pitch_end_deg": 26.0,
+            "cda_attached_m2": 11.2,
+            "engines": 4,
+            "thrust_sl_n": 740400.0,
+            "thrust_vac_n": 826000.0,
+            "isp_sl_s": 260.7,
+            "isp_vac_s": 291.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 3200.0,
+            "prop_kg": 54667.0,
+            "pitch_end_deg": -13.0,
+            "cda_attached_m2": 0.0,
+            "phases": [
+              {
+                "name": "主机",
+                "thrusters": [
+                  {
+                    "n": 1,
+                    "thrust_vac_n": 741400.0,
+                    "isp_vac_s": 298.0
+                  },
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 289.0
+                  }
+                ],
+                "end_met": 330.0,
+                "emit_event": true
+              },
+              {
+                "name": "游机",
+                "thrusters": [
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 289.0
+                  }
+                ]
+              }
+            ],
+            "pitch_duration_s": 400.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 900.0,
+          "halves": 2,
+          "sep_met": 200.0,
+          "cda_m2": 13.7
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 7.0,
+            "extra_mass_kg": 1200.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 1.0
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "中高",
+      "note": "分级推进剂/发动机取自中英文维基公开数据（一级 162.706 t 推进剂、4×YF-21C 总推力 2961.6 kN；二级 YF-24E 主机 741.4 kN + 4×YF-23C 游机，推进剂 54.667 t）；一/二级干重为公开资料量级（8.6 t / 3.2 t）。制导参数为同类锚点估值，运行时会自动反演。",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_2C",
+          "note": "长征二号丙：质量/运力/分级推进剂/发动机",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Taiyuan_Satellite_Launch_Center",
+          "note": "太原卫星发射中心工位（LC-9/9A/16/7）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cz2d",
+      "name": "长征二号丁（CZ-2D）",
+      "aliases": [
+        "长征二号丁",
+        "长二丁",
+        "长二D",
+        "CZ-2D",
+        "LM-2D",
+        "Chang Zheng 2D",
+        "Long March 2D"
+      ],
+      "class": "中型两级常温液体运载火箭",
+      "liftoff_mass_kg": 250660.0,
+      "leo_kg": 3500,
+      "sso_kg": 1300,
+      "default_payload_kg": 1000,
+      "typical_orbits": [
+        {
+          "name": "SSO 505 km",
+          "alt_km": 505.0,
+          "i_deg": 97.45
+        },
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "jq_sls2_94",
+        "jq_sls1_921",
+        "ty_lc9",
+        "ty_lc9a",
+        "xc_lc3"
+      ],
+      "launch_sites": [
+        "jq_sls2_94",
+        "jq_sls1_921",
+        "ty_lc9",
+        "ty_lc9a",
+        "xc_lc3"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 7.76385835688926,
+        "t_p": 169.07545191101238,
+        "pitch_power": 1.056200079950064,
+        "t_fairing": 206.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 300.0,
+        "payload_kg": 1000.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 10000.0,
+            "prop_kg": 182000.0,
+            "pitch_end_deg": 27.566007200883384,
+            "cda_attached_m2": 11.2,
+            "engines": 4,
+            "thrust_sl_n": 740400.0,
+            "thrust_vac_n": 839000.0,
+            "isp_sl_s": 260.03,
+            "isp_vac_s": 294.7
+          },
+          {
+            "name": "二级",
+            "dry_kg": 3800.0,
+            "prop_kg": 52700.0,
+            "pitch_end_deg": -14.680018671659413,
+            "phases": [
+              {
+                "name": "主机",
+                "thrusters": [
+                  {
+                    "n": 1,
+                    "thrust_vac_n": 742040.0,
+                    "isp_vac_s": 300.0
+                  },
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 288.98
+                  }
+                ],
+                "end_met": 324.1,
+                "emit_event": true
+              },
+              {
+                "name": "游机",
+                "thrusters": [
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 288.98
+                  }
+                ]
+              }
+            ],
+            "pitch_duration_s": 400.1972871030607,
+            "seco_met": 723.7810065598651
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 860.0,
+          "halves": 2,
+          "sep_met": 206.0,
+          "cda_m2": 13.7
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 7.0,
+            "extra_mass_kg": 1500.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 320.0
+          },
+          "boosters": {
+            "cda": 8.0,
+            "extra_mass_kg": 500.0,
+            "divert_mps": 6.0
+          }
+        },
+        "ascent_cda_scale": 1.0
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "高",
+      "note": "直接复用 2026-11-19 长征二号丁（遥106）太原 LC-9 历史任务 config 的 vehicle/guidance_defaults 数值，未改动；公开起飞质量 232-250 t（中文维基 232 t 与分级质量求和 250.7 t 不一致，本库以分级质量求和为准）；制导参数为该历史任务拟合值，运行时会自动反演。",
+      "sources": [
+        {
+          "url": "F:/DeepSeek工作区/火箭弹道工具箱_v2.0/config.json",
+          "note": "CZ-2D 遥106 历史任务配置（车辆/制导/残骸完整参数）",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_2D",
+          "note": "长征二号丁：质量/运力/分级推进剂",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cz2f",
+      "name": "长征二号F（CZ-2F，含载人型）",
+      "aliases": [
+        "长征二号F",
+        "长二F",
+        "长二F/G",
+        "CZ-2F",
+        "CZ-2F/G",
+        "LM-2F",
+        "Long March 2F",
+        "神舟火箭"
+      ],
+      "class": "载人中型两级常温液体运载火箭（含逃逸塔）",
+      "liftoff_mass_kg": 479600.0,
+      "leo_kg": 8400,
+      "sso_kg": 6000,
+      "default_payload_kg": 8100,
+      "typical_orbits": [
+        {
+          "name": "LEO 200 km",
+          "alt_km": 200.0,
+          "i_deg": 41.47
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": 41.47
+        },
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        }
+      ],
+      "sites": [
+        "jq_sls1_921"
+      ],
+      "launch_sites": [
+        "jq_sls1_921"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 8.591225126343502,
+        "t_p": 159.40034352922422,
+        "pitch_power": 0.9717497623577005,
+        "t_fairing": 200.87,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 0.0,
+        "payload_kg": 8100.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 9400.0,
+            "prop_kg": 186600.0,
+            "pitch_end_deg": 20.329944354914474,
+            "cda_attached_m2": 11.5,
+            "engines": 4,
+            "thrust_sl_n": 740400.0,
+            "thrust_vac_n": 816285.0,
+            "isp_sl_s": 260.7,
+            "isp_vac_s": 291.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 5000.0,
+            "prop_kg": 84800.0,
+            "pitch_end_deg": -3.760353221130631,
+            "cda_attached_m2": 9.0,
+            "phases": [
+              {
+                "name": "主机",
+                "thrusters": [
+                  {
+                    "n": 1,
+                    "thrust_vac_n": 746000.0,
+                    "isp_vac_s": 298.0
+                  },
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 296.8
+                  }
+                ],
+                "end_met": 461.0,
+                "emit_event": true
+              },
+              {
+                "name": "游机",
+                "thrusters": [
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 296.8
+                  }
+                ]
+              }
+            ],
+            "pitch_duration_s": 425.0,
+            "seco_met": 584.0
+          }
+        ],
+        "boosters": {
+          "name": "助推器",
+          "count": 4,
+          "dry_kg_each": 3500.0,
+          "prop_kg_each": 41500.0,
+          "thrusters": [
+            {
+              "n": 4,
+              "thrust_vac_n": 816285.0,
+              "isp_vac_s": 291.0,
+              "thrust_sl_n": 740400.0,
+              "isp_sl_s": 260.7
+            }
+          ],
+          "jettison_met": 153.0
+        },
+        "fairing": {
+          "mass_kg": 5700.0,
+          "halves": 2,
+          "sep_met": 200.87,
+          "cda_m2": 14.0,
+          "note": "2200 kg 整流罩 + 3500 kg 逃逸塔（模型不单列逃逸塔分离，合并到抛罩时刻一次抛离）"
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 7.0,
+            "extra_mass_kg": 1500.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": -1750.0,
+            "note": "每半 5700/2-1750=1100 kg（公开整流罩约 2.2 t，两半各 1.1 t）"
+          },
+          "boosters": {
+            "cda": 8.0,
+            "extra_mass_kg": 500.0,
+            "divert_mps": 6.0
+          }
+        },
+        "ascent_cda_scale": 0.7
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "高",
+      "note": "直接复用 2026-11-25 长征二号F/G（遥二十四）神舟二十四号 酒泉 921 工位历史任务 config 的 vehicle/guidance_defaults 数值，未改动；公开起飞质量 464 t，分级+载荷求和 479.6 t（差 3.4%，因逃逸塔/适配质量归并到整流罩块）。SSO 运力无实际任务，6000 kg 为同芯级工程估值；制导参数为该历史任务拟合值，运行时会自动反演。",
+      "sources": [
+        {
+          "url": "F:/DeepSeek工作区/弹道仿真工作区/2026.11.25 CZ2-F/config.json",
+          "note": "CZ-2F/G 遥二十四 历史任务配置（车辆/制导/残骸完整参数）",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_2F",
+          "note": "长征二号F：质量/运力/助推器与二子级数据",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cz3b",
+      "name": "长征三号乙（CZ-3B）",
+      "aliases": [
+        "长征三号乙",
+        "长三乙",
+        "长三B",
+        "CZ-3B",
+        "LM-3B",
+        "Long March 3B",
+        "Chang Zheng 3B"
+      ],
+      "class": "大型三级常温+低温液体运载火箭（4 助推）",
+      "liftoff_mass_kg": 443900.0,
+      "leo_kg": 11500,
+      "sso_kg": 7100,
+      "default_payload_kg": 5500,
+      "typical_orbits": [
+        {
+          "name": "GTO",
+          "alt_km": 35786.0,
+          "i_deg": 27.0
+        },
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "xc_lc2",
+        "xc_lc3"
+      ],
+      "launch_sites": [
+        "xc_lc2",
+        "xc_lc3"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 9.0,
+        "t_p": 165.0,
+        "pitch_power": 1.0,
+        "t_fairing": 200.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 300.0,
+        "payload_kg": 5500.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 11000.0,
+            "prop_kg": 171800.0,
+            "pitch_end_deg": 30.0,
+            "cda_attached_m2": 11.2,
+            "engines": 4,
+            "thrust_sl_n": 740400.0,
+            "thrust_vac_n": 826000.0,
+            "isp_sl_s": 260.7,
+            "isp_vac_s": 291.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 5500.0,
+            "prop_kg": 49400.0,
+            "pitch_end_deg": -8.0,
+            "cda_attached_m2": 9.0,
+            "phases": [
+              {
+                "name": "主机",
+                "thrusters": [
+                  {
+                    "n": 1,
+                    "thrust_vac_n": 742040.0,
+                    "isp_vac_s": 298.0
+                  },
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 289.0
+                  }
+                ],
+                "end_met": 305.0,
+                "emit_event": true
+              },
+              {
+                "name": "游机",
+                "thrusters": [
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 289.0
+                  }
+                ]
+              }
+            ],
+            "pitch_duration_s": 430.0
+          },
+          {
+            "name": "三级",
+            "dry_kg": 2800.0,
+            "prop_kg": 18200.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 6.0,
+            "engines": 2,
+            "thrust_vac_n": 83585.0,
+            "isp_vac_s": 438.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": {
+          "name": "助推器",
+          "count": 4,
+          "dry_kg_each": 3200.0,
+          "prop_kg_each": 41100.0,
+          "thrusters": [
+            {
+              "n": 4,
+              "thrust_vac_n": 826000.0,
+              "isp_vac_s": 291.0,
+              "thrust_sl_n": 740400.0,
+              "isp_sl_s": 260.7
+            }
+          ],
+          "jettison_met": null,
+          "note": "4×2.25 m 助推器，单台 YF-21C，推进剂 41.1 t、燃烧约 130 s"
+        },
+        "fairing": {
+          "mass_kg": 2200.0,
+          "halves": 2,
+          "sep_met": 200.0,
+          "cda_m2": 14.5
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 7.0,
+            "extra_mass_kg": 1500.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "stage_2": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          },
+          "boosters": {
+            "cda": 8.0,
+            "extra_mass_kg": 500.0,
+            "divert_mps": 6.0
+          }
+        },
+        "ascent_cda_scale": 0.61
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "中高",
+      "note": "分级推进剂/发动机/助推器取自中英文维基公开数据；各级干重（11/5.5/2.8 t、助推 3.2 t）为公开量级工程估值。公开起飞质量 456-458.6 t，本库质量账目 453.8 t（差约 1%）。制导参数为同类锚点估值，运行时会自动反演。【v3.3 全库体检更正】质量账目实为 443.9 t（与 liftoff_mass_kg 一致），旧注记『453.8 t（差约 1%）』为笔误；GTO 运力 5.5 t 与理论闭合偏紧（约 −0.9 km/s），属公开分级数据本身的矛盾，使用时请按量级参考。",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_3B",
+          "note": "长征三号乙：质量/运力/分级与助推器",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Xichang_Satellite_Launch_Center",
+          "note": "西昌卫星发射中心工位（LC-2/LC-3）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cz3c",
+      "name": "长征三号丙（CZ-3C）",
+      "aliases": [
+        "长征三号丙",
+        "长三丙",
+        "长三C",
+        "CZ-3C",
+        "LM-3C",
+        "Long March 3C"
+      ],
+      "class": "大型三级常温+低温液体运载火箭（2 助推）",
+      "liftoff_mass_kg": 353700.0,
+      "leo_kg": 8000,
+      "sso_kg": 5000,
+      "default_payload_kg": 3900,
+      "typical_orbits": [
+        {
+          "name": "GTO",
+          "alt_km": 35786.0,
+          "i_deg": 27.0
+        },
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "xc_lc2",
+        "xc_lc3"
+      ],
+      "launch_sites": [
+        "xc_lc2",
+        "xc_lc3"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 9.0,
+        "t_p": 168.0,
+        "pitch_power": 1.0,
+        "t_fairing": 200.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 300.0,
+        "payload_kg": 3900.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 11000.0,
+            "prop_kg": 171800.0,
+            "pitch_end_deg": 29.0,
+            "cda_attached_m2": 11.2,
+            "engines": 4,
+            "thrust_sl_n": 740400.0,
+            "thrust_vac_n": 826000.0,
+            "isp_sl_s": 260.7,
+            "isp_vac_s": 291.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 5500.0,
+            "prop_kg": 49400.0,
+            "pitch_end_deg": -9.0,
+            "cda_attached_m2": 8.5,
+            "phases": [
+              {
+                "name": "主机",
+                "thrusters": [
+                  {
+                    "n": 1,
+                    "thrust_vac_n": 742040.0,
+                    "isp_vac_s": 298.0
+                  },
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 289.0
+                  }
+                ],
+                "end_met": 300.0,
+                "emit_event": true
+              },
+              {
+                "name": "游机",
+                "thrusters": [
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 289.0
+                  }
+                ]
+              }
+            ],
+            "pitch_duration_s": 420.0
+          },
+          {
+            "name": "三级",
+            "dry_kg": 2800.0,
+            "prop_kg": 18200.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 6.0,
+            "engines": 2,
+            "thrust_vac_n": 83585.0,
+            "isp_vac_s": 438.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": {
+          "name": "助推器",
+          "count": 2,
+          "dry_kg_each": 3200.0,
+          "prop_kg_each": 41100.0,
+          "thrusters": [
+            {
+              "n": 2,
+              "thrust_vac_n": 826000.0,
+              "isp_vac_s": 291.0,
+              "thrust_sl_n": 740400.0,
+              "isp_sl_s": 260.7
+            }
+          ],
+          "jettison_met": null
+        },
+        "fairing": {
+          "mass_kg": 2200.0,
+          "halves": 2,
+          "sep_met": 200.0,
+          "cda_m2": 14.5
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 7.0,
+            "extra_mass_kg": 1500.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "stage_2": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          },
+          "boosters": {
+            "cda": 8.0,
+            "extra_mass_kg": 500.0,
+            "divert_mps": 6.0
+          }
+        },
+        "ascent_cda_scale": 0.62
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "中高",
+      "note": "CZ-3B 去掉 2 台助推器的构型；分级推进剂/发动机取自维基公开数据，干重为工程估值。公开起飞质量 345 t，本库质量账目 353.6 t（差 2.5%）。制导参数为同类锚点估值，运行时会自动反演。",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_3C",
+          "note": "长征三号丙：质量/运力/分级与助推器",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Xichang_Satellite_Launch_Center",
+          "note": "西昌卫星发射中心工位（LC-2/LC-3）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cz4b",
+      "name": "长征四号乙（CZ-4B）",
+      "aliases": [
+        "长征四号乙",
+        "长四乙",
+        "长四B",
+        "CZ-4B",
+        "LM-4B",
+        "Long March 4B"
+      ],
+      "class": "中型三级常温液体运载火箭",
+      "liftoff_mass_kg": 247900.0,
+      "leo_kg": 4200,
+      "sso_kg": 2800,
+      "default_payload_kg": 2800,
+      "typical_orbits": [
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "ty_lc9",
+        "ty_lc9a",
+        "jq_sls2_94",
+        "jq_sls1_921",
+        "xc_lc3"
+      ],
+      "launch_sites": [
+        "ty_lc9",
+        "ty_lc9a",
+        "jq_sls2_94",
+        "jq_sls1_921",
+        "xc_lc3"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 8.2,
+        "t_p": 175.0,
+        "pitch_power": 1.0,
+        "t_fairing": 190.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 300.0,
+        "payload_kg": 2800.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 8600.0,
+            "prop_kg": 162700.0,
+            "pitch_end_deg": 28.0,
+            "cda_attached_m2": 11.2,
+            "engines": 4,
+            "thrust_sl_n": 740400.0,
+            "thrust_vac_n": 826000.0,
+            "isp_sl_s": 260.7,
+            "isp_vac_s": 291.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 3800.0,
+            "prop_kg": 52700.0,
+            "pitch_end_deg": -12.0,
+            "cda_attached_m2": 0.0,
+            "phases": [
+              {
+                "name": "主机",
+                "thrusters": [
+                  {
+                    "n": 1,
+                    "thrust_vac_n": 742040.0,
+                    "isp_vac_s": 298.0
+                  },
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 289.0
+                  }
+                ],
+                "end_met": 330.0,
+                "emit_event": true
+              },
+              {
+                "name": "游机",
+                "thrusters": [
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 289.0
+                  }
+                ]
+              }
+            ],
+            "pitch_duration_s": 400.0
+          },
+          {
+            "name": "三级",
+            "dry_kg": 1800.0,
+            "prop_kg": 14000.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 6.0,
+            "engines": 2,
+            "thrust_vac_n": 50425.0,
+            "isp_vac_s": 303.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 1200.0,
+          "halves": 2,
+          "sep_met": 190.0,
+          "cda_m2": 13.7
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 7.0,
+            "extra_mass_kg": 1500.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "stage_2": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 0.78
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "中高",
+      "note": "一级推进剂按 CZ-2C 基础级 162.7 t（与公开起飞质量 249.2 t 闭合），二级 52.7 t、三级 14 t 取自维基；三级 2×YF-40 共 100.85 kN、比冲 303 s。干重（8.6/3.8/1.8 t）为公开量级工程估值。制导参数为同类锚点估值，运行时会自动反演。",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_4B",
+          "note": "长征四号乙：质量/运力/分级",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Taiyuan_Satellite_Launch_Center",
+          "note": "太原卫星发射中心工位（LC-9/9A/16/7）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cz4c",
+      "name": "长征四号丙（CZ-4C）",
+      "aliases": [
+        "长征四号丙",
+        "长四丙",
+        "长四C",
+        "CZ-4C",
+        "LM-4C",
+        "Long March 4C"
+      ],
+      "class": "中型三级常温液体运载火箭（三级可二次起动）",
+      "liftoff_mass_kg": 247900.0,
+      "leo_kg": 4200,
+      "sso_kg": 2800,
+      "default_payload_kg": 2800,
+      "typical_orbits": [
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "ty_lc9",
+        "ty_lc9a",
+        "jq_sls1_921",
+        "jq_sls2_94",
+        "xc_lc3"
+      ],
+      "launch_sites": [
+        "ty_lc9",
+        "ty_lc9a",
+        "jq_sls1_921",
+        "jq_sls2_94",
+        "xc_lc3"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 8.2,
+        "t_p": 175.0,
+        "pitch_power": 1.0,
+        "t_fairing": 190.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 300.0,
+        "payload_kg": 2800.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 8600.0,
+            "prop_kg": 162700.0,
+            "pitch_end_deg": 28.0,
+            "cda_attached_m2": 11.2,
+            "engines": 4,
+            "thrust_sl_n": 740400.0,
+            "thrust_vac_n": 826000.0,
+            "isp_sl_s": 260.7,
+            "isp_vac_s": 291.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 3800.0,
+            "prop_kg": 52700.0,
+            "pitch_end_deg": -12.0,
+            "cda_attached_m2": 0.0,
+            "phases": [
+              {
+                "name": "主机",
+                "thrusters": [
+                  {
+                    "n": 1,
+                    "thrust_vac_n": 742040.0,
+                    "isp_vac_s": 298.0
+                  },
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 289.0
+                  }
+                ],
+                "end_met": 330.0,
+                "emit_event": true
+              },
+              {
+                "name": "游机",
+                "thrusters": [
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 289.0
+                  }
+                ]
+              }
+            ],
+            "pitch_duration_s": 400.0
+          },
+          {
+            "name": "三级",
+            "dry_kg": 1800.0,
+            "prop_kg": 14000.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 6.0,
+            "engines": 2,
+            "thrust_vac_n": 50425.0,
+            "isp_vac_s": 303.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 1200.0,
+          "halves": 2,
+          "sep_met": 190.0,
+          "cda_m2": 13.7
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 7.0,
+            "extra_mass_kg": 1500.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "stage_2": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 0.78
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "中高",
+      "note": "CZ-4B 的三级可二次起动改进型（YF-40A），质量与运力同 CZ-4B；干重为工程估值。制导参数为同类锚点估值，运行时会自动反演。",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_4C",
+          "note": "长征四号丙：质量/运力/分级",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Taiyuan_Satellite_Launch_Center",
+          "note": "太原卫星发射中心工位（LC-9/9A/16/7）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cz5",
+      "name": "长征五号（CZ-5）",
+      "aliases": [
+        "长征五号",
+        "长五",
+        "胖五",
+        "CZ-5",
+        "LM-5",
+        "Long March 5",
+        "Chang Zheng 5"
+      ],
+      "class": "大型两级低温液体运载火箭（5 m 芯级 + 4 助推）",
+      "liftoff_mass_kg": 866200.0,
+      "leo_kg": 25000,
+      "sso_kg": 10000,
+      "default_payload_kg": 14000,
+      "typical_orbits": [
+        {
+          "name": "GTO",
+          "alt_km": 35786.0,
+          "i_deg": 27.0
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        },
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        }
+      ],
+      "sites": [
+        "wc_lc101"
+      ],
+      "launch_sites": [
+        "wc_lc101"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 9.0,
+        "t_p": 180.0,
+        "pitch_power": 1.0,
+        "t_fairing": 250.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 500.0,
+        "payload_kg": 14000.0,
+        "stages": [
+          {
+            "name": "芯一级",
+            "dry_kg": 21600.0,
+            "prop_kg": 165300.0,
+            "pitch_end_deg": 25.0,
+            "cda_attached_m2": 20.0,
+            "engines": 2,
+            "thrust_sl_n": 518000.0,
+            "thrust_vac_n": 700000.0,
+            "isp_sl_s": 316.7,
+            "isp_vac_s": 428.0
+          },
+          {
+            "name": "芯二级",
+            "dry_kg": 5100.0,
+            "prop_kg": 29100.0,
+            "pitch_end_deg": -5.0,
+            "cda_attached_m2": 16.0,
+            "engines": 2,
+            "thrust_vac_n": 88360.0,
+            "isp_vac_s": 442.6,
+            "seco_met": null
+          }
+        ],
+        "boosters": {
+          "name": "助推器",
+          "count": 4,
+          "dry_kg_each": 13800.0,
+          "prop_kg_each": 142800.0,
+          "thrusters": [
+            {
+              "n": 8,
+              "thrust_vac_n": 1340000.0,
+              "isp_vac_s": 335.1,
+              "thrust_sl_n": 1200000.0,
+              "isp_sl_s": 300.0
+            }
+          ],
+          "jettison_met": null,
+          "note": "4×3.35 m 助推器，每台 2×YF-100（n=8 为 4 台助推器合计台数）"
+        },
+        "fairing": {
+          "mass_kg": 4200.0,
+          "halves": 2,
+          "sep_met": 250.0,
+          "cda_m2": 26.0
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 10.0,
+            "extra_mass_kg": 2000.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          },
+          "boosters": {
+            "cda": 8.0,
+            "extra_mass_kg": 500.0,
+            "divert_mps": 6.0
+          }
+        },
+        "ascent_cda_scale": 0.65
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "中高",
+      "note": "芯级/助推器质量与发动机参数取自维基与公开报道（助推器单台 156.6 t 总重、装药 142.8 t；芯一级推进剂 165.3 t、2×YF-77；芯二级 2×YF-75D）；干重（芯一级 21.6 t、芯二级 5.1 t、助推 13.8 t）为公开量级。SSO 运力公开数据不一致（6.7-15 t），取 10 t 工程估值。制导参数为同类锚点估值，运行时会自动反演。",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_5",
+          "note": "长征五号：质量/运力/芯级与助推器数据",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Wenchang_Space_Launch_Site",
+          "note": "文昌航天发射场（101/201 工位）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cz5b",
+      "name": "长征五号B（CZ-5B）",
+      "aliases": [
+        "长征五号B",
+        "长五B",
+        "CZ-5B",
+        "LM-5B",
+        "Long March 5B",
+        "Chang Zheng 5B"
+      ],
+      "class": "大型一级半低温液体运载火箭（5 m 芯级 + 4 助推，无二级）",
+      "liftoff_mass_kg": 841000.0,
+      "leo_kg": 25000,
+      "sso_kg": 13000,
+      "default_payload_kg": 23000,
+      "typical_orbits": [
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": 41.5
+        },
+        {
+          "name": "LEO 200 km",
+          "alt_km": 200.0,
+          "i_deg": 41.5
+        },
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        }
+      ],
+      "sites": [
+        "wc_lc101"
+      ],
+      "launch_sites": [
+        "wc_lc101"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 9.5,
+        "t_p": 185.0,
+        "pitch_power": 1.0,
+        "t_fairing": 250.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 500.0,
+        "payload_kg": 23000.0,
+        "stages": [
+          {
+            "name": "芯一级",
+            "dry_kg": 21600.0,
+            "prop_kg": 165300.0,
+            "pitch_end_deg": 22.0,
+            "cda_attached_m2": 20.0,
+            "engines": 2,
+            "thrust_sl_n": 518000.0,
+            "thrust_vac_n": 700000.0,
+            "isp_sl_s": 316.7,
+            "isp_vac_s": 428.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": {
+          "name": "助推器",
+          "count": 4,
+          "dry_kg_each": 13800.0,
+          "prop_kg_each": 142800.0,
+          "thrusters": [
+            {
+              "n": 8,
+              "thrust_vac_n": 1340000.0,
+              "isp_vac_s": 335.1,
+              "thrust_sl_n": 1200000.0,
+              "isp_sl_s": 300.0
+            }
+          ],
+          "jettison_met": null
+        },
+        "fairing": {
+          "mass_kg": 4200.0,
+          "halves": 2,
+          "sep_met": 250.0,
+          "cda_m2": 26.0
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 10.0,
+            "extra_mass_kg": 2000.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          },
+          "boosters": {
+            "cda": 8.0,
+            "extra_mass_kg": 500.0,
+            "divert_mps": 6.0
+          }
+        },
+        "ascent_cda_scale": 0.87
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "中高",
+      "note": "公开：全长 53.7 m、起飞重量 837 t、LEO 25 t、省去芯二级；芯级/助推器参数同 CZ-5。本库质量账目 842.6 t（差 0.7%）。SSO 运力无实际任务，13000 kg 为工程估值。末级按推进剂耗尽（seco_met=null）处理，程序关机时刻由反演确定。制导参数为估值，运行时会自动反演。",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_5B",
+          "note": "长征五号B：构型与运力",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://www.kepuchina.cn/article/articleinfo?business_type=100&classify=0&ar_id=43896",
+          "note": "长征五号B：全箭高 53.7 m、起飞重量 837 t、LEO 25 t",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Wenchang_Space_Launch_Site",
+          "note": "文昌航天发射场（101/201 工位）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cz6",
+      "name": "长征六号（CZ-6）",
+      "aliases": [
+        "长征六号",
+        "长六",
+        "CZ-6",
+        "LM-6",
+        "Long March 6"
+      ],
+      "class": "小型两级液氧煤油运载火箭",
+      "liftoff_mass_kg": 104600.0,
+      "leo_kg": 1500,
+      "sso_kg": 500,
+      "default_payload_kg": 500,
+      "typical_orbits": [
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "ty_lc16"
+      ],
+      "launch_sites": [
+        "ty_lc16"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 6.5,
+        "t_p": 150.0,
+        "pitch_power": 1.05,
+        "t_fairing": 180.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 200.0,
+        "payload_kg": 500.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 9500.0,
+            "prop_kg": 76000.0,
+            "pitch_end_deg": 22.0,
+            "cda_attached_m2": 11.0,
+            "engines": 1,
+            "thrust_sl_n": 1188000.0,
+            "thrust_vac_n": 1340000.0,
+            "isp_sl_s": 300.0,
+            "isp_vac_s": 335.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 2500.0,
+            "prop_kg": 15000.0,
+            "pitch_end_deg": -8.0,
+            "cda_attached_m2": 8.0,
+            "engines": 1,
+            "thrust_vac_n": 180000.0,
+            "isp_vac_s": 341.5,
+            "seco_met": null
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 900.0,
+          "halves": 2,
+          "sep_met": 180.0,
+          "cda_m2": 13.7
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 7.0,
+            "extra_mass_kg": 800.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 0.73
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "低",
+      "note": "官方参数：总长 29.932 m、起飞质量约 102 t、700 km SSO 约 500 kg；一级 1×YF-100、二级 1×YF-115（维基）。一级推进剂 76 t（维基区间 61-76 t 取上限）、二级 15 t；干重（9.5/2.5 t）为工程估值。制导参数为同类锚点估值，运行时会自动反演。【v3.3 全库体检】真实 CZ-6 为**三级**构型（一级 YF-100 + 二级 YF-115 + 三级 4×YF-85 上面级），本条目只建了两级 → 对 SSO 任务的运力与末段弹道会偏低/偏离；入库前请补齐上面级参数。",
+      "sources": [
+        {
+          "url": "https://1.202.156.62/n25/n146/n238/n12985/c1043784/content.html",
+          "note": "长征六号官方参数：总长 29.932 m、起飞质量约 102 t、700 km SSO 约 500 kg",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_6",
+          "note": "长征六号：质量/运力/发动机",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cz6a",
+      "name": "长征六号甲（CZ-6A）",
+      "aliases": [
+        "长征六号甲",
+        "长六甲",
+        "长六A",
+        "CZ-6A",
+        "LM-6A",
+        "Long March 6A"
+      ],
+      "class": "中型两级半液氧煤油运载火箭（4 固体助推）",
+      "liftoff_mass_kg": 524700.0,
+      "leo_kg": 8000,
+      "sso_kg": 5000,
+      "default_payload_kg": 3000,
+      "typical_orbits": [
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "ty_lc9a"
+      ],
+      "launch_sites": [
+        "ty_lc9a"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 8.011132026820905,
+        "t_p": 133.6845313598508,
+        "pitch_power": 0.7333818721267129,
+        "t_fairing": 179.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null,
+        "yaw2_tau": 220.0
+      },
+      "vehicle": {
+        "adapter_kg": 600.0,
+        "payload_kg": 3000.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 17000.0,
+            "prop_kg": 192600.0,
+            "pitch_end_deg": 36.811276026928596,
+            "cda_attached_m2": 11.5,
+            "engines": 2,
+            "thrust_sl_n": 1188000.0,
+            "thrust_vac_n": 1340000.0,
+            "isp_sl_s": 300.0,
+            "isp_vac_s": 335.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 5000.0,
+            "prop_kg": 24000.0,
+            "pitch_end_deg": -11.101671364326789,
+            "cda_attached_m2": 9.0,
+            "phases": [
+              {
+                "name": "主机",
+                "thrusters": [
+                  {
+                    "n": 1,
+                    "thrust_vac_n": 180000.0,
+                    "isp_vac_s": 342.0,
+                    "thrust_sl_n": 168000.0,
+                    "isp_sl_s": 319.0
+                  }
+                ]
+              }
+            ],
+            "pitch_duration_s": 252.4341002414477,
+            "seco_met": null
+          }
+        ],
+        "boosters": {
+          "name": "助推器",
+          "count": 4,
+          "dry_kg_each": 11700.0,
+          "prop_kg_each": 58300.0,
+          "thrusters": [
+            {
+              "n": 4,
+              "thrust_vac_n": 1283000.0,
+              "isp_vac_s": 258.0,
+              "thrust_sl_n": 1214000.0,
+              "isp_sl_s": 244.0
+            }
+          ],
+          "jettison_met": null,
+          "note": "2 m×15.1 m 两段式固体助推：总重 70 t、装药 58.3 t、工作时间 115 s、海平面推力 1214 kN"
+        },
+        "fairing": {
+          "mass_kg": 2500.0,
+          "halves": 2,
+          "sep_met": 179.0,
+          "cda_m2": 14.0,
+          "note": "标配 4.2 m 直径、长 11 m；质量为同类 4.2 m 罩估值"
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 7.0,
+            "extra_mass_kg": 1500.0
+          },
+          "fairing": {
+            "cda": 8.0,
+            "extra_mass_kg": 0.0
+          },
+          "boosters": {
+            "cda": 8.0,
+            "extra_mass_kg": 500.0,
+            "divert_mps": 6.0
+          }
+        },
+        "ascent_cda_scale": 0.5
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "高",
+      "note": "直接复用 2026-11-27 长征六号甲（遥29）太原 9A 工位历史任务 config 的 vehicle/guidance_defaults 数值，未改动。锚点任务为 142° 逆行轨道（i_target_deg=141.29、方位角 253.68°），本库默认置 null 由任务轨道决定；制导参数为该历史任务拟合值，运行时会自动反演。公开起飞质量 530 t，质量账目 524.7 t（差 1%）。（v3 补：yaw2_tau=220 s 为历史算例已率定的末级平面修正时间常数，供 dogleg 使用）【v3.3 全库体检更正】本条目数值直接来自 2026-11-27 遥29 历史任务 config（已与该任务实测对齐），二级推进剂为 24.0 t；旧注记中『二级 29.3 t（240→813 s 反算）』与本数据矛盾，以 24.0 t 为准。质量账目 524.7 t 与公开 530 t 差 1%。",
+      "sources": [
+        {
+          "url": "F:/DeepSeek工作区/弹道仿真工作区/2026.11.27 CZ6-A/config.json",
+          "note": "CZ-6A 遥29 历史任务配置（车辆/制导/残骸完整参数）",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_6A",
+          "note": "长征六号甲：质量/运力/构型",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cz6c",
+      "name": "长征六号丙（CZ-6C）",
+      "aliases": [
+        "长征六号丙",
+        "长六丙",
+        "长六C",
+        "CZ-6C",
+        "LM-6C",
+        "Long March 6C"
+      ],
+      "class": "中型两级液氧煤油运载火箭（单芯级，无助推）",
+      "liftoff_mass_kg": 217000.0,
+      "leo_kg": 4500,
+      "sso_kg": 2400,
+      "default_payload_kg": 900,
+      "typical_orbits": [
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        },
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "ty_lc9a"
+      ],
+      "launch_sites": [
+        "ty_lc9a"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 8.0,
+        "t_p": 170.0,
+        "pitch_power": 1.05,
+        "t_fairing": 226.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "yaw2_tau": 200.0,
+        "i_target_deg": null,
+        "pitch_schedule": [
+          [
+            0.0,
+            90.0
+          ],
+          [
+            10.0,
+            90.0
+          ],
+          [
+            40.0,
+            81.488
+          ],
+          [
+            90.0,
+            86.679
+          ],
+          [
+            150.0,
+            56.494
+          ],
+          [
+            209.0,
+            34.393
+          ],
+          [
+            270.0,
+            31.556
+          ],
+          [
+            350.0,
+            1.43
+          ],
+          [
+            450.0,
+            -2.845
+          ],
+          [
+            560.0,
+            14.717
+          ],
+          [
+            700.0,
+            5.558
+          ]
+        ]
+      },
+      "vehicle": {
+        "adapter_kg": 300.0,
+        "payload_kg": 900.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 12500.0,
+            "prop_kg": 170000.0,
+            "pitch_end_deg": 40.0,
+            "cda_attached_m2": 11.5,
+            "engines": 2,
+            "thrust_sl_n": 1188000.0,
+            "thrust_vac_n": 1340000.0,
+            "isp_sl_s": 300.0,
+            "isp_vac_s": 335.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 3200.0,
+            "prop_kg": 28000.0,
+            "pitch_end_deg": 3.0,
+            "pitch_duration_s": 300.0,
+            "cda_attached_m2": 8.0,
+            "engines": 1,
+            "thrust_vac_n": 180000.0,
+            "isp_vac_s": 341.5,
+            "seco_met": null,
+            "seco_mode": "target_orbit"
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 1000.0,
+          "halves": 2,
+          "sep_met": 226.0,
+          "cda_m2": 10.0
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 7.0,
+            "extra_mass_kg": 1200.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 0.7
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "中",
+      "note": "【v3.3 数据核查后重建】公开（高置信）：全箭长 43 m、起飞质量 217 t、起飞推力约 240 tf、LEO 4.5 t、500 km SSO 2.4 t / 700 km SSO 2.0 t（均指二级两次起动；一次起动 500 km SSO 2.0 t、700 km SSO 1.4 t）；一级 3.35 m、推进剂 170 t、2×YF-100（1188/1340 kN，300/335 s）；二级 2.9 m 共底贮箱、推进剂 28 t、1×YF-115（180 kN、341.5 s）、可二次启动；首飞用 3.35 m 整流罩。未公开量（工程估值，已用质量账目与公开运力校核）：一级干重 12.5 t、二级干重 3.2 t、3.35 m 整流罩 1.0 t、适配器 0.3 t —— 质量账目 217.0 t（与公开 217 t 一致，旧版 216.9 t 时不闭合）。抛罩 T+240 s（未公开；按 CZ-2D 抛罩晚于一级分离 49 s 的同级规律取 MECO+31 s，并用 2026-11-29 任务两处航警落区反算校核）。二级推重比仅约 0.54，对轻载荷任务推进剂明显有余量 → seco_mode=target_orbit（按参考轨道高度/偏心率目标带程序关机），否则“耗尽关机”必然解出远超目标的大椭圆。pitch_schedule 为本箭型标称折线俯仰剖面（线性 t_v/t_p/pitch_end 口径无法描述该箭型入轨剖面；剖面已与两处航警落区、公开运力档位自洽校核，反演会微调关键节点）。ascent_cda_scale 按库内 3.35 m 级标定区间（17–25 m²）取 0.7。【v3.3.1】默认载荷由 2000 kg 改为 900 kg：CZ-6C 实飞载荷档位即此量级（遥一 7 星合计约 0.87 t、遥三 2×中科卫星12/13 约 0.8 t）。按 500 km SSO 单次点火运力 2.0 t 取默认值会把轻载荷任务的弹道抬高 20–30 km 量级（实测：载荷 2000 kg 时整流罩落在两处航警区之间）。质量账目（900 kg 载荷）= 215.9 t，与 CASC 通稿「约 215 t」一致；设计运力 sso_kg 仍为 2400 kg（两次起动口径）不变。",
+      "sources": [
+        {
+          "url": "https://researching.cn/ArticlePdf/m00139/2024/41/5/24.pdf",
+          "note": "上海航天 2024,41(5) 长征六号丙总体设计：起飞质量约 217 t、起飞推力 240 tf、500 km SSO 运力、子级在长六甲芯一级基础上略微缩短、二级 2.9 m 共底贮箱",
+          "accessed": "2026-11-24"
+        },
+        {
+          "url": "https://www.163.com/dy/article/J1JEJG3U0552MUWE.html",
+          "note": "首飞报道（CASC/上海航天口径转发）：长 43 m、起飞质量约 215 t、起飞推力约 242 t、LEO 4.5 t、500 km SSO 约 2.4 t、700 km SSO 2.0 t（二级两次起动）；一级 3.35 m、推进剂装载量 170 t、2×YF-100 单台约 121 t；二级 2.9 m、推进剂装载量 28 t、1×YF-115 推力 18 t、可二次启动；整流罩 3.35 m/3.8 m",
+          "accessed": "2026-11-24"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s/WBk5s9207EMkpCT9e8F1og",
+          "note": "上海航天首飞通报：二子级直径 2.9 m、1 台 18 t 级液氧煤油发动机、2.9 m 直径大温差泡沫夹层共底贮箱（国内首次）",
+          "accessed": "2026-11-24"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_6C",
+          "note": "英文维基：43 m / 3.35 m / 217,000 kg / 二级 2.9 m / 1×YF-115 180 kN / 341.5 s / LEO 4500 kg / 500 km SSO 2400 kg / 700 km SSO 2000 kg；3 次发射记录",
+          "accessed": "2026-11-24"
+        },
+        {
+          "url": "https://zh.wikipedia.org/wiki/%E9%95%BF%E5%BE%81%E5%85%AD%E5%8F%B7%E4%B8%99%E8%BF%90%E8%BD%BD%E7%81%AB%E7%AE%AD",
+          "note": "中文维基：约 43 m、芯级 3.35 m、整流罩 2.9/3.35/3.8 m、约 217 t、LEO 4500 kg、500 km SSO 2400 kg、发射记录（2024-05-07 首飞、2026-08-25 遥一）",
+          "accessed": "2026-11-24"
+        },
+        {
+          "url": "https://novosti-kosmonavtiki.ru/articles/212905/",
+          "note": "Новости космонавтики（2026-08-25 长六丙遥一）：起飞质量 215 t、高 43 m；运力 4000 kg@300 km/42°、2400 kg@500 km SSO、2000 kg@700 km SSO（两次起动），一次起动 500 km SSO 2000 kg / 700 km SSO 1400 kg；遥一实测入轨 530×545 km、i=97.54°",
+          "accessed": "2026-11-24"
+        },
+        {
+          "url": "https://space.skyrocket.de/doc_lau/cz-6.htm",
+          "note": "Gunter's Space Page CZ-6C：两级、一级 2×YF-100、二级 2.9 m/YF-115、SSO 2500 kg；发射记录",
+          "accessed": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": "cz7",
+      "name": "长征七号（CZ-7）",
+      "aliases": [
+        "长征七号",
+        "长七",
+        "CZ-7",
+        "LM-7",
+        "Long March 7"
+      ],
+      "class": "中型两级半液氧煤油运载火箭（4 助推）",
+      "liftoff_mass_kg": 581500.0,
+      "leo_kg": 13500,
+      "sso_kg": 5500,
+      "default_payload_kg": 13500,
+      "typical_orbits": [
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": 19.6
+        },
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "LEO 200 km",
+          "alt_km": 200.0,
+          "i_deg": 19.6
+        }
+      ],
+      "sites": [
+        "wc_lc201"
+      ],
+      "launch_sites": [
+        "wc_lc201"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 8.5,
+        "t_p": 172.0,
+        "pitch_power": 1.0,
+        "t_fairing": 200.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 500.0,
+        "payload_kg": 13500.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 14000.0,
+            "prop_kg": 150000.0,
+            "pitch_end_deg": 26.0,
+            "cda_attached_m2": 11.5,
+            "engines": 2,
+            "thrust_sl_n": 1188000.0,
+            "thrust_vac_n": 1340000.0,
+            "isp_sl_s": 300.0,
+            "isp_vac_s": 335.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 6000.0,
+            "prop_kg": 80000.0,
+            "pitch_end_deg": -10.0,
+            "cda_attached_m2": 8.5,
+            "engines": 4,
+            "thrust_vac_n": 176500.0,
+            "isp_vac_s": 341.5,
+            "seco_met": null
+          }
+        ],
+        "boosters": {
+          "name": "助推器",
+          "count": 4,
+          "dry_kg_each": 8500.0,
+          "prop_kg_each": 70000.0,
+          "thrusters": [
+            {
+              "n": 4,
+              "thrust_vac_n": 1340000.0,
+              "isp_vac_s": 335.0,
+              "thrust_sl_n": 1200000.0,
+              "isp_sl_s": 300.0
+            }
+          ],
+          "jettison_met": null,
+          "note": "4×2.25 m 助推器，每台 1×YF-100；推进剂为按起飞质量比例拆分估值"
+        },
+        "fairing": {
+          "mass_kg": 3500.0,
+          "halves": 2,
+          "sep_met": 200.0,
+          "cda_m2": 15.0
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 8.0,
+            "extra_mass_kg": 1500.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          },
+          "boosters": {
+            "cda": 8.0,
+            "extra_mass_kg": 500.0,
+            "divert_mps": 6.0
+          }
+        },
+        "ascent_cda_scale": 0.49
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "中",
+      "note": "公开：起飞质量约 594 t、LEO 13.5 t、SSO 5.5 t；一级 2×YF-100、二级 4×YF-115、4×2.25 m 助推器各 1×YF-100（总推力 7.2 MN）。分级推进剂（一级 150 t、二级 80 t、助推各 70 t）与干重按公开起飞质量与推力比例拆分，为工程估值（未公开）。制导参数为同类锚点估值，运行时会自动反演。【v3.3 全库体检】公开起飞质量约 573–594 t；本库质量账目 581.5 t（差 ≤2%），分级推进剂为工程估值。",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_7",
+          "note": "长征七号：构型/运力/发动机",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Wenchang_Space_Launch_Site",
+          "note": "文昌航天发射场（101/201 工位）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cz7a",
+      "name": "长征七号甲（CZ-7A）",
+      "aliases": [
+        "长征七号甲",
+        "长七甲",
+        "长七A",
+        "CZ-7A",
+        "LM-7A",
+        "Long March 7A"
+      ],
+      "class": "大型三级半液氧煤油+氢氧运载火箭（4 助推）",
+      "liftoff_mass_kg": 586000.0,
+      "leo_kg": 11000,
+      "sso_kg": 5500,
+      "default_payload_kg": 7000,
+      "typical_orbits": [
+        {
+          "name": "GTO",
+          "alt_km": 35786.0,
+          "i_deg": 27.0
+        },
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "wc_lc201"
+      ],
+      "launch_sites": [
+        "wc_lc201"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 8.8,
+        "t_p": 175.0,
+        "pitch_power": 1.0,
+        "t_fairing": 200.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 500.0,
+        "payload_kg": 7000.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 14000.0,
+            "prop_kg": 150000.0,
+            "pitch_end_deg": 27.0,
+            "cda_attached_m2": 11.5,
+            "engines": 2,
+            "thrust_sl_n": 1188000.0,
+            "thrust_vac_n": 1340000.0,
+            "isp_sl_s": 300.0,
+            "isp_vac_s": 335.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 6000.0,
+            "prop_kg": 70000.0,
+            "pitch_end_deg": -9.0,
+            "cda_attached_m2": 8.5,
+            "engines": 4,
+            "thrust_vac_n": 176500.0,
+            "isp_vac_s": 341.5
+          },
+          {
+            "name": "三级",
+            "dry_kg": 2800.0,
+            "prop_kg": 18200.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 6.0,
+            "engines": 2,
+            "thrust_vac_n": 83585.0,
+            "isp_vac_s": 438.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": {
+          "name": "助推器",
+          "count": 4,
+          "dry_kg_each": 8500.0,
+          "prop_kg_each": 70000.0,
+          "thrusters": [
+            {
+              "n": 4,
+              "thrust_vac_n": 1340000.0,
+              "isp_vac_s": 335.0,
+              "thrust_sl_n": 1200000.0,
+              "isp_sl_s": 300.0
+            }
+          ],
+          "jettison_met": null
+        },
+        "fairing": {
+          "mass_kg": 3500.0,
+          "halves": 2,
+          "sep_met": 200.0,
+          "cda_m2": 15.0
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 8.0,
+            "extra_mass_kg": 1500.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "stage_2": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          },
+          "boosters": {
+            "cda": 8.0,
+            "extra_mass_kg": 500.0,
+            "divert_mps": 6.0
+          }
+        },
+        "ascent_cda_scale": 0.42
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "中",
+      "note": "官方参数（CALT）：总长 60.13 m、芯一/二级 3.35 m、芯三级 3 m、助推 2.25 m、起飞质量约 573 t、GTO 7 t。分级推进剂与干重为按公开起飞质量比例拆分的工程估值。制导参数为同类锚点估值，运行时会自动反演。",
+      "sources": [
+        {
+          "url": "http://calt.spacechina.com/n482/n498/c14641/content.html",
+          "note": "长征七号甲官方参数：总长 60.13 m、起飞质量约 573 t、GTO 7 t",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_7A",
+          "note": "长征七号甲：运力/构型",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Wenchang_Space_Launch_Site",
+          "note": "文昌航天发射场（101/201 工位）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cz8",
+      "name": "长征八号（CZ-8）",
+      "aliases": [
+        "长征八号",
+        "长八",
+        "CZ-8",
+        "LM-8",
+        "Long March 8"
+      ],
+      "class": "中型两级半液氧煤油+氢氧运载火箭（2 助推）",
+      "liftoff_mass_kg": 349500.0,
+      "leo_kg": 8100,
+      "sso_kg": 4500,
+      "default_payload_kg": 4500,
+      "typical_orbits": [
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "wc_lc201",
+        "hn_lc1"
+      ],
+      "launch_sites": [
+        "wc_lc201",
+        "hn_lc1"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 8.3,
+        "t_p": 170.0,
+        "pitch_power": 1.0,
+        "t_fairing": 200.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 500.0,
+        "payload_kg": 4500.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 12000.0,
+            "prop_kg": 155000.0,
+            "pitch_end_deg": 25.0,
+            "cda_attached_m2": 11.5,
+            "engines": 2,
+            "thrust_sl_n": 1188000.0,
+            "thrust_vac_n": 1340000.0,
+            "isp_sl_s": 300.0,
+            "isp_vac_s": 335.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 3500.0,
+            "prop_kg": 25000.0,
+            "pitch_end_deg": -6.0,
+            "cda_attached_m2": 8.0,
+            "engines": 2,
+            "thrust_vac_n": 83585.0,
+            "isp_vac_s": 438.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": {
+          "name": "助推器",
+          "count": 2,
+          "dry_kg_each": 8000.0,
+          "prop_kg_each": 65000.0,
+          "thrusters": [
+            {
+              "n": 2,
+              "thrust_vac_n": 1340000.0,
+              "isp_vac_s": 335.0,
+              "thrust_sl_n": 1200000.0,
+              "isp_sl_s": 300.0
+            }
+          ],
+          "jettison_met": null,
+          "note": "2×2.25 m 助推器，每台 1×YF-100"
+        },
+        "fairing": {
+          "mass_kg": 3000.0,
+          "halves": 2,
+          "sep_met": 200.0,
+          "cda_m2": 14.0
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 8.0,
+            "extra_mass_kg": 1500.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          },
+          "boosters": {
+            "cda": 8.0,
+            "extra_mass_kg": 500.0,
+            "divert_mps": 6.0
+          }
+        },
+        "ascent_cda_scale": 0.6
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "中",
+      "note": "公开：全长 50.3 m、芯一级 3.35 m + 2×2.25 m 助推、起飞重量 356 t、LEO 8.1 t、700 km SSO 约 4.5 t。分级推进剂与干重为按公开起飞质量与推力比例拆分的工程估值（未公开）。制导参数为同类锚点估值，运行时会自动反演。【v3.3 全库体检】公开起飞重量约 356 t；本库质量账目 349.5 t（−1.8%），分级推进剂为工程估值。",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_8",
+          "note": "长征八号：质量/运力/构型",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://news.cnr.cn/native/gd/20240425/t20240425_526680517.shtml",
+          "note": "长征八号系列 700 km SSO 3/5/7 t 梯度运力",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Wenchang_Space_Launch_Site",
+          "note": "文昌航天发射场（101/201 工位）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cz8a",
+      "name": "长征八号甲（CZ-8A）",
+      "aliases": [
+        "长征八号甲",
+        "长八甲",
+        "长八A",
+        "CZ-8A",
+        "LM-8A",
+        "Long March 8A"
+      ],
+      "class": "中型两级半液氧煤油+氢氧运载火箭（2 助推，增大二级）",
+      "liftoff_mass_kg": 379000.0,
+      "leo_kg": 9000,
+      "sso_kg": 7000,
+      "default_payload_kg": 7000,
+      "typical_orbits": [
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "hn_lc1",
+        "wc_lc201"
+      ],
+      "launch_sites": [
+        "hn_lc1",
+        "wc_lc201"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 8.3,
+        "t_p": 172.0,
+        "pitch_power": 1.0,
+        "t_fairing": 210.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 500.0,
+        "payload_kg": 7000.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 12000.0,
+            "prop_kg": 160000.0,
+            "pitch_end_deg": 25.0,
+            "cda_attached_m2": 11.5,
+            "engines": 2,
+            "thrust_sl_n": 1188000.0,
+            "thrust_vac_n": 1340000.0,
+            "isp_sl_s": 300.0,
+            "isp_vac_s": 335.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 4000.0,
+            "prop_kg": 35000.0,
+            "pitch_end_deg": -6.0,
+            "cda_attached_m2": 8.0,
+            "engines": 2,
+            "thrust_vac_n": 83585.0,
+            "isp_vac_s": 442.6,
+            "seco_met": null
+          }
+        ],
+        "boosters": {
+          "name": "助推器",
+          "count": 2,
+          "dry_kg_each": 8500.0,
+          "prop_kg_each": 70000.0,
+          "thrusters": [
+            {
+              "n": 2,
+              "thrust_vac_n": 1340000.0,
+              "isp_vac_s": 335.0,
+              "thrust_sl_n": 1200000.0,
+              "isp_sl_s": 300.0
+            }
+          ],
+          "jettison_met": null
+        },
+        "fairing": {
+          "mass_kg": 3500.0,
+          "halves": 2,
+          "sep_met": 210.0,
+          "cda_m2": 15.0
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 8.0,
+            "extra_mass_kg": 1500.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          },
+          "boosters": {
+            "cda": 8.0,
+            "extra_mass_kg": 500.0,
+            "divert_mps": 6.0
+          }
+        },
+        "ascent_cda_scale": 0.58
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "低",
+      "note": "官方：全箭总长约 50.5 m、起飞重量约 371 t、700 km SSO 7 t 级、两级半构型（2 助推）。一级/二级推进剂与干重、二级 YF-75H 参数均为按公开起飞质量与 CZ-8 参数比例拆分的工程估值（未公开）。制导参数为估值，运行时会自动反演。lead 请重点复核分级质量与二级运力假设。【v3.3 全库体检】公开起飞重量约 371 t；本库质量账目 379.0 t（+2.2%），分级推进剂为工程估值；二级运力假设（YF-75H 简化）未核实。",
+      "sources": [
+        {
+          "url": "https://m.spacechina.com/n2014789/n2014804/c4407861/content.html",
+          "note": "长征八号甲：总长 50.5 m、起飞重量约 371 t、700 km SSO 7 t 级",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://news.cnr.cn/native/gd/20240425/t20240425_526680517.shtml",
+          "note": "长征八号系列 700 km SSO 3/5/7 t 梯度运力",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cz11",
+      "name": "长征十一号（CZ-11）",
+      "aliases": [
+        "长征十一号",
+        "长十一",
+        "CZ-11",
+        "LM-11",
+        "Long March 11"
+      ],
+      "class": "小型四级固体运载火箭",
+      "liftoff_mass_kg": 59100.0,
+      "leo_kg": 700,
+      "sso_kg": 350,
+      "default_payload_kg": 350,
+      "typical_orbits": [
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        },
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        }
+      ],
+      "sites": [
+        "jq_sls1_921",
+        "hy_offshore"
+      ],
+      "launch_sites": [
+        "jq_sls1_921",
+        "hy_offshore"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 4.5,
+        "t_p": 95.0,
+        "pitch_power": 1.2,
+        "t_fairing": 90.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 100.0,
+        "payload_kg": 350.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 3000.0,
+            "prop_kg": 35000.0,
+            "pitch_end_deg": 30.0,
+            "cda_attached_m2": 6.0,
+            "engines": 1,
+            "thrust_sl_n": 1150000.0,
+            "thrust_vac_n": 1250000.0,
+            "isp_sl_s": 250.0,
+            "isp_vac_s": 270.0,
+            "note": "一级固体发动机直径 2 m、装药量 35 t、推力约 120 t（公开报道）"
+          },
+          {
+            "name": "二级",
+            "dry_kg": 1200.0,
+            "prop_kg": 12000.0,
+            "pitch_end_deg": 10.0,
+            "cda_attached_m2": 4.0,
+            "engines": 1,
+            "thrust_sl_n": 350000.0,
+            "thrust_vac_n": 380000.0,
+            "isp_sl_s": 255.0,
+            "isp_vac_s": 275.0
+          },
+          {
+            "name": "三级",
+            "dry_kg": 500.0,
+            "prop_kg": 5000.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 3.0,
+            "engines": 1,
+            "thrust_sl_n": 150000.0,
+            "thrust_vac_n": 165000.0,
+            "isp_sl_s": 260.0,
+            "isp_vac_s": 280.0
+          },
+          {
+            "name": "四级",
+            "dry_kg": 200.0,
+            "prop_kg": 1400.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 2.0,
+            "engines": 1,
+            "thrust_vac_n": 33000.0,
+            "isp_vac_s": 290.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 350.0,
+          "halves": 2,
+          "sep_met": 90.0,
+          "cda_m2": 3.5
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 4.0,
+            "extra_mass_kg": 200.0
+          },
+          "stage_1": {
+            "cda": 3.0,
+            "extra_mass_kg": 0.0
+          },
+          "stage_2": {
+            "cda": 3.0,
+            "extra_mass_kg": 0.0
+          },
+          "stage_3": {
+            "cda": 3.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 0.49
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "中",
+      "note": "官方：全长 20.8 m、起飞质量 58 t、起飞推力 120 t、700 km SSO 350 kg、LEO 700 kg；一级固体发动机直径 2 m、装药 35 t。二/三/四级推进剂与干重、各级比冲为按公开总质量与固体火箭典型质量分数拆分的工程估值（未公开）。酒泉发射工位随任务调整（921/简易工位）并有海上平台发射，具体工位映射未逐一核实。制导参数为估值，运行时会自动反演。",
+      "sources": [
+        {
+          "url": "http://zhuanti.spacechina.com/n2504491/n2504682/c2508057/content.html",
+          "note": "长征十一号：全长 20.8 m、重 58 t、起飞推力 120 t、700 km SSO 350 kg、LEO 700 kg",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_11",
+          "note": "长征十一号：固体火箭构型",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "cz12",
+      "name": "长征十二号（CZ-12）",
+      "aliases": [
+        "长征十二号",
+        "长十二",
+        "CZ-12",
+        "LM-12",
+        "Long March 12"
+      ],
+      "class": "中型两级液氧煤油运载火箭（4 m 级单芯级）",
+      "liftoff_mass_kg": 426000.0,
+      "leo_kg": 12000,
+      "sso_kg": 6000,
+      "default_payload_kg": 6000,
+      "typical_orbits": [
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "jq_cz12_pad",
+        "hn_lc2",
+        "hn_lc1"
+      ],
+      "launch_sites": [
+        "jq_cz12_pad",
+        "hn_lc2",
+        "hn_lc1"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 8.0,
+        "t_p": 168.0,
+        "pitch_power": 1.0,
+        "t_fairing": 210.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 500.0,
+        "payload_kg": 6000.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 22000.0,
+            "prop_kg": 360000.0,
+            "pitch_end_deg": 25.0,
+            "cda_attached_m2": 14.0,
+            "engines": 4,
+            "thrust_sl_n": 1250000.0,
+            "thrust_vac_n": 1340000.0,
+            "isp_sl_s": 300.0,
+            "isp_vac_s": 335.0,
+            "note": "官方：一级 4×YF-100K（单台 1250 kN 级）"
+          },
+          {
+            "name": "二级",
+            "dry_kg": 4000.0,
+            "prop_kg": 30000.0,
+            "pitch_end_deg": -8.0,
+            "cda_attached_m2": 9.0,
+            "engines": 2,
+            "thrust_vac_n": 180000.0,
+            "isp_vac_s": 341.5,
+            "seco_met": null
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 3500.0,
+          "halves": 2,
+          "sep_met": 210.0,
+          "cda_m2": 16.0
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 9.0,
+            "extra_mass_kg": 1500.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 0.77
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "低",
+      "note": "官方：全长约 62 m、起飞质量约 430 t、一级 4×YF-100K（1250 kN/台）、二级 2×YF-115（180 kN/台）、LEO≥12 t、700 km SSO≥6 t。一级推进剂 360 t、二级 30 t 与干重 22/4 t 为按公开起飞质量拆分的工程估值（未公开）。制导参数为估值，运行时会自动反演。lead 请重点复核分级质量。",
+      "sources": [
+        {
+          "url": "http://www.sast.cn/n1323881/n1323961/c4234570/content.html",
+          "note": "长征十二号官方参数：全长约 62 m、起飞质量约 430 t、4×1250 kN 一级、2×180 kN 二级、LEO 12 t / SSO 6 t",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_12",
+          "note": "长征十二号：构型/运力",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "kz1a",
+      "name": "快舟一号甲（KZ-1A）",
+      "aliases": [
+        "快舟一号甲",
+        "快舟1A",
+        "KZ-1A",
+        "Kuaizhou-1A",
+        "Kuaizhou 1A"
+      ],
+      "class": "小型四级固体运载火箭（三级固体+液体上面级）",
+      "liftoff_mass_kg": 30520.0,
+      "leo_kg": 300,
+      "sso_kg": 200,
+      "default_payload_kg": 200,
+      "typical_orbits": [
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        },
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        }
+      ],
+      "sites": [
+        "jq_la96a",
+        "hy_offshore"
+      ],
+      "launch_sites": [
+        "jq_la96a",
+        "hy_offshore"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 4.0,
+        "t_p": 85.0,
+        "pitch_power": 1.2,
+        "t_fairing": 95.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 100.0,
+        "payload_kg": 200.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 1800.0,
+            "prop_kg": 19000.0,
+            "pitch_end_deg": 30.0,
+            "cda_attached_m2": 4.5,
+            "engines": 1,
+            "thrust_sl_n": 750000.0,
+            "thrust_vac_n": 820000.0,
+            "isp_sl_s": 250.0,
+            "isp_vac_s": 268.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 600.0,
+            "prop_kg": 5500.0,
+            "pitch_end_deg": 8.0,
+            "cda_attached_m2": 3.0,
+            "engines": 1,
+            "thrust_sl_n": 260000.0,
+            "thrust_vac_n": 285000.0,
+            "isp_sl_s": 255.0,
+            "isp_vac_s": 272.0
+          },
+          {
+            "name": "三级",
+            "dry_kg": 250.0,
+            "prop_kg": 2200.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 2.0,
+            "engines": 1,
+            "thrust_vac_n": 90000.0,
+            "isp_vac_s": 280.0
+          },
+          {
+            "name": "四级",
+            "dry_kg": 120.0,
+            "prop_kg": 500.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 1.5,
+            "engines": 1,
+            "thrust_vac_n": 15000.0,
+            "isp_vac_s": 290.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 250.0,
+          "halves": 2,
+          "sep_met": 95.0,
+          "cda_m2": 3.0
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 3.0,
+            "extra_mass_kg": 150.0
+          },
+          "stage_1": {
+            "cda": 2.5,
+            "extra_mass_kg": 0.0
+          },
+          "stage_2": {
+            "cda": 2.5,
+            "extra_mass_kg": 0.0
+          },
+          "stage_3": {
+            "cda": 2.5,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 0.32
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "低",
+      "note": "官方：全长约 20 m、起飞质量约 30 t、SSO 700 km 200 kg、LEO 300 kg；三级固体+末级液体构型。各级推进剂/干重/推力/比冲为按公开总质量与同类固体小火箭比例拆分的工程估值（未公开）。酒泉工位为简易/移动工位、并有海上平台发射，具体工位映射未逐一核实。制导参数为估值，运行时会自动反演。【v3.3 全库体检】按公开运力（700 km SSO 200 kg）反算，本条目分级工程估值偏紧约 −0.37 km/s；固体比冲与干重均为估值，结果只能作量级参考。",
+      "sources": [
+        {
+          "url": "http://casic23hr.com/n12377419/n12378166/c12559564/content.html",
+          "note": "快舟一号甲：全长约 20 m、起飞质量约 30 t、SSO 700 km 200 kg、LEO 300 kg",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Jiuquan_Satellite_Launch_Center",
+          "note": "酒泉卫星发射中心工位（921/SLS-1、94/SLS-2 等）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "kz11",
+      "name": "快舟十一号（KZ-11）",
+      "aliases": [
+        "快舟十一号",
+        "快舟11",
+        "KZ-11",
+        "Kuaizhou-11",
+        "Kuaizhou 11"
+      ],
+      "class": "中型四级固体运载火箭",
+      "liftoff_mass_kg": 77100.0,
+      "leo_kg": 1500,
+      "sso_kg": 1000,
+      "default_payload_kg": 1000,
+      "typical_orbits": [
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        },
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        }
+      ],
+      "sites": [
+        "jq_la130"
+      ],
+      "launch_sites": [
+        "jq_la130"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 4.5,
+        "t_p": 100.0,
+        "pitch_power": 1.2,
+        "t_fairing": 110.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 100.0,
+        "payload_kg": 1000.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 5000.0,
+            "prop_kg": 55000.0,
+            "pitch_end_deg": 30.0,
+            "cda_attached_m2": 8.0,
+            "engines": 1,
+            "thrust_sl_n": 1500000.0,
+            "thrust_vac_n": 1620000.0,
+            "isp_sl_s": 250.0,
+            "isp_vac_s": 268.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 1000.0,
+            "prop_kg": 10000.0,
+            "pitch_end_deg": 8.0,
+            "cda_attached_m2": 5.0,
+            "engines": 1,
+            "thrust_sl_n": 380000.0,
+            "thrust_vac_n": 410000.0,
+            "isp_sl_s": 255.0,
+            "isp_vac_s": 272.0
+          },
+          {
+            "name": "三级",
+            "dry_kg": 400.0,
+            "prop_kg": 3000.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 3.0,
+            "engines": 1,
+            "thrust_vac_n": 160000.0,
+            "isp_vac_s": 280.0
+          },
+          {
+            "name": "四级",
+            "dry_kg": 200.0,
+            "prop_kg": 1000.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 2.0,
+            "engines": 1,
+            "thrust_vac_n": 50000.0,
+            "isp_vac_s": 290.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 400.0,
+          "halves": 2,
+          "sep_met": 110.0,
+          "cda_m2": 4.0
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 5.0,
+            "extra_mass_kg": 200.0
+          },
+          "stage_1": {
+            "cda": 3.0,
+            "extra_mass_kg": 0.0
+          },
+          "stage_2": {
+            "cda": 3.0,
+            "extra_mass_kg": 0.0
+          },
+          "stage_3": {
+            "cda": 3.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 0.45
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "低",
+      "note": "官方：起飞质量 78 t、LEO 1.5 t、700 km SSO 1 t。各级推进剂/干重/推力/比冲为按公开总质量与同类固体火箭比例拆分的工程估值（未公开）。发射工位为酒泉简易/移动工位（具体工位号未核实）。制导参数为估值，运行时会自动反演。【v3.3 全库体检】按公开运力（700 km SSO 1 t）反算，本条目分级工程估值缺口约 −0.51 km/s；在该缺口消除前只能作量级参考。",
+      "sources": [
+        {
+          "url": "http://mrdx.cn/content/20180306/Articel15003BB.htm",
+          "note": "快舟十一号：起飞质量 78 t、LEO 1.5 t、SSO 700 km 1 t",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Jiuquan_Satellite_Launch_Center",
+          "note": "酒泉卫星发射中心工位（921/SLS-1、94/SLS-2 等）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "gsx1",
+      "name": "谷神星一号（GSX-1 / Ceres-1）",
+      "aliases": [
+        "谷神星一号",
+        "谷神星1号",
+        "GSX-1",
+        "Ceres-1",
+        "CERES-1"
+      ],
+      "class": "小型四级固体运载火箭（三级固体+液体上面级）",
+      "liftoff_mass_kg": 32220.0,
+      "leo_kg": 400,
+      "sso_kg": 300,
+      "default_payload_kg": 300,
+      "typical_orbits": [
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        },
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "jq_la96b",
+        "hy_offshore",
+        "rz_offshore"
+      ],
+      "launch_sites": [
+        "jq_la96b",
+        "hy_offshore",
+        "rz_offshore"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 4.2,
+        "t_p": 90.0,
+        "pitch_power": 1.2,
+        "t_fairing": 95.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 100.0,
+        "payload_kg": 300.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 2000.0,
+            "prop_kg": 21000.0,
+            "pitch_end_deg": 30.0,
+            "cda_attached_m2": 4.5,
+            "engines": 1,
+            "thrust_sl_n": 780000.0,
+            "thrust_vac_n": 850000.0,
+            "isp_sl_s": 250.0,
+            "isp_vac_s": 268.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 550.0,
+            "prop_kg": 5500.0,
+            "pitch_end_deg": 8.0,
+            "cda_attached_m2": 3.0,
+            "engines": 1,
+            "thrust_sl_n": 240000.0,
+            "thrust_vac_n": 265000.0,
+            "isp_sl_s": 255.0,
+            "isp_vac_s": 272.0
+          },
+          {
+            "name": "三级",
+            "dry_kg": 250.0,
+            "prop_kg": 1800.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 2.0,
+            "engines": 1,
+            "thrust_vac_n": 80000.0,
+            "isp_vac_s": 280.0
+          },
+          {
+            "name": "四级",
+            "dry_kg": 120.0,
+            "prop_kg": 350.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 1.5,
+            "engines": 1,
+            "thrust_vac_n": 12000.0,
+            "isp_vac_s": 290.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 250.0,
+          "halves": 2,
+          "sep_met": 95.0,
+          "cda_m2": 3.0
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 3.0,
+            "extra_mass_kg": 150.0
+          },
+          "stage_1": {
+            "cda": 2.5,
+            "extra_mass_kg": 0.0
+          },
+          "stage_2": {
+            "cda": 2.5,
+            "extra_mass_kg": 0.0
+          },
+          "stage_3": {
+            "cda": 2.5,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 0.32
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "低",
+      "note": "官方：直径 1.4 m、全长约 20 m、起飞质量约 33 t、500 km SSO 300 kg。各级推进剂/干重/推力/比冲为按公开总质量与同类固体小火箭比例拆分的工程估值（未公开）。酒泉/海上平台发射，具体工位映射未逐一核实。制导参数为估值，运行时会自动反演。【v3.3 全库体检】按公开运力（500 km SSO 300 kg）反算，本条目分级工程估值只能提供约 8.6 km/s 理想 Δv，缺口约 −0.86 km/s（固体比冲/干重估计偏保守）；在该缺口消除前，本型号结果只能作量级参考。",
+      "sources": [
+        {
+          "url": "https://www.stdaily.com/web/gdxw/2025-09/06/content_396336.html",
+          "note": "谷神星一号：直径 1.4 m、全长约 20 m、起飞质量约 33 t、SSO 500 km 300 kg",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Jiuquan_Satellite_Launch_Center",
+          "note": "酒泉卫星发射中心工位（921/SLS-1、94/SLS-2 等）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "sqx1",
+      "name": "双曲线一号（SQX-1 / Hyperbola-1）",
+      "aliases": [
+        "双曲线一号",
+        "双曲线1号",
+        "SQX-1",
+        "Hyperbola-1",
+        "Hyperbola 1"
+      ],
+      "class": "小型四级固体运载火箭（三级固体+液体四级）",
+      "liftoff_mass_kg": 30420.0,
+      "leo_kg": 300,
+      "sso_kg": 150,
+      "default_payload_kg": 150,
+      "typical_orbits": [
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        },
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        }
+      ],
+      "sites": [
+        "jq_la96a"
+      ],
+      "launch_sites": [
+        "jq_la96a"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 4.2,
+        "t_p": 92.0,
+        "pitch_power": 1.2,
+        "t_fairing": 90.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 100.0,
+        "payload_kg": 150.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 2000.0,
+            "prop_kg": 20000.0,
+            "pitch_end_deg": 30.0,
+            "cda_attached_m2": 4.5,
+            "engines": 1,
+            "thrust_sl_n": 700000.0,
+            "thrust_vac_n": 760000.0,
+            "isp_sl_s": 250.0,
+            "isp_vac_s": 268.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 500.0,
+            "prop_kg": 5000.0,
+            "pitch_end_deg": 8.0,
+            "cda_attached_m2": 3.0,
+            "engines": 1,
+            "thrust_sl_n": 220000.0,
+            "thrust_vac_n": 240000.0,
+            "isp_sl_s": 255.0,
+            "isp_vac_s": 272.0
+          },
+          {
+            "name": "三级",
+            "dry_kg": 250.0,
+            "prop_kg": 1700.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 2.0,
+            "engines": 1,
+            "thrust_vac_n": 75000.0,
+            "isp_vac_s": 280.0
+          },
+          {
+            "name": "四级",
+            "dry_kg": 120.0,
+            "prop_kg": 350.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 1.5,
+            "engines": 1,
+            "thrust_vac_n": 12000.0,
+            "isp_vac_s": 290.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 250.0,
+          "halves": 2,
+          "sep_met": 90.0,
+          "cda_m2": 3.0
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 3.0,
+            "extra_mass_kg": 150.0
+          },
+          "stage_1": {
+            "cda": 2.5,
+            "extra_mass_kg": 0.0
+          },
+          "stage_2": {
+            "cda": 2.5,
+            "extra_mass_kg": 0.0
+          },
+          "stage_3": {
+            "cda": 2.5,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 0.32
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "低",
+      "note": "公开：直径 1.4 m、高 20 m、起飞质量 31 t、四级构型（前三级固体、四级液体）、LEO 300 kg、700 km SSO 150 kg。各级推进剂/干重/推力/比冲为按公开总质量与同类固体小火箭比例拆分的工程估值（未公开）。酒泉工位映射未逐一核实。制导参数为估值，运行时会自动反演。【v3.3 全库体检】按公开运力（700 km SSO 150 kg）反算，本条目分级工程估值偏紧约 −0.43 km/s；分级数据均为估值，结果只能作量级参考。",
+      "sources": [
+        {
+          "url": "http://mp.weixin.qq.com/s?__biz=MzU0OTkxNTQ4Mw==&mid=2247484835&idx=1&sn=5c901e190c5714528ac72097d43cc273",
+          "note": "双曲线一号：直径 1.4 m、高 20 m、起飞质量 31 t、四级构型、LEO 300 kg、SSO 700 km 150 kg",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Jiuquan_Satellite_Launch_Center",
+          "note": "酒泉卫星发射中心工位（921/SLS-1、94/SLS-2 等）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "zq2",
+      "name": "朱雀二号（ZQ-2，液氧甲烷）",
+      "aliases": [
+        "朱雀二号",
+        "朱雀2号",
+        "ZQ-2",
+        "Zhuque-2",
+        "Zhuque 2",
+        "LandSpace ZQ-2"
+      ],
+      "class": "中型两级液氧甲烷运载火箭",
+      "liftoff_mass_kg": 218000.0,
+      "leo_kg": 6000,
+      "sso_kg": 4000,
+      "default_payload_kg": 4000,
+      "typical_orbits": [
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        },
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        }
+      ],
+      "sites": [
+        "jq_la120"
+      ],
+      "launch_sites": [
+        "jq_la120"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 7.5,
+        "t_p": 165.0,
+        "pitch_power": 1.0,
+        "t_fairing": 190.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 500.0,
+        "payload_kg": 4000.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 15000.0,
+            "prop_kg": 160000.0,
+            "pitch_end_deg": 28.0,
+            "cda_attached_m2": 11.5,
+            "engines": 4,
+            "thrust_sl_n": 670000.0,
+            "thrust_vac_n": 760000.0,
+            "isp_sl_s": 285.0,
+            "isp_vac_s": 320.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 6000.0,
+            "prop_kg": 30000.0,
+            "pitch_end_deg": -9.0,
+            "cda_attached_m2": 8.5,
+            "phases": [
+              {
+                "name": "主机",
+                "thrusters": [
+                  {
+                    "n": 1,
+                    "thrust_vac_n": 800000.0,
+                    "isp_vac_s": 350.0
+                  },
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 10000.0,
+                    "isp_vac_s": 320.0
+                  }
+                ]
+              }
+            ],
+            "pitch_duration_s": 380.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 2500.0,
+          "halves": 2,
+          "sep_met": 190.0,
+          "cda_m2": 14.0
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 7.0,
+            "extra_mass_kg": 1500.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 0.74
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "低",
+      "note": "公开：直径 3.35 m、初始型起飞质量 219 t、4×天鹊-12（一级）；改进型 LEO 6 t、500 km SSO 4 t。一级推进剂 160 t、二级 30 t 与干重 15/6 t、二级发动机推力/比冲（1×真空天鹊-12 + 4×天鹊-11 游机）均为按公开总质量与同类中型液体火箭比例拆分的工程估值（未公开）。发射工位映射未逐一核实。制导参数为估值，运行时会自动反演。lead 请重点复核二级参数。【v3.3 全库体检】按公开运力（500 km SSO 4 t）反算，本条目缺口约 −1.18 km/s（二级干重/比冲与『改进型』运力档混用所致）；在该缺口消除前只能作量级参考。",
+      "sources": [
+        {
+          "url": "https://zh.wikipedia.org/wiki/朱雀二号运载火箭",
+          "note": "朱雀二号：直径 3.35 m、初始型 219 t、4×天鹊-12",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://share.gmw.cn/local/2026-06/10/content_38821962.htm",
+          "note": "朱雀二号改进型：LEO 6 t、SSO 500 km 4 t",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "tl2",
+      "name": "天龙二号（TL-2，液氧煤油）",
+      "aliases": [
+        "天龙二号",
+        "天龙2号",
+        "TL-2",
+        "Tianlong-2",
+        "Tianlong 2",
+        "Space Pioneer TL-2"
+      ],
+      "class": "中型三级液氧煤油运载火箭",
+      "liftoff_mass_kg": 154600.0,
+      "leo_kg": 2000,
+      "sso_kg": 1500,
+      "default_payload_kg": 1500,
+      "typical_orbits": [
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        },
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        }
+      ],
+      "sites": [
+        "jq_la120"
+      ],
+      "launch_sites": [
+        "jq_la120"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 7.2,
+        "t_p": 160.0,
+        "pitch_power": 1.0,
+        "t_fairing": 170.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 300.0,
+        "payload_kg": 1500.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 8000.0,
+            "prop_kg": 110000.0,
+            "pitch_end_deg": 27.0,
+            "cda_attached_m2": 11.5,
+            "engines": 1,
+            "thrust_sl_n": 1890000.0,
+            "thrust_vac_n": 2100000.0,
+            "isp_sl_s": 290.0,
+            "isp_vac_s": 310.0,
+            "note": "官方起飞推力 193 t（1.89 MN）按一级单工况等效输入"
+          },
+          {
+            "name": "二级",
+            "dry_kg": 2000.0,
+            "prop_kg": 22000.0,
+            "pitch_end_deg": -8.0,
+            "cda_attached_m2": 8.0,
+            "engines": 1,
+            "thrust_vac_n": 300000.0,
+            "isp_vac_s": 340.0
+          },
+          {
+            "name": "三级",
+            "dry_kg": 800.0,
+            "prop_kg": 8000.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 6.0,
+            "engines": 1,
+            "thrust_vac_n": 100000.0,
+            "isp_vac_s": 345.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 2000.0,
+          "halves": 2,
+          "sep_met": 170.0,
+          "cda_m2": 12.0
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 7.0,
+            "extra_mass_kg": 1000.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "stage_2": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 0.67
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "低",
+      "note": "公开：直径 3.35 m、全长 32.8 m、起飞质量 153 t、起飞推力 193 t、500 km SSO 1.5 t、LEO 2 t（百度百科/公开报道）。一级为 1 台等效发动机（1.89 MN）的输入方式是为匹配公开起飞推力；三级推进剂分配与发动机推力/比冲、干重均为工程估值（未公开）。发射工位映射未逐一核实。制导参数为估值，运行时会自动反演。lead 请重点复核级数与发动机台数。",
+      "sources": [
+        {
+          "url": "http://iot.china.com.cn/content/2023-05/29/content_42386162.html",
+          "note": "天龙二号：起飞质量 153 t、起飞推力 193 t、SSO 500 km 1.5 t、LEO 2 t",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://baike.baidu.com/item/天龙二号/62862296",
+          "note": "天龙二号：三级液氧煤油、直径 3.35 m、全长 32.8 m",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "lj1",
+      "name": "力箭一号（LJ-1 / Kinetica-1）",
+      "aliases": [
+        "力箭一号",
+        "力箭1号",
+        "LJ-1",
+        "Kinetica-1",
+        "Kinetica 1",
+        "中科宇航力箭一号"
+      ],
+      "class": "中型四级固体运载火箭",
+      "liftoff_mass_kg": 133800.0,
+      "leo_kg": 1500,
+      "sso_kg": 1500,
+      "default_payload_kg": 1500,
+      "typical_orbits": [
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        },
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "jq_pallas1_pad"
+      ],
+      "launch_sites": [
+        "jq_pallas1_pad"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 4.5,
+        "t_p": 105.0,
+        "pitch_power": 1.2,
+        "t_fairing": 110.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 200.0,
+        "payload_kg": 1500.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 9000.0,
+            "prop_kg": 100000.0,
+            "pitch_end_deg": 28.0,
+            "cda_attached_m2": 8.0,
+            "engines": 1,
+            "thrust_sl_n": 1960000.0,
+            "thrust_vac_n": 2100000.0,
+            "isp_sl_s": 260.0,
+            "isp_vac_s": 275.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 1400.0,
+            "prop_kg": 14000.0,
+            "pitch_end_deg": 6.0,
+            "cda_attached_m2": 5.0,
+            "engines": 1,
+            "thrust_sl_n": 450000.0,
+            "thrust_vac_n": 490000.0,
+            "isp_sl_s": 265.0,
+            "isp_vac_s": 280.0
+          },
+          {
+            "name": "三级",
+            "dry_kg": 500.0,
+            "prop_kg": 5000.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 3.5,
+            "engines": 1,
+            "thrust_vac_n": 180000.0,
+            "isp_vac_s": 285.0
+          },
+          {
+            "name": "四级",
+            "dry_kg": 200.0,
+            "prop_kg": 1500.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 2.5,
+            "engines": 1,
+            "thrust_vac_n": 60000.0,
+            "isp_vac_s": 290.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 500.0,
+          "halves": 2,
+          "sep_met": 110.0,
+          "cda_m2": 4.5
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 5.0,
+            "extra_mass_kg": 200.0
+          },
+          "stage_1": {
+            "cda": 3.5,
+            "extra_mass_kg": 0.0
+          },
+          "stage_2": {
+            "cda": 3.5,
+            "extra_mass_kg": 0.0
+          },
+          "stage_3": {
+            "cda": 3.5,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 0.49
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "中",
+      "note": "公开：箭体高 30 m、发动机最大直径 2.65 m、起飞质量 135 t、起飞推力 200 t、500 km SSO 1.5 t、四级固体串联。各级推进剂/干重/推力/比冲为按公开总质量与同类固体火箭比例拆分的工程估值（未公开）。酒泉发射工位映射为参考（AeroPattern 命名为 Pallas-1 工位，未核实对应关系）。制导参数为估值，运行时会自动反演。",
+      "sources": [
+        {
+          "url": "https://szb.snkjb.com/sxkjb/20260617/mhtml/index_content_003.htm",
+          "note": "力箭一号：高 30 m、起飞质量 135 t、起飞推力 200 t、SSO 500 km 1.5 t、四级固体",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Jiuquan_Satellite_Launch_Center",
+          "note": "酒泉卫星发射中心工位（921/SLS-1、94/SLS-2 等）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "jl3",
+      "name": "捷龙三号（JL-3 / Smart Dragon 3）",
+      "aliases": [
+        "捷龙三号",
+        "捷龙3号",
+        "JL-3",
+        "Smart Dragon 3",
+        "SD-3",
+        "中箭捷龙三号"
+      ],
+      "class": "中型四级固体运载火箭（可海上发射）",
+      "liftoff_mass_kg": 140620.0,
+      "leo_kg": 2000,
+      "sso_kg": 1500,
+      "default_payload_kg": 1500,
+      "typical_orbits": [
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        },
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "hy_offshore",
+        "scs_lc1",
+        "scs_lc2"
+      ],
+      "launch_sites": [
+        "hy_offshore",
+        "scs_lc1",
+        "scs_lc2"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 4.5,
+        "t_p": 105.0,
+        "pitch_power": 1.2,
+        "t_fairing": 110.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 200.0,
+        "payload_kg": 1500.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 9500.0,
+            "prop_kg": 105000.0,
+            "pitch_end_deg": 28.0,
+            "cda_attached_m2": 8.0,
+            "engines": 1,
+            "thrust_sl_n": 2000000.0,
+            "thrust_vac_n": 2140000.0,
+            "isp_sl_s": 260.0,
+            "isp_vac_s": 275.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 1500.0,
+            "prop_kg": 15000.0,
+            "pitch_end_deg": 6.0,
+            "cda_attached_m2": 5.0,
+            "engines": 1,
+            "thrust_sl_n": 460000.0,
+            "thrust_vac_n": 500000.0,
+            "isp_sl_s": 265.0,
+            "isp_vac_s": 280.0
+          },
+          {
+            "name": "三级",
+            "dry_kg": 520.0,
+            "prop_kg": 5200.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 3.5,
+            "engines": 1,
+            "thrust_vac_n": 185000.0,
+            "isp_vac_s": 285.0
+          },
+          {
+            "name": "四级",
+            "dry_kg": 200.0,
+            "prop_kg": 1500.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 2.5,
+            "engines": 1,
+            "thrust_vac_n": 60000.0,
+            "isp_vac_s": 290.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 500.0,
+          "halves": 2,
+          "sep_met": 110.0,
+          "cda_m2": 4.5
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 5.0,
+            "extra_mass_kg": 200.0
+          },
+          "stage_1": {
+            "cda": 3.5,
+            "extra_mass_kg": 0.0
+          },
+          "stage_2": {
+            "cda": 3.5,
+            "extra_mass_kg": 0.0
+          },
+          "stage_3": {
+            "cda": 3.5,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 0.49
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "中",
+      "note": "官方（CALT）：全长 31.8 m、箭体最大直径 2.64 m、起飞重量 140 t、500 km SSO 1.5 t、四级固体。各级推进剂/干重/推力/比冲为按公开总质量与同类固体火箭比例拆分的工程估值（未公开）。主要从海上平台发射（海阳/南海海区），坐标为代表值。制导参数为估值，运行时会自动反演。",
+      "sources": [
+        {
+          "url": "http://calt.spacechina.com/n482/n498/c27923/content.html",
+          "note": "捷龙三号：全长 31.8 m、最大直径 2.64 m、起飞重量 140 t、SSO 500 km 1.5 t",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Jiuquan_Satellite_Launch_Center",
+          "note": "酒泉卫星发射中心工位（921/SLS-1、94/SLS-2 等）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "generic_medium_liquid",
+      "name": "通用中型两级常温液体火箭（模板）",
+      "aliases": [
+        "通用中型液体",
+        "generic_medium_liquid",
+        "中型常温液体模板"
+      ],
+      "class": "中型两级常温液体运载火箭（通用模板）",
+      "liftoff_mass_kg": 247700.0,
+      "leo_kg": 4000,
+      "sso_kg": 2500,
+      "default_payload_kg": 2500,
+      "typical_orbits": [
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        },
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        }
+      ],
+      "sites": [
+        "jq_sls2_94",
+        "ty_lc9"
+      ],
+      "launch_sites": [
+        "jq_sls2_94",
+        "ty_lc9"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 8.0,
+        "t_p": 170.0,
+        "pitch_power": 1.0,
+        "t_fairing": 200.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 300.0,
+        "payload_kg": 2500.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 10000.0,
+            "prop_kg": 180000.0,
+            "pitch_end_deg": 27.0,
+            "cda_attached_m2": 11.2,
+            "engines": 4,
+            "thrust_sl_n": 740400.0,
+            "thrust_vac_n": 826000.0,
+            "isp_sl_s": 260.7,
+            "isp_vac_s": 291.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 4000.0,
+            "prop_kg": 50000.0,
+            "pitch_end_deg": -12.0,
+            "cda_attached_m2": 8.0,
+            "engines": 1,
+            "thrust_vac_n": 742000.0,
+            "isp_vac_s": 298.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 900.0,
+          "halves": 2,
+          "sep_met": 200.0,
+          "cda_m2": 13.7
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 7.0,
+            "extra_mass_kg": 1500.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 0.76
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "低",
+      "note": "通用模板：不指向具体型号。用户未提供箭型且无法匹配时使用；质量/推力按 CZ-2D 锚点同级缩小，起飞质量约 248 t、LEO 4 t、SSO 2.5 t。所有参数为工程估值，制导参数运行时会自动反演。",
+      "sources": [
+        {
+          "url": "F:/DeepSeek工作区/火箭弹道工具箱_v2.0/config.json",
+          "note": "CZ-2D 遥106 历史任务配置（车辆/制导/残骸完整参数）",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Long_March_2D",
+          "note": "长征二号丁：质量/运力/分级推进剂",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "generic_small_solid",
+      "name": "通用小型四级固体火箭（模板）",
+      "aliases": [
+        "通用小型固体",
+        "generic_small_solid",
+        "小型固体模板"
+      ],
+      "class": "小型四级固体运载火箭（三级固体+液体上面级，通用模板）",
+      "liftoff_mass_kg": 59550.0,
+      "leo_kg": 500,
+      "sso_kg": 500,
+      "default_payload_kg": 500,
+      "typical_orbits": [
+        {
+          "name": "SSO 500 km",
+          "alt_km": 500.0,
+          "i_deg": 97.4
+        },
+        {
+          "name": "SSO 700 km",
+          "alt_km": 700.0,
+          "i_deg": 98.2
+        },
+        {
+          "name": "LEO 400 km",
+          "alt_km": 400.0,
+          "i_deg": null
+        }
+      ],
+      "sites": [
+        "jq_la96a",
+        "hy_offshore"
+      ],
+      "launch_sites": [
+        "jq_la96a",
+        "hy_offshore"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "azimuth_deg": null,
+        "t_v": 4.5,
+        "t_p": 95.0,
+        "pitch_power": 1.2,
+        "t_fairing": 95.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null
+      },
+      "vehicle": {
+        "adapter_kg": 100.0,
+        "payload_kg": 500.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 3000.0,
+            "prop_kg": 36000.0,
+            "pitch_end_deg": 30.0,
+            "cda_attached_m2": 6.0,
+            "engines": 1,
+            "thrust_sl_n": 1200000.0,
+            "thrust_vac_n": 1300000.0,
+            "isp_sl_s": 250.0,
+            "isp_vac_s": 268.0
+          },
+          {
+            "name": "二级",
+            "dry_kg": 1200.0,
+            "prop_kg": 12000.0,
+            "pitch_end_deg": 8.0,
+            "cda_attached_m2": 4.0,
+            "engines": 1,
+            "thrust_sl_n": 380000.0,
+            "thrust_vac_n": 420000.0,
+            "isp_sl_s": 255.0,
+            "isp_vac_s": 272.0
+          },
+          {
+            "name": "三级",
+            "dry_kg": 500.0,
+            "prop_kg": 5000.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 3.0,
+            "engines": 1,
+            "thrust_vac_n": 160000.0,
+            "isp_vac_s": 280.0
+          },
+          {
+            "name": "四级",
+            "dry_kg": 150.0,
+            "prop_kg": 800.0,
+            "pitch_end_deg": -2.0,
+            "cda_attached_m2": 2.0,
+            "engines": 1,
+            "thrust_vac_n": 25000.0,
+            "isp_vac_s": 290.0,
+            "seco_met": null
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 300.0,
+          "halves": 2,
+          "sep_met": 90.0,
+          "cda_m2": 3.5
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 3.5,
+            "extra_mass_kg": 150.0
+          },
+          "stage_1": {
+            "cda": 2.5,
+            "extra_mass_kg": 0.0
+          },
+          "stage_2": {
+            "cda": 2.5,
+            "extra_mass_kg": 0.0
+          },
+          "stage_3": {
+            "cda": 2.5,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 0.0
+          }
+        },
+        "ascent_cda_scale": 0.32
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "低",
+      "note": "通用模板：不指向具体型号。用户未提供箭型且无法匹配时使用；质量/推力按谷神星一号/快舟一号甲同级取值，起飞质量约 60 t、SSO 500 kg。所有参数为工程估值，制导参数运行时会自动反演。",
+      "sources": [
+        {
+          "url": "https://www.stdaily.com/web/gdxw/2025-09/06/content_396336.html",
+          "note": "谷神星一号：直径 1.4 m、全长约 20 m、起飞质量约 33 t、SSO 500 km 300 kg",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "http://casic23hr.com/n12377419/n12378166/c12559564/content.html",
+          "note": "快舟一号甲：全长约 20 m、起飞质量约 30 t、SSO 700 km 200 kg、LEO 300 kg",
+          "accessed": "2026-11-23"
+        }
+      ]
+    }
+  ]
+}

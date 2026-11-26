@@ -1,0 +1,169 @@
+{
+  "schema": "rocketkit.orbits.v1",
+  "updated": "2026-11-23",
+  "note": "参考轨道库：供 infer.infer_reference_orbit 在用户未给轨道时按箭型/发射场/落区推断。i_deg=null 表示按发射场纬度取典型值。",
+  "sources": [
+    {
+      "url": "https://zh.wikipedia.org/wiki/太阳同步轨道",
+      "note": "SSO 定义与倾角-高度关系",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Sun-synchronous_orbit",
+      "note": "SSO 高度-倾角典型值交叉核对",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Geostationary_transfer_orbit",
+      "note": "GTO 近/远地点与倾角典型值",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/International_Space_Station",
+      "note": "ISS 高度/倾角公开参数",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/BeiDou-3",
+      "note": "北斗 MEO/IGSO/GEO 星座高度与倾角",
+      "accessed": "2026-11-23"
+    }
+  ],
+  "orbits": [
+    {
+      "id": "sso_500",
+      "name": "太阳同步轨道 500 km",
+      "alt_km": 500.0,
+      "i_deg": 97.4,
+      "type": "SSO",
+      "confidence": "高",
+      "note": "500 km 太阳同步轨道，倾角 97.4°（典型值，i 随高度略变）；国内 SSO 任务最常用高度带"
+    },
+    {
+      "id": "sso_600",
+      "name": "太阳同步轨道 600 km",
+      "alt_km": 600.0,
+      "i_deg": 97.8,
+      "type": "SSO",
+      "confidence": "高",
+      "note": "600 km SSO，倾角约 97.8°（按 500-800 km 的倾角-高度经验关系取值）"
+    },
+    {
+      "id": "sso_700",
+      "name": "太阳同步轨道 700 km",
+      "alt_km": 700.0,
+      "i_deg": 98.2,
+      "type": "SSO",
+      "confidence": "高",
+      "note": "700 km SSO，倾角约 98.2°；对地遥感常用高度"
+    },
+    {
+      "id": "sso_800",
+      "name": "太阳同步轨道 800 km",
+      "alt_km": 800.0,
+      "i_deg": 98.6,
+      "type": "SSO",
+      "confidence": "中",
+      "note": "800 km SSO，倾角约 98.6°（经验关系外推，±0.2°）"
+    },
+    {
+      "id": "polar_97_4",
+      "name": "极轨/近极轨 97.4°",
+      "alt_km": 750.0,
+      "i_deg": 97.4,
+      "type": "polar",
+      "confidence": "中",
+      "note": "倾角 97.4° 的近极轨（与 500 km SSO 同倾角、高度取 750 km 的典型值，供倾角优先的任务使用）"
+    },
+    {
+      "id": "leo_200",
+      "name": "低地球轨道 200 km",
+      "alt_km": 200.0,
+      "i_deg": null,
+      "type": "LEO",
+      "confidence": "高",
+      "note": "200 km 近地轨道（神舟/天舟初始插入轨道量级）；倾角通常取发射场纬度附近（酒泉 41.5°、太原 38.9°、文昌 19.6°）"
+    },
+    {
+      "id": "leo_300",
+      "name": "低地球轨道 300 km",
+      "alt_km": 300.0,
+      "i_deg": null,
+      "type": "LEO",
+      "confidence": "高",
+      "note": "300 km 近地轨道；倾角通常取发射场纬度附近"
+    },
+    {
+      "id": "leo_400",
+      "name": "低地球轨道 400 km",
+      "alt_km": 400.0,
+      "i_deg": null,
+      "type": "LEO",
+      "confidence": "高",
+      "note": "400 km 近地轨道（空间站/载人任务常用）；倾角通常取发射场纬度附近"
+    },
+    {
+      "id": "leo_500",
+      "name": "低地球轨道 500 km",
+      "alt_km": 500.0,
+      "i_deg": null,
+      "type": "LEO",
+      "confidence": "高",
+      "note": "500 km 近地轨道；倾角通常取发射场纬度附近"
+    },
+    {
+      "id": "iss_400",
+      "name": "国际空间站轨道 400 km / 51.6°",
+      "alt_km": 400.0,
+      "i_deg": 51.6,
+      "type": "LEO",
+      "confidence": "高",
+      "note": "ISS 典型轨道 400 km、倾角 51.6°（公开编目），供观测/交会类任务参考"
+    },
+    {
+      "id": "meo_2000",
+      "name": "中地球轨道 2000 km",
+      "alt_km": 2000.0,
+      "i_deg": 55.0,
+      "type": "MEO",
+      "confidence": "中",
+      "note": "2000 km MEO 示例（倾角取 55° 的导航星座典型值）；真实 MEO 任务高度差异大，需按任务确认"
+    },
+    {
+      "id": "gto_200x35786",
+      "name": "地球同步转移轨道 GTO",
+      "alt_km": 35786.0,
+      "i_deg": 27.0,
+      "type": "GTO",
+      "confidence": "中",
+      "note": "GTO：近地点约 200 km、远地点 35786 km；alt_km 记远地点，倾角 27° 为西昌发射 GTO 的典型值（19.6-28.5° 视射向）"
+    },
+    {
+      "id": "geo_35786",
+      "name": "地球同步轨道 GEO 35786 km",
+      "alt_km": 35786.0,
+      "i_deg": 0.0,
+      "type": "GEO",
+      "confidence": "高",
+      "note": "地球同步/静止轨道：高度 35786 km、倾角 0°（需要末级共面机动或直接入轨）"
+    },
+    {
+      "id": "igso_35786",
+      "name": "倾斜地球同步轨道 IGSO 35786 km / 55°",
+      "alt_km": 35786.0,
+      "i_deg": 55.0,
+      "type": "IGSO",
+      "confidence": "中",
+      "note": "IGSO：高度 35786 km、倾角约 55°（北斗 IGSO 星座公开参数）"
+    },
+    {
+      "id": "sso_400",
+      "name": "太阳同步轨道 400 km",
+      "alt_km": 400.0,
+      "i_deg": 97.0,
+      "type": "SSO",
+      "confidence": "中",
+      "note": "400 km SSO，倾角约 97.0°（经验关系，±0.2°）"
+    }
+  ]
+}

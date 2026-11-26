@@ -1,0 +1,296 @@
+[
+  {
+    "name": "CZ-2D_太原",
+    "ok": true,
+    "level": "PASS",
+    "worst_orbit_rel_diff": 0.0,
+    "worst_impact_km": 0.0,
+    "orbit": [
+      {
+        "field": "a_km",
+        "new": 6850.4120575045945,
+        "reference": 6850.4120575045945,
+        "rel_diff": 0.0
+      },
+      {
+        "field": "e",
+        "new": 0.005871194795724314,
+        "reference": 0.005871194795724314,
+        "rel_diff": 0.0
+      },
+      {
+        "field": "i_deg",
+        "new": 94.72729510717495,
+        "reference": 94.72729510717495,
+        "rel_diff": 0.0
+      },
+      {
+        "field": "perigee_km",
+        "new": 432.05495388400647,
+        "reference": 432.05495388400647,
+        "rel_diff": 0.0
+      },
+      {
+        "field": "apogee_km",
+        "new": 512.4951611251831,
+        "reference": 512.4951611251831,
+        "rel_diff": 0.0
+      },
+      {
+        "field": "period_s",
+        "new": 5642.6878187535885,
+        "reference": 5642.6878187535885,
+        "rel_diff": 0.0
+      }
+    ],
+    "impacts": [
+      {
+        "object": "core_stage",
+        "new_lat": 33.431115,
+        "new_lon": 110.527398,
+        "ref_lat": 33.431115,
+        "ref_lon": 110.527398,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      },
+      {
+        "object": "fairing_L",
+        "new_lat": 30.331599,
+        "new_lon": 109.973904,
+        "ref_lat": 30.331599,
+        "ref_lon": 109.973904,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      },
+      {
+        "object": "fairing_R",
+        "new_lat": 30.335542,
+        "new_lon": 109.946642,
+        "ref_lat": 30.335542,
+        "ref_lon": 109.946642,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      }
+    ]
+  },
+  {
+    "name": "CZ-2F_酒泉",
+    "ok": true,
+    "level": "PASS",
+    "worst_orbit_rel_diff": 0.0,
+    "worst_impact_km": 0.0,
+    "orbit": [
+      {
+        "field": "a_km",
+        "new": 6578.176275374191,
+        "reference": 6578.176275374191,
+        "rel_diff": 0.0
+      },
+      {
+        "field": "e",
+        "new": 0.0007881787794147134,
+        "reference": 0.0007881787794147134,
+        "rel_diff": 0.0
+      },
+      {
+        "field": "i_deg",
+        "new": 41.456804377384145,
+        "reference": 41.456804377384145,
+        "rel_diff": 0.0
+      },
+      {
+        "field": "perigee_km",
+        "new": 194.85449642669224,
+        "reference": 194.85449642669224,
+        "rel_diff": 0.0
+      },
+      {
+        "field": "apogee_km",
+        "new": 205.22405432169046,
+        "reference": 205.22405432169046,
+        "rel_diff": 0.0
+      },
+      {
+        "field": "period_s",
+        "new": 5309.690917942743,
+        "reference": 5309.690917942743,
+        "rel_diff": 0.0
+      }
+    ],
+    "impacts": [
+      {
+        "object": "booster_1",
+        "new_lat": 39.515946,
+        "new_lon": 106.080044,
+        "ref_lat": 39.515946,
+        "ref_lon": 106.080044,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      },
+      {
+        "object": "booster_2",
+        "new_lat": 39.488747,
+        "new_lon": 106.067394,
+        "ref_lat": 39.488747,
+        "ref_lon": 106.067394,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      },
+      {
+        "object": "booster_3",
+        "new_lat": 39.515946,
+        "new_lon": 106.080044,
+        "ref_lat": 39.515946,
+        "ref_lon": 106.080044,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      },
+      {
+        "object": "booster_4",
+        "new_lat": 39.488747,
+        "new_lon": 106.067394,
+        "ref_lat": 39.488747,
+        "ref_lon": 106.067394,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      },
+      {
+        "object": "core_stage",
+        "new_lat": 38.758614,
+        "new_lon": 108.560561,
+        "ref_lat": 38.758614,
+        "ref_lon": 108.560561,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      },
+      {
+        "object": "fairing_L",
+        "new_lat": 38.360163,
+        "new_lon": 109.871329,
+        "ref_lat": 38.360163,
+        "ref_lon": 109.871329,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      },
+      {
+        "object": "fairing_R",
+        "new_lat": 38.340901,
+        "new_lon": 109.861809,
+        "ref_lat": 38.340901,
+        "ref_lon": 109.861809,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      }
+    ]
+  },
+  {
+    "name": "CZ-6A_太原",
+    "ok": true,
+    "level": "PASS",
+    "worst_orbit_rel_diff": 0.0,
+    "worst_impact_km": 0.0,
+    "orbit": [
+      {
+        "field": "a_km",
+        "new": 7201.257818154954,
+        "reference": 7201.257818154954,
+        "rel_diff": 0.0
+      },
+      {
+        "field": "e",
+        "new": 0.017813153881321837,
+        "reference": 0.017813153881321837,
+        "rel_diff": 0.0
+      },
+      {
+        "field": "i_deg",
+        "new": 142.2105660526617,
+        "reference": 142.2105660526617,
+        "rel_diff": 0.0
+      },
+      {
+        "field": "perigee_km",
+        "new": 694.8437045010878,
+        "reference": 694.8437045010878,
+        "rel_diff": 0.0
+      },
+      {
+        "field": "apogee_km",
+        "new": 951.39793180882,
+        "reference": 951.39793180882,
+        "rel_diff": 0.0
+      },
+      {
+        "field": "period_s",
+        "new": 6081.679369491744,
+        "reference": 6081.679369491744,
+        "rel_diff": 0.0
+      }
+    ],
+    "impacts": [
+      {
+        "object": "booster_1",
+        "new_lat": 37.989769,
+        "new_lon": 107.912738,
+        "ref_lat": 37.989769,
+        "ref_lon": 107.912738,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      },
+      {
+        "object": "booster_2",
+        "new_lat": 38.015939,
+        "new_lon": 107.902331,
+        "ref_lat": 38.015939,
+        "ref_lon": 107.902331,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      },
+      {
+        "object": "booster_3",
+        "new_lat": 37.989769,
+        "new_lon": 107.912738,
+        "ref_lat": 37.989769,
+        "ref_lon": 107.912738,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      },
+      {
+        "object": "booster_4",
+        "new_lat": 38.015939,
+        "new_lon": 107.902331,
+        "ref_lat": 38.015939,
+        "ref_lon": 107.902331,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      },
+      {
+        "object": "core_stage",
+        "new_lat": 28.746246,
+        "new_lon": 81.897509,
+        "ref_lat": 28.746246,
+        "ref_lon": 81.897509,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      },
+      {
+        "object": "fairing_L",
+        "new_lat": 36.224057,
+        "new_lon": 101.390556,
+        "ref_lat": 36.224057,
+        "ref_lon": 101.390556,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      },
+      {
+        "object": "fairing_R",
+        "new_lat": 36.248164,
+        "new_lon": 101.379616,
+        "ref_lat": 36.248164,
+        "ref_lon": 101.379616,
+        "distance_km": 0.0,
+        "dt_s": 0.0
+      }
+    ]
+  }
+]

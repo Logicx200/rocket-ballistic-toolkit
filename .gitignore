@@ -1,0 +1,45 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+
+# ---- 构建产物（build\ 只提交脚本与说明，不提交 venv/中间产物/exe）----
+build/.venv/
+build/.pipcache/
+build/pyi-build/
+build/dist/
+build/*.log
+build/_*.py
+build/_*.json
+build/beijing_*
+build/calib_*
+build/_calib_*
+build/_smoke_*
+build/smoke_*
+
+# ---- 运行时生成（工作区、用户库、缓存、设置）----
+作品/
+user_data/
+cache/
+settings.json
+*.log
+
+# ---- DEM 瓦片缓存（GB 级，运行期下载或导入）----
+engine/data/dem/gz/
+engine/data/dem/hgt/
+engine/data/dem/cache/
+engine/data/dem/custom/
+
+# ---- 测试产物与旧截图（GUI 截图脚本保留）----
+tests/_regression/
+tests/_dem_test/
+tests/_param_test/
+tests/_gui_shots/v4/
+tests/_gui_shots/旧版v3/
+tests/_gui_shots/_smoke*
+
+# ---- 临时/外部工作目录 ----
+_gh_work/
+*.tmp

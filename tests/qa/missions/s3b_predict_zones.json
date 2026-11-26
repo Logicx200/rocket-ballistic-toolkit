@@ -1,0 +1,25 @@
+{
+  "name": "场景3b：无航警 + 给 T0（预测落区模式）",
+  "rocket_label": "长征二号丁",
+  "site_label": "太原 LC-9",
+  "t0_text": "2026-11-19 06:50",
+  "observers": [
+    {"id": "obs_bj", "name": "北京"}
+  ],
+  "notams_mode": "predict",
+  "orbit_alt_km": 505.0,
+  "orbit_i_deg": 97.45,
+  "modules": {
+    "dem": false,
+    "invert": false,
+    "export": true,
+    "window": false,
+    "sky": false,
+    "appear": false,
+    "map": true,
+    "mc": false,
+    "kml": true,
+    "qc": true,
+    "report": true
+  }
+}

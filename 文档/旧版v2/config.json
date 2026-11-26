@@ -1,0 +1,211 @@
+{
+  "_schema": "rocketkit.config.v1",
+  "_note": "示例配置：2026-11-19 长征二号丁（CZ-2D 遥106）太原 LC-9。参数来源与置信度见 01_任务提示词模板.md 与 docs/验证_回归_CZ2D.md；本文件为“已填好”的实例，新任务请整体复制后只改 {{...}} 类字段。",
+  "mission": {
+    "name": "2026-11-19 长征二号丁（CZ-2D 遥106）太原 LC-9 上升段 3-DOF 弹道仿真",
+    "rocket": "长征二号丁（CZ-2D，遥106，第 108 次飞行）",
+    "serial": "遥106",
+    "t0_utc": "2026-11-18T22:50:00Z",
+    "t0_note": "标称：NASA SF 2026-11-15 预览（22:50 UTC）+ 中文维基（06:50 北京时）+ 航警 B) 2611182243；非官方实测",
+    "launch_site": {
+      "name": "太原卫星发射中心九号工位 (TSLC LC-9)",
+      "lat_deg": 38.8632,
+      "lon_deg": 111.5896,
+      "alt_m_ellipsoid": 1459.0,
+      "coord_note": "中文维基 38°51′48″N 111°35′23″E 与 AeroPattern 38.86N/111.59E 两源一致（差约 11 m）；海拔 SRTM 1459 m"
+    },
+    "payload_note": "公开未确认（NASA SF: Unknown Payload）；参考情景见 reference_orbit",
+    "reference_orbit": {
+      "alt_km": 505.0,
+      "i_deg": 97.45,
+      "confidence": "中（太原长二丁 SSO 先例 500–530 km / i 97.4–97.49）"
+    },
+    "disclaimer": "仅供公开信息分析与教学使用，非实际发射弹道"
+  },
+  "vehicle": {
+    "adapter_kg": 300.0,
+    "payload_kg": 1000.0,
+    "stages": [
+      {
+        "name": "一级",
+        "dry_kg": 10000.0,
+        "prop_kg": 182000.0,
+        "engines": 4,
+        "thrust_sl_n": 740400.0,
+        "thrust_vac_n": 839000.0,
+        "isp_sl_s": 260.03,
+        "isp_vac_s": 294.7,
+        "pitch_end_deg": 27.566007200883384,
+        "cda_attached_m2": 11.2
+      },
+      {
+        "name": "二级",
+        "dry_kg": 3800.0,
+        "prop_kg": 52700.0,
+        "pitch_end_deg": -14.680018671659413,
+        "pitch_duration_s": 400.1972871030607,
+        "seco_met": 723.7810065598651,
+        "phases": [
+          {
+            "name": "主机",
+            "end_met": 324.1,
+            "thrusters": [
+              {
+                "n": 1,
+                "thrust_vac_n": 742040.0,
+                "isp_vac_s": 300.0
+              },
+              {
+                "n": 4,
+                "thrust_vac_n": 11775.0,
+                "isp_vac_s": 288.98
+              }
+            ],
+            "emit_event": true
+          },
+          {
+            "name": "游机",
+            "thrusters": [
+              {
+                "n": 4,
+                "thrust_vac_n": 11775.0,
+                "isp_vac_s": 288.98
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "boosters": null,
+    "fairing": {
+      "mass_kg": 860.0,
+      "halves": 2,
+      "sep_met": 206.0,
+      "cda_m2": 13.7
+    },
+    "debris": {
+      "stage_0": {
+        "cda": 7.0,
+        "extra_mass_kg": 1500.0
+      },
+      "stage_1": {
+        "cda": 5.0,
+        "extra_mass_kg": 0.0
+      },
+      "fairing": {
+        "cda": 7.0,
+        "extra_mass_kg": 320.0
+      },
+      "boosters": {
+        "cda": 8.0,
+        "extra_mass_kg": 500.0,
+        "divert_mps": 6.0
+      }
+    },
+    "ascent_cda_scale": 1.0
+  },
+  "guidance": {
+    "mode": "shooting_plane",
+    "azimuth_deg": 188.0,
+    "t_v": 7.76385835688926,
+    "t_p": 169.07545191101238,
+    "pitch_power": 1.056200079950064,
+    "t_fairing": 206.0,
+    "fairing_divert_mps": 4.0,
+    "plane_keeping": false,
+    "yaw_tau": 150.0,
+    "i_target_deg": null,
+    "dt": 0.02,
+    "debris_dt": 0.25,
+    "post_seco_s": 60.0,
+    "flow_scale": 1.0
+  },
+  "numerics": {
+    "mode": "accurate",
+    "dt": 0.2,
+    "dt_legacy": 0.02,
+    "sample_dt": 0.5,
+    "debris_dt": 1.0,
+    "debris_mode": "accurate",
+    "_note": "v2.0 数值口径。mode=accurate：事件（抛罩/推力段切换/级分离/SECO/推进剂耗尽/采样）对齐步进 + 质量与推进剂随 RK4 同步积分，事件时刻精确、结果与 dt 无关（默认，推荐）；mode=legacy：逐位复现 v1.0（事件量化到 dt 步边界），用于复现已交付成果。dt 在 accurate 下可放大到 0.2–0.5 s（本算例 dt=0.5…0.02 的入轨半长轴差 < 1 m）。"
+  },
+  "notams": [
+    {
+      "id": "A5897/26",
+      "b_utc": "2026-11-18T22:43:00Z",
+      "c_utc": "2026-11-18T23:05:00Z",
+      "q_line": "Q)ZXXX/QRDCA/IV/BO/W/000/999/3322N11036E013",
+      "fir": "ZLHW ZHWH",
+      "polygon_latlon": [
+        [
+          33.566667,
+          110.516667
+        ],
+        [
+          33.533333,
+          110.733333
+        ],
+        [
+          33.166667,
+          110.683333
+        ],
+        [
+          33.183333,
+          110.45
+        ]
+      ],
+      "stage_hint": "一级",
+      "verified": "NOTAC 收录原文，与用户原文逐字一致；A4456/26（2026-09-19 同型任务）多边形逐点相同"
+    },
+    {
+      "id": "A5898/26",
+      "b_utc": "2026-11-18T22:44:00Z",
+      "c_utc": "2026-11-18T23:10:00Z",
+      "q_line": "Q)ZHWH/QRDCA/IV/BO/W/000/999/3015N11004E022",
+      "fir": "ZHWH",
+      "polygon_latlon": [
+        [
+          30.583333,
+          109.95
+        ],
+        [
+          30.55,
+          110.316667
+        ],
+        [
+          29.9,
+          110.216667
+        ],
+        [
+          29.95,
+          109.833333
+        ]
+      ],
+      "stage_hint": "整流罩",
+      "verified": "NOTAC 收录原文，与用户原文逐字一致"
+    }
+  ],
+  "observers": [
+    {
+      "id": "obspoint",
+      "name": "指定观测点（山西晋中/太原南）",
+      "lat_deg": 37.761467,
+      "lon_deg": 112.725219,
+      "alt_m": 840.0,
+      "note": "用户 2026-11-19 提供（GE 截图 37°45′41.28″N / 112°43′30.79″E）；高程以 SRTM 1″ 采样为准"
+    }
+  ],
+  "grid": {
+    "lon_min": 72.0,
+    "lon_max": 136.0,
+    "lat_min": 15.0,
+    "lat_max": 55.0,
+    "step_deg": 0.2
+  },
+  "dem": {
+    "type": "SRTMGL1",
+    "source": "AWS elevation-tiles-prod/skadi",
+    "sampling_m": 90,
+    "horizon_radius_km": 200
+  }
+}

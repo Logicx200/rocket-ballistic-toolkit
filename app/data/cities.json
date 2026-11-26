@@ -1,0 +1,3611 @@
+{
+  "schema": "rocketkit.cities.v1",
+  "updated": "2026-11-23",
+  "note": "中国城市坐标与高程（市政府驻地近似坐标，WGS-84；高程为市政府驻地海拔近似值，取自公开地形/城市海拔资料，误差约数十米，用于观测点预置与名称查找，不用于精密弹道计算）。发射场区所在城市附别名如『西昌卫星发射中心』。",
+  "sources": [
+    {
+      "url": "https://www.openstreetmap.org/",
+      "note": "城市驻地坐标交叉核对（OpenStreetMap）",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://www.geonames.org/",
+      "note": "地名与人口/海拔量级核对",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://zh.wikipedia.org/wiki/中华人民共和国行政区划",
+      "note": "地级行政区清单",
+      "accessed": "2026-11-23"
+    }
+  ],
+  "cities": [
+    {
+      "name": "北京",
+      "province": "北京市",
+      "lat_deg": 39.9042,
+      "lon_deg": 116.4074,
+      "alt_m": 44.0,
+      "aliases": [
+        "北京市",
+        "首都",
+        "京城"
+      ]
+    },
+    {
+      "name": "上海",
+      "province": "上海市",
+      "lat_deg": 31.2304,
+      "lon_deg": 121.4737,
+      "alt_m": 4.0,
+      "aliases": [
+        "上海市",
+        "沪",
+        "申城"
+      ]
+    },
+    {
+      "name": "天津",
+      "province": "天津市",
+      "lat_deg": 39.0842,
+      "lon_deg": 117.2009,
+      "alt_m": 5.0,
+      "aliases": [
+        "天津市",
+        "津",
+        "津门"
+      ]
+    },
+    {
+      "name": "重庆",
+      "province": "重庆市",
+      "lat_deg": 29.563,
+      "lon_deg": 106.5516,
+      "alt_m": 244.0,
+      "aliases": [
+        "重庆市",
+        "渝",
+        "山城"
+      ]
+    },
+    {
+      "name": "石家庄",
+      "province": "河北省",
+      "lat_deg": 38.0428,
+      "lon_deg": 114.5149,
+      "alt_m": 83.0,
+      "aliases": [
+        "石家庄市",
+        "石门"
+      ]
+    },
+    {
+      "name": "唐山",
+      "province": "河北省",
+      "lat_deg": 39.6305,
+      "lon_deg": 118.1802,
+      "alt_m": 25.0,
+      "aliases": [
+        "唐山市"
+      ]
+    },
+    {
+      "name": "秦皇岛",
+      "province": "河北省",
+      "lat_deg": 39.9354,
+      "lon_deg": 119.6005,
+      "alt_m": 10.0,
+      "aliases": [
+        "秦皇岛市",
+        "港城"
+      ]
+    },
+    {
+      "name": "邯郸",
+      "province": "河北省",
+      "lat_deg": 36.6253,
+      "lon_deg": 114.5391,
+      "alt_m": 60.0,
+      "aliases": [
+        "邯郸市"
+      ]
+    },
+    {
+      "name": "邢台",
+      "province": "河北省",
+      "lat_deg": 37.0682,
+      "lon_deg": 114.5048,
+      "alt_m": 80.0,
+      "aliases": [
+        "邢台市"
+      ]
+    },
+    {
+      "name": "保定",
+      "province": "河北省",
+      "lat_deg": 38.8738,
+      "lon_deg": 115.4646,
+      "alt_m": 20.0,
+      "aliases": [
+        "保定市"
+      ]
+    },
+    {
+      "name": "张家口",
+      "province": "河北省",
+      "lat_deg": 40.7677,
+      "lon_deg": 114.8862,
+      "alt_m": 725.0,
+      "aliases": [
+        "张家口市"
+      ]
+    },
+    {
+      "name": "承德",
+      "province": "河北省",
+      "lat_deg": 40.9515,
+      "lon_deg": 117.9634,
+      "alt_m": 350.0,
+      "aliases": [
+        "承德市"
+      ]
+    },
+    {
+      "name": "沧州",
+      "province": "河北省",
+      "lat_deg": 38.3037,
+      "lon_deg": 116.8389,
+      "alt_m": 10.0,
+      "aliases": [
+        "沧州市"
+      ]
+    },
+    {
+      "name": "廊坊",
+      "province": "河北省",
+      "lat_deg": 39.5237,
+      "lon_deg": 116.7036,
+      "alt_m": 15.0,
+      "aliases": [
+        "廊坊市"
+      ]
+    },
+    {
+      "name": "衡水",
+      "province": "河北省",
+      "lat_deg": 37.7351,
+      "lon_deg": 115.6707,
+      "alt_m": 25.0,
+      "aliases": [
+        "衡水市"
+      ]
+    },
+    {
+      "name": "太原",
+      "province": "山西省",
+      "lat_deg": 37.8706,
+      "lon_deg": 112.5489,
+      "alt_m": 780.0,
+      "aliases": [
+        "太原市",
+        "并州"
+      ]
+    },
+    {
+      "name": "大同",
+      "province": "山西省",
+      "lat_deg": 40.0768,
+      "lon_deg": 113.3001,
+      "alt_m": 1050.0,
+      "aliases": [
+        "大同市",
+        "平城"
+      ]
+    },
+    {
+      "name": "阳泉",
+      "province": "山西省",
+      "lat_deg": 37.857,
+      "lon_deg": 113.5805,
+      "alt_m": 650.0,
+      "aliases": [
+        "阳泉市"
+      ]
+    },
+    {
+      "name": "长治",
+      "province": "山西省",
+      "lat_deg": 36.1954,
+      "lon_deg": 113.1163,
+      "alt_m": 950.0,
+      "aliases": [
+        "长治市"
+      ]
+    },
+    {
+      "name": "晋城",
+      "province": "山西省",
+      "lat_deg": 35.4906,
+      "lon_deg": 112.8513,
+      "alt_m": 650.0,
+      "aliases": [
+        "晋城市"
+      ]
+    },
+    {
+      "name": "朔州",
+      "province": "山西省",
+      "lat_deg": 39.3317,
+      "lon_deg": 112.4329,
+      "alt_m": 1090.0,
+      "aliases": [
+        "朔州市"
+      ]
+    },
+    {
+      "name": "晋中",
+      "province": "山西省",
+      "lat_deg": 37.687,
+      "lon_deg": 112.7527,
+      "alt_m": 800.0,
+      "aliases": [
+        "晋中市",
+        "榆次"
+      ]
+    },
+    {
+      "name": "运城",
+      "province": "山西省",
+      "lat_deg": 35.0262,
+      "lon_deg": 111.0072,
+      "alt_m": 370.0,
+      "aliases": [
+        "运城市"
+      ]
+    },
+    {
+      "name": "忻州",
+      "province": "山西省",
+      "lat_deg": 38.4167,
+      "lon_deg": 112.7339,
+      "alt_m": 800.0,
+      "aliases": [
+        "忻州市"
+      ]
+    },
+    {
+      "name": "临汾",
+      "province": "山西省",
+      "lat_deg": 36.088,
+      "lon_deg": 111.519,
+      "alt_m": 450.0,
+      "aliases": [
+        "临汾市"
+      ]
+    },
+    {
+      "name": "吕梁",
+      "province": "山西省",
+      "lat_deg": 37.519,
+      "lon_deg": 111.1446,
+      "alt_m": 950.0,
+      "aliases": [
+        "吕梁市",
+        "离石"
+      ]
+    },
+    {
+      "name": "岢岚",
+      "province": "山西省",
+      "lat_deg": 38.7052,
+      "lon_deg": 111.5727,
+      "alt_m": 1400.0,
+      "aliases": [
+        "岢岚县",
+        "太原卫星发射中心"
+      ]
+    },
+    {
+      "name": "呼和浩特",
+      "province": "内蒙古自治区",
+      "lat_deg": 40.8426,
+      "lon_deg": 111.7492,
+      "alt_m": 1065.0,
+      "aliases": [
+        "呼和浩特市",
+        "呼市",
+        "青城"
+      ]
+    },
+    {
+      "name": "包头",
+      "province": "内蒙古自治区",
+      "lat_deg": 40.6574,
+      "lon_deg": 109.8403,
+      "alt_m": 1065.0,
+      "aliases": [
+        "包头市",
+        "鹿城"
+      ]
+    },
+    {
+      "name": "乌海",
+      "province": "内蒙古自治区",
+      "lat_deg": 39.6538,
+      "lon_deg": 106.7955,
+      "alt_m": 1100.0,
+      "aliases": [
+        "乌海市"
+      ]
+    },
+    {
+      "name": "赤峰",
+      "province": "内蒙古自治区",
+      "lat_deg": 42.2586,
+      "lon_deg": 118.8889,
+      "alt_m": 570.0,
+      "aliases": [
+        "赤峰市"
+      ]
+    },
+    {
+      "name": "通辽",
+      "province": "内蒙古自治区",
+      "lat_deg": 43.6529,
+      "lon_deg": 122.244,
+      "alt_m": 180.0,
+      "aliases": [
+        "通辽市"
+      ]
+    },
+    {
+      "name": "鄂尔多斯",
+      "province": "内蒙古自治区",
+      "lat_deg": 39.6086,
+      "lon_deg": 109.781,
+      "alt_m": 1400.0,
+      "aliases": [
+        "鄂尔多斯市",
+        "东胜"
+      ]
+    },
+    {
+      "name": "呼伦贝尔",
+      "province": "内蒙古自治区",
+      "lat_deg": 49.2116,
+      "lon_deg": 119.7656,
+      "alt_m": 610.0,
+      "aliases": [
+        "呼伦贝尔市",
+        "海拉尔"
+      ]
+    },
+    {
+      "name": "巴彦淖尔",
+      "province": "内蒙古自治区",
+      "lat_deg": 40.7432,
+      "lon_deg": 107.3877,
+      "alt_m": 1040.0,
+      "aliases": [
+        "巴彦淖尔市",
+        "临河"
+      ]
+    },
+    {
+      "name": "乌兰察布",
+      "province": "内蒙古自治区",
+      "lat_deg": 40.9944,
+      "lon_deg": 113.1324,
+      "alt_m": 1400.0,
+      "aliases": [
+        "乌兰察布市",
+        "集宁"
+      ]
+    },
+    {
+      "name": "额济纳",
+      "province": "内蒙古自治区",
+      "lat_deg": 41.958,
+      "lon_deg": 101.0682,
+      "alt_m": 900.0,
+      "aliases": [
+        "额济纳旗",
+        "东风镇",
+        "酒泉卫星发射中心"
+      ]
+    },
+    {
+      "name": "沈阳",
+      "province": "辽宁省",
+      "lat_deg": 41.8057,
+      "lon_deg": 123.4315,
+      "alt_m": 45.0,
+      "aliases": [
+        "沈阳市",
+        "盛京"
+      ]
+    },
+    {
+      "name": "大连",
+      "province": "辽宁省",
+      "lat_deg": 38.914,
+      "lon_deg": 121.6147,
+      "alt_m": 30.0,
+      "aliases": [
+        "大连市",
+        "滨城"
+      ]
+    },
+    {
+      "name": "鞍山",
+      "province": "辽宁省",
+      "lat_deg": 41.1086,
+      "lon_deg": 122.9945,
+      "alt_m": 50.0,
+      "aliases": [
+        "鞍山市"
+      ]
+    },
+    {
+      "name": "抚顺",
+      "province": "辽宁省",
+      "lat_deg": 41.8807,
+      "lon_deg": 123.9573,
+      "alt_m": 80.0,
+      "aliases": [
+        "抚顺市"
+      ]
+    },
+    {
+      "name": "本溪",
+      "province": "辽宁省",
+      "lat_deg": 41.2945,
+      "lon_deg": 123.7668,
+      "alt_m": 150.0,
+      "aliases": [
+        "本溪市"
+      ]
+    },
+    {
+      "name": "丹东",
+      "province": "辽宁省",
+      "lat_deg": 40.0008,
+      "lon_deg": 124.3565,
+      "alt_m": 10.0,
+      "aliases": [
+        "丹东市"
+      ]
+    },
+    {
+      "name": "锦州",
+      "province": "辽宁省",
+      "lat_deg": 41.0951,
+      "lon_deg": 121.127,
+      "alt_m": 10.0,
+      "aliases": [
+        "锦州市"
+      ]
+    },
+    {
+      "name": "营口",
+      "province": "辽宁省",
+      "lat_deg": 40.6673,
+      "lon_deg": 122.235,
+      "alt_m": 10.0,
+      "aliases": [
+        "营口市"
+      ]
+    },
+    {
+      "name": "阜新",
+      "province": "辽宁省",
+      "lat_deg": 42.0215,
+      "lon_deg": 121.67,
+      "alt_m": 150.0,
+      "aliases": [
+        "阜新市"
+      ]
+    },
+    {
+      "name": "辽阳",
+      "province": "辽宁省",
+      "lat_deg": 41.2738,
+      "lon_deg": 123.2373,
+      "alt_m": 25.0,
+      "aliases": [
+        "辽阳市"
+      ]
+    },
+    {
+      "name": "盘锦",
+      "province": "辽宁省",
+      "lat_deg": 41.1244,
+      "lon_deg": 122.0708,
+      "alt_m": 5.0,
+      "aliases": [
+        "盘锦市"
+      ]
+    },
+    {
+      "name": "铁岭",
+      "province": "辽宁省",
+      "lat_deg": 42.2862,
+      "lon_deg": 123.8424,
+      "alt_m": 60.0,
+      "aliases": [
+        "铁岭市"
+      ]
+    },
+    {
+      "name": "朝阳",
+      "province": "辽宁省",
+      "lat_deg": 41.5767,
+      "lon_deg": 120.4508,
+      "alt_m": 170.0,
+      "aliases": [
+        "朝阳市"
+      ]
+    },
+    {
+      "name": "葫芦岛",
+      "province": "辽宁省",
+      "lat_deg": 40.711,
+      "lon_deg": 120.837,
+      "alt_m": 10.0,
+      "aliases": [
+        "葫芦岛市"
+      ]
+    },
+    {
+      "name": "长春",
+      "province": "吉林省",
+      "lat_deg": 43.8171,
+      "lon_deg": 125.3235,
+      "alt_m": 238.0,
+      "aliases": [
+        "长春市",
+        "北国春城"
+      ]
+    },
+    {
+      "name": "吉林市",
+      "province": "吉林省",
+      "lat_deg": 43.8378,
+      "lon_deg": 126.5495,
+      "alt_m": 200.0,
+      "aliases": [
+        "吉林",
+        "江城"
+      ]
+    },
+    {
+      "name": "四平",
+      "province": "吉林省",
+      "lat_deg": 43.1667,
+      "lon_deg": 124.35,
+      "alt_m": 170.0,
+      "aliases": [
+        "四平市"
+      ]
+    },
+    {
+      "name": "辽源",
+      "province": "吉林省",
+      "lat_deg": 42.9027,
+      "lon_deg": 125.1435,
+      "alt_m": 260.0,
+      "aliases": [
+        "辽源市"
+      ]
+    },
+    {
+      "name": "通化",
+      "province": "吉林省",
+      "lat_deg": 41.7283,
+      "lon_deg": 125.9398,
+      "alt_m": 400.0,
+      "aliases": [
+        "通化市"
+      ]
+    },
+    {
+      "name": "白山",
+      "province": "吉林省",
+      "lat_deg": 41.94,
+      "lon_deg": 126.424,
+      "alt_m": 470.0,
+      "aliases": [
+        "白山市"
+      ]
+    },
+    {
+      "name": "松原",
+      "province": "吉林省",
+      "lat_deg": 45.1411,
+      "lon_deg": 124.825,
+      "alt_m": 135.0,
+      "aliases": [
+        "松原市"
+      ]
+    },
+    {
+      "name": "白城",
+      "province": "吉林省",
+      "lat_deg": 45.6195,
+      "lon_deg": 122.839,
+      "alt_m": 160.0,
+      "aliases": [
+        "白城市"
+      ]
+    },
+    {
+      "name": "延吉",
+      "province": "吉林省",
+      "lat_deg": 42.9064,
+      "lon_deg": 129.508,
+      "alt_m": 180.0,
+      "aliases": [
+        "延边",
+        "延吉市",
+        "延边朝鲜族自治州"
+      ]
+    },
+    {
+      "name": "哈尔滨",
+      "province": "黑龙江省",
+      "lat_deg": 45.8038,
+      "lon_deg": 126.535,
+      "alt_m": 150.0,
+      "aliases": [
+        "哈尔滨市",
+        "冰城"
+      ]
+    },
+    {
+      "name": "齐齐哈尔",
+      "province": "黑龙江省",
+      "lat_deg": 47.3543,
+      "lon_deg": 123.918,
+      "alt_m": 150.0,
+      "aliases": [
+        "齐齐哈尔市",
+        "鹤城"
+      ]
+    },
+    {
+      "name": "鸡西",
+      "province": "黑龙江省",
+      "lat_deg": 45.295,
+      "lon_deg": 130.969,
+      "alt_m": 200.0,
+      "aliases": [
+        "鸡西市"
+      ]
+    },
+    {
+      "name": "鹤岗",
+      "province": "黑龙江省",
+      "lat_deg": 47.3495,
+      "lon_deg": 130.2978,
+      "alt_m": 200.0,
+      "aliases": [
+        "鹤岗市"
+      ]
+    },
+    {
+      "name": "双鸭山",
+      "province": "黑龙江省",
+      "lat_deg": 46.6434,
+      "lon_deg": 131.1591,
+      "alt_m": 100.0,
+      "aliases": [
+        "双鸭山市"
+      ]
+    },
+    {
+      "name": "大庆",
+      "province": "黑龙江省",
+      "lat_deg": 46.5907,
+      "lon_deg": 125.1035,
+      "alt_m": 150.0,
+      "aliases": [
+        "大庆市",
+        "油城"
+      ]
+    },
+    {
+      "name": "伊春",
+      "province": "黑龙江省",
+      "lat_deg": 47.7275,
+      "lon_deg": 128.8995,
+      "alt_m": 230.0,
+      "aliases": [
+        "伊春市"
+      ]
+    },
+    {
+      "name": "佳木斯",
+      "province": "黑龙江省",
+      "lat_deg": 46.7998,
+      "lon_deg": 130.3189,
+      "alt_m": 80.0,
+      "aliases": [
+        "佳木斯市"
+      ]
+    },
+    {
+      "name": "七台河",
+      "province": "黑龙江省",
+      "lat_deg": 45.7707,
+      "lon_deg": 131.0036,
+      "alt_m": 200.0,
+      "aliases": [
+        "七台河市"
+      ]
+    },
+    {
+      "name": "牡丹江",
+      "province": "黑龙江省",
+      "lat_deg": 44.5513,
+      "lon_deg": 129.6329,
+      "alt_m": 250.0,
+      "aliases": [
+        "牡丹江市"
+      ]
+    },
+    {
+      "name": "黑河",
+      "province": "黑龙江省",
+      "lat_deg": 50.2458,
+      "lon_deg": 127.5286,
+      "alt_m": 170.0,
+      "aliases": [
+        "黑河市"
+      ]
+    },
+    {
+      "name": "绥化",
+      "province": "黑龙江省",
+      "lat_deg": 46.6531,
+      "lon_deg": 126.969,
+      "alt_m": 180.0,
+      "aliases": [
+        "绥化市"
+      ]
+    },
+    {
+      "name": "南京",
+      "province": "江苏省",
+      "lat_deg": 32.0603,
+      "lon_deg": 118.7969,
+      "alt_m": 20.0,
+      "aliases": [
+        "南京市",
+        "金陵",
+        "宁"
+      ]
+    },
+    {
+      "name": "无锡",
+      "province": "江苏省",
+      "lat_deg": 31.4912,
+      "lon_deg": 120.3119,
+      "alt_m": 10.0,
+      "aliases": [
+        "无锡市",
+        "锡城"
+      ]
+    },
+    {
+      "name": "徐州",
+      "province": "江苏省",
+      "lat_deg": 34.2058,
+      "lon_deg": 117.2848,
+      "alt_m": 40.0,
+      "aliases": [
+        "徐州市",
+        "彭城"
+      ]
+    },
+    {
+      "name": "常州",
+      "province": "江苏省",
+      "lat_deg": 31.8107,
+      "lon_deg": 119.9741,
+      "alt_m": 10.0,
+      "aliases": [
+        "常州市"
+      ]
+    },
+    {
+      "name": "苏州",
+      "province": "江苏省",
+      "lat_deg": 31.2989,
+      "lon_deg": 120.5853,
+      "alt_m": 5.0,
+      "aliases": [
+        "苏州市",
+        "姑苏"
+      ]
+    },
+    {
+      "name": "南通",
+      "province": "江苏省",
+      "lat_deg": 31.9802,
+      "lon_deg": 120.8943,
+      "alt_m": 5.0,
+      "aliases": [
+        "南通市"
+      ]
+    },
+    {
+      "name": "连云港",
+      "province": "江苏省",
+      "lat_deg": 34.5967,
+      "lon_deg": 119.2216,
+      "alt_m": 5.0,
+      "aliases": [
+        "连云港市"
+      ]
+    },
+    {
+      "name": "淮安",
+      "province": "江苏省",
+      "lat_deg": 33.6104,
+      "lon_deg": 119.0153,
+      "alt_m": 15.0,
+      "aliases": [
+        "淮安市"
+      ]
+    },
+    {
+      "name": "盐城",
+      "province": "江苏省",
+      "lat_deg": 33.3496,
+      "lon_deg": 120.1614,
+      "alt_m": 5.0,
+      "aliases": [
+        "盐城市"
+      ]
+    },
+    {
+      "name": "扬州",
+      "province": "江苏省",
+      "lat_deg": 32.3942,
+      "lon_deg": 119.4128,
+      "alt_m": 10.0,
+      "aliases": [
+        "扬州市"
+      ]
+    },
+    {
+      "name": "镇江",
+      "province": "江苏省",
+      "lat_deg": 32.1877,
+      "lon_deg": 119.425,
+      "alt_m": 10.0,
+      "aliases": [
+        "镇江市"
+      ]
+    },
+    {
+      "name": "泰州",
+      "province": "江苏省",
+      "lat_deg": 32.4558,
+      "lon_deg": 119.9231,
+      "alt_m": 5.0,
+      "aliases": [
+        "泰州市"
+      ]
+    },
+    {
+      "name": "宿迁",
+      "province": "江苏省",
+      "lat_deg": 33.963,
+      "lon_deg": 118.2754,
+      "alt_m": 20.0,
+      "aliases": [
+        "宿迁市"
+      ]
+    },
+    {
+      "name": "杭州",
+      "province": "浙江省",
+      "lat_deg": 30.2741,
+      "lon_deg": 120.1551,
+      "alt_m": 14.0,
+      "aliases": [
+        "杭州市",
+        "杭城"
+      ]
+    },
+    {
+      "name": "宁波",
+      "province": "浙江省",
+      "lat_deg": 29.8683,
+      "lon_deg": 121.544,
+      "alt_m": 5.0,
+      "aliases": [
+        "宁波市",
+        "甬城"
+      ]
+    },
+    {
+      "name": "温州",
+      "province": "浙江省",
+      "lat_deg": 28.0006,
+      "lon_deg": 120.6721,
+      "alt_m": 5.0,
+      "aliases": [
+        "温州市",
+        "瓯"
+      ]
+    },
+    {
+      "name": "嘉兴",
+      "province": "浙江省",
+      "lat_deg": 30.7522,
+      "lon_deg": 120.75,
+      "alt_m": 5.0,
+      "aliases": [
+        "嘉兴市"
+      ]
+    },
+    {
+      "name": "湖州",
+      "province": "浙江省",
+      "lat_deg": 30.8703,
+      "lon_deg": 120.0933,
+      "alt_m": 10.0,
+      "aliases": [
+        "湖州市"
+      ]
+    },
+    {
+      "name": "绍兴",
+      "province": "浙江省",
+      "lat_deg": 30.0,
+      "lon_deg": 120.5786,
+      "alt_m": 10.0,
+      "aliases": [
+        "绍兴市",
+        "越城"
+      ]
+    },
+    {
+      "name": "金华",
+      "province": "浙江省",
+      "lat_deg": 29.0792,
+      "lon_deg": 119.6474,
+      "alt_m": 60.0,
+      "aliases": [
+        "金华市"
+      ]
+    },
+    {
+      "name": "衢州",
+      "province": "浙江省",
+      "lat_deg": 28.97,
+      "lon_deg": 118.8593,
+      "alt_m": 70.0,
+      "aliases": [
+        "衢州市"
+      ]
+    },
+    {
+      "name": "舟山",
+      "province": "浙江省",
+      "lat_deg": 29.9853,
+      "lon_deg": 122.2072,
+      "alt_m": 5.0,
+      "aliases": [
+        "舟山市"
+      ]
+    },
+    {
+      "name": "台州",
+      "province": "浙江省",
+      "lat_deg": 28.6564,
+      "lon_deg": 121.4207,
+      "alt_m": 5.0,
+      "aliases": [
+        "台州市"
+      ]
+    },
+    {
+      "name": "丽水",
+      "province": "浙江省",
+      "lat_deg": 28.4676,
+      "lon_deg": 119.9229,
+      "alt_m": 70.0,
+      "aliases": [
+        "丽水市"
+      ]
+    },
+    {
+      "name": "合肥",
+      "province": "安徽省",
+      "lat_deg": 31.8206,
+      "lon_deg": 117.2272,
+      "alt_m": 30.0,
+      "aliases": [
+        "合肥市",
+        "庐州"
+      ]
+    },
+    {
+      "name": "芜湖",
+      "province": "安徽省",
+      "lat_deg": 31.3525,
+      "lon_deg": 118.4336,
+      "alt_m": 10.0,
+      "aliases": [
+        "芜湖市"
+      ]
+    },
+    {
+      "name": "蚌埠",
+      "province": "安徽省",
+      "lat_deg": 32.9163,
+      "lon_deg": 117.3893,
+      "alt_m": 20.0,
+      "aliases": [
+        "蚌埠市"
+      ]
+    },
+    {
+      "name": "淮南",
+      "province": "安徽省",
+      "lat_deg": 32.6255,
+      "lon_deg": 116.9998,
+      "alt_m": 20.0,
+      "aliases": [
+        "淮南市"
+      ]
+    },
+    {
+      "name": "马鞍山",
+      "province": "安徽省",
+      "lat_deg": 31.6705,
+      "lon_deg": 118.5065,
+      "alt_m": 10.0,
+      "aliases": [
+        "马鞍山市"
+      ]
+    },
+    {
+      "name": "淮北",
+      "province": "安徽省",
+      "lat_deg": 33.9543,
+      "lon_deg": 116.7981,
+      "alt_m": 30.0,
+      "aliases": [
+        "淮北市"
+      ]
+    },
+    {
+      "name": "铜陵",
+      "province": "安徽省",
+      "lat_deg": 30.9444,
+      "lon_deg": 117.8122,
+      "alt_m": 10.0,
+      "aliases": [
+        "铜陵市"
+      ]
+    },
+    {
+      "name": "安庆",
+      "province": "安徽省",
+      "lat_deg": 30.5429,
+      "lon_deg": 117.0635,
+      "alt_m": 20.0,
+      "aliases": [
+        "安庆市"
+      ]
+    },
+    {
+      "name": "黄山",
+      "province": "安徽省",
+      "lat_deg": 29.7147,
+      "lon_deg": 118.3376,
+      "alt_m": 140.0,
+      "aliases": [
+        "黄山市",
+        "屯溪"
+      ]
+    },
+    {
+      "name": "滁州",
+      "province": "安徽省",
+      "lat_deg": 32.3016,
+      "lon_deg": 118.3171,
+      "alt_m": 30.0,
+      "aliases": [
+        "滁州市"
+      ]
+    },
+    {
+      "name": "阜阳",
+      "province": "安徽省",
+      "lat_deg": 32.8969,
+      "lon_deg": 115.8142,
+      "alt_m": 30.0,
+      "aliases": [
+        "阜阳市"
+      ]
+    },
+    {
+      "name": "宿州",
+      "province": "安徽省",
+      "lat_deg": 33.6466,
+      "lon_deg": 116.964,
+      "alt_m": 30.0,
+      "aliases": [
+        "宿州市"
+      ]
+    },
+    {
+      "name": "六安",
+      "province": "安徽省",
+      "lat_deg": 31.7528,
+      "lon_deg": 116.5077,
+      "alt_m": 60.0,
+      "aliases": [
+        "六安市"
+      ]
+    },
+    {
+      "name": "亳州",
+      "province": "安徽省",
+      "lat_deg": 33.8693,
+      "lon_deg": 115.7793,
+      "alt_m": 40.0,
+      "aliases": [
+        "亳州市"
+      ]
+    },
+    {
+      "name": "池州",
+      "province": "安徽省",
+      "lat_deg": 30.6648,
+      "lon_deg": 117.4915,
+      "alt_m": 20.0,
+      "aliases": [
+        "池州市"
+      ]
+    },
+    {
+      "name": "宣城",
+      "province": "安徽省",
+      "lat_deg": 30.9454,
+      "lon_deg": 118.7588,
+      "alt_m": 30.0,
+      "aliases": [
+        "宣城市"
+      ]
+    },
+    {
+      "name": "福州",
+      "province": "福建省",
+      "lat_deg": 26.0745,
+      "lon_deg": 119.2965,
+      "alt_m": 15.0,
+      "aliases": [
+        "福州市",
+        "榕城"
+      ]
+    },
+    {
+      "name": "厦门",
+      "province": "福建省",
+      "lat_deg": 24.4798,
+      "lon_deg": 118.0894,
+      "alt_m": 10.0,
+      "aliases": [
+        "厦门市",
+        "鹭岛"
+      ]
+    },
+    {
+      "name": "莆田",
+      "province": "福建省",
+      "lat_deg": 25.454,
+      "lon_deg": 119.0077,
+      "alt_m": 10.0,
+      "aliases": [
+        "莆田市"
+      ]
+    },
+    {
+      "name": "三明",
+      "province": "福建省",
+      "lat_deg": 26.2639,
+      "lon_deg": 117.6387,
+      "alt_m": 150.0,
+      "aliases": [
+        "三明市"
+      ]
+    },
+    {
+      "name": "泉州",
+      "province": "福建省",
+      "lat_deg": 24.8741,
+      "lon_deg": 118.6757,
+      "alt_m": 10.0,
+      "aliases": [
+        "泉州市",
+        "鲤城"
+      ]
+    },
+    {
+      "name": "漳州",
+      "province": "福建省",
+      "lat_deg": 24.513,
+      "lon_deg": 117.6471,
+      "alt_m": 10.0,
+      "aliases": [
+        "漳州市"
+      ]
+    },
+    {
+      "name": "南平",
+      "province": "福建省",
+      "lat_deg": 26.6418,
+      "lon_deg": 118.1772,
+      "alt_m": 130.0,
+      "aliases": [
+        "南平市"
+      ]
+    },
+    {
+      "name": "龙岩",
+      "province": "福建省",
+      "lat_deg": 25.0751,
+      "lon_deg": 117.0305,
+      "alt_m": 350.0,
+      "aliases": [
+        "龙岩市"
+      ]
+    },
+    {
+      "name": "宁德",
+      "province": "福建省",
+      "lat_deg": 26.6656,
+      "lon_deg": 119.5479,
+      "alt_m": 10.0,
+      "aliases": [
+        "宁德市"
+      ]
+    },
+    {
+      "name": "南昌",
+      "province": "江西省",
+      "lat_deg": 28.682,
+      "lon_deg": 115.8579,
+      "alt_m": 25.0,
+      "aliases": [
+        "南昌市",
+        "洪城"
+      ]
+    },
+    {
+      "name": "景德镇",
+      "province": "江西省",
+      "lat_deg": 29.2688,
+      "lon_deg": 117.1784,
+      "alt_m": 40.0,
+      "aliases": [
+        "景德镇市",
+        "瓷都"
+      ]
+    },
+    {
+      "name": "萍乡",
+      "province": "江西省",
+      "lat_deg": 27.6226,
+      "lon_deg": 113.8544,
+      "alt_m": 100.0,
+      "aliases": [
+        "萍乡市"
+      ]
+    },
+    {
+      "name": "九江",
+      "province": "江西省",
+      "lat_deg": 29.7051,
+      "lon_deg": 115.9924,
+      "alt_m": 30.0,
+      "aliases": [
+        "九江市",
+        "浔阳"
+      ]
+    },
+    {
+      "name": "新余",
+      "province": "江西省",
+      "lat_deg": 27.8174,
+      "lon_deg": 114.9173,
+      "alt_m": 50.0,
+      "aliases": [
+        "新余市"
+      ]
+    },
+    {
+      "name": "鹰潭",
+      "province": "江西省",
+      "lat_deg": 28.2602,
+      "lon_deg": 117.0693,
+      "alt_m": 40.0,
+      "aliases": [
+        "鹰潭市"
+      ]
+    },
+    {
+      "name": "赣州",
+      "province": "江西省",
+      "lat_deg": 25.8311,
+      "lon_deg": 114.933,
+      "alt_m": 120.0,
+      "aliases": [
+        "赣州市"
+      ]
+    },
+    {
+      "name": "吉安",
+      "province": "江西省",
+      "lat_deg": 27.1117,
+      "lon_deg": 114.9927,
+      "alt_m": 70.0,
+      "aliases": [
+        "吉安市"
+      ]
+    },
+    {
+      "name": "宜春",
+      "province": "江西省",
+      "lat_deg": 27.8144,
+      "lon_deg": 114.4163,
+      "alt_m": 80.0,
+      "aliases": [
+        "宜春市"
+      ]
+    },
+    {
+      "name": "抚州",
+      "province": "江西省",
+      "lat_deg": 27.9492,
+      "lon_deg": 116.3582,
+      "alt_m": 50.0,
+      "aliases": [
+        "抚州市"
+      ]
+    },
+    {
+      "name": "上饶",
+      "province": "江西省",
+      "lat_deg": 28.4548,
+      "lon_deg": 117.943,
+      "alt_m": 80.0,
+      "aliases": [
+        "上饶市"
+      ]
+    },
+    {
+      "name": "济南",
+      "province": "山东省",
+      "lat_deg": 36.6512,
+      "lon_deg": 117.1201,
+      "alt_m": 55.0,
+      "aliases": [
+        "济南市",
+        "泉城"
+      ]
+    },
+    {
+      "name": "青岛",
+      "province": "山东省",
+      "lat_deg": 36.0671,
+      "lon_deg": 120.3826,
+      "alt_m": 10.0,
+      "aliases": [
+        "青岛市",
+        "岛城"
+      ]
+    },
+    {
+      "name": "淄博",
+      "province": "山东省",
+      "lat_deg": 36.8131,
+      "lon_deg": 118.0548,
+      "alt_m": 50.0,
+      "aliases": [
+        "淄博市"
+      ]
+    },
+    {
+      "name": "枣庄",
+      "province": "山东省",
+      "lat_deg": 34.8106,
+      "lon_deg": 117.3234,
+      "alt_m": 80.0,
+      "aliases": [
+        "枣庄市"
+      ]
+    },
+    {
+      "name": "东营",
+      "province": "山东省",
+      "lat_deg": 37.4337,
+      "lon_deg": 118.6748,
+      "alt_m": 5.0,
+      "aliases": [
+        "东营市"
+      ]
+    },
+    {
+      "name": "烟台",
+      "province": "山东省",
+      "lat_deg": 37.4638,
+      "lon_deg": 121.4479,
+      "alt_m": 10.0,
+      "aliases": [
+        "烟台市",
+        "港城"
+      ]
+    },
+    {
+      "name": "潍坊",
+      "province": "山东省",
+      "lat_deg": 36.7069,
+      "lon_deg": 119.1618,
+      "alt_m": 20.0,
+      "aliases": [
+        "潍坊市",
+        "鸢都"
+      ]
+    },
+    {
+      "name": "济宁",
+      "province": "山东省",
+      "lat_deg": 35.4152,
+      "lon_deg": 116.5871,
+      "alt_m": 50.0,
+      "aliases": [
+        "济宁市"
+      ]
+    },
+    {
+      "name": "泰安",
+      "province": "山东省",
+      "lat_deg": 36.1946,
+      "lon_deg": 117.0876,
+      "alt_m": 130.0,
+      "aliases": [
+        "泰安市"
+      ]
+    },
+    {
+      "name": "威海",
+      "province": "山东省",
+      "lat_deg": 37.5131,
+      "lon_deg": 122.1204,
+      "alt_m": 10.0,
+      "aliases": [
+        "威海市"
+      ]
+    },
+    {
+      "name": "日照",
+      "province": "山东省",
+      "lat_deg": 35.4164,
+      "lon_deg": 119.5269,
+      "alt_m": 10.0,
+      "aliases": [
+        "日照市"
+      ]
+    },
+    {
+      "name": "临沂",
+      "province": "山东省",
+      "lat_deg": 35.1047,
+      "lon_deg": 118.3564,
+      "alt_m": 70.0,
+      "aliases": [
+        "临沂市"
+      ]
+    },
+    {
+      "name": "德州",
+      "province": "山东省",
+      "lat_deg": 37.4355,
+      "lon_deg": 116.3574,
+      "alt_m": 20.0,
+      "aliases": [
+        "德州市"
+      ]
+    },
+    {
+      "name": "聊城",
+      "province": "山东省",
+      "lat_deg": 36.4568,
+      "lon_deg": 115.9851,
+      "alt_m": 30.0,
+      "aliases": [
+        "聊城市"
+      ]
+    },
+    {
+      "name": "滨州",
+      "province": "山东省",
+      "lat_deg": 37.3835,
+      "lon_deg": 117.9708,
+      "alt_m": 10.0,
+      "aliases": [
+        "滨州市"
+      ]
+    },
+    {
+      "name": "菏泽",
+      "province": "山东省",
+      "lat_deg": 35.2333,
+      "lon_deg": 115.4807,
+      "alt_m": 50.0,
+      "aliases": [
+        "菏泽市"
+      ]
+    },
+    {
+      "name": "海阳",
+      "province": "山东省",
+      "lat_deg": 36.688,
+      "lon_deg": 121.173,
+      "alt_m": 10.0,
+      "aliases": [
+        "海阳市",
+        "东方航天港"
+      ]
+    },
+    {
+      "name": "郑州",
+      "province": "河南省",
+      "lat_deg": 34.7466,
+      "lon_deg": 113.6254,
+      "alt_m": 110.0,
+      "aliases": [
+        "郑州市",
+        "商都"
+      ]
+    },
+    {
+      "name": "洛阳",
+      "province": "河南省",
+      "lat_deg": 34.6197,
+      "lon_deg": 112.454,
+      "alt_m": 150.0,
+      "aliases": [
+        "洛阳市",
+        "神都"
+      ]
+    },
+    {
+      "name": "开封",
+      "province": "河南省",
+      "lat_deg": 34.7972,
+      "lon_deg": 114.3076,
+      "alt_m": 70.0,
+      "aliases": [
+        "开封市",
+        "汴梁"
+      ]
+    },
+    {
+      "name": "平顶山",
+      "province": "河南省",
+      "lat_deg": 33.766,
+      "lon_deg": 113.1926,
+      "alt_m": 100.0,
+      "aliases": [
+        "平顶山市"
+      ]
+    },
+    {
+      "name": "安阳",
+      "province": "河南省",
+      "lat_deg": 36.0977,
+      "lon_deg": 114.3931,
+      "alt_m": 70.0,
+      "aliases": [
+        "安阳市"
+      ]
+    },
+    {
+      "name": "鹤壁",
+      "province": "河南省",
+      "lat_deg": 35.7475,
+      "lon_deg": 114.2974,
+      "alt_m": 100.0,
+      "aliases": [
+        "鹤壁市"
+      ]
+    },
+    {
+      "name": "新乡",
+      "province": "河南省",
+      "lat_deg": 35.303,
+      "lon_deg": 113.9268,
+      "alt_m": 80.0,
+      "aliases": [
+        "新乡市"
+      ]
+    },
+    {
+      "name": "焦作",
+      "province": "河南省",
+      "lat_deg": 35.2159,
+      "lon_deg": 113.2418,
+      "alt_m": 120.0,
+      "aliases": [
+        "焦作市"
+      ]
+    },
+    {
+      "name": "濮阳",
+      "province": "河南省",
+      "lat_deg": 35.7615,
+      "lon_deg": 115.0325,
+      "alt_m": 50.0,
+      "aliases": [
+        "濮阳市"
+      ]
+    },
+    {
+      "name": "许昌",
+      "province": "河南省",
+      "lat_deg": 34.0357,
+      "lon_deg": 113.8523,
+      "alt_m": 70.0,
+      "aliases": [
+        "许昌市"
+      ]
+    },
+    {
+      "name": "漯河",
+      "province": "河南省",
+      "lat_deg": 33.5814,
+      "lon_deg": 114.0166,
+      "alt_m": 60.0,
+      "aliases": [
+        "漯河市"
+      ]
+    },
+    {
+      "name": "三门峡",
+      "province": "河南省",
+      "lat_deg": 34.7733,
+      "lon_deg": 111.2003,
+      "alt_m": 400.0,
+      "aliases": [
+        "三门峡市"
+      ]
+    },
+    {
+      "name": "南阳",
+      "province": "河南省",
+      "lat_deg": 32.9908,
+      "lon_deg": 112.5283,
+      "alt_m": 130.0,
+      "aliases": [
+        "南阳市",
+        "宛城"
+      ]
+    },
+    {
+      "name": "商丘",
+      "province": "河南省",
+      "lat_deg": 34.4144,
+      "lon_deg": 115.6564,
+      "alt_m": 50.0,
+      "aliases": [
+        "商丘市"
+      ]
+    },
+    {
+      "name": "信阳",
+      "province": "河南省",
+      "lat_deg": 32.147,
+      "lon_deg": 114.0913,
+      "alt_m": 80.0,
+      "aliases": [
+        "信阳市"
+      ]
+    },
+    {
+      "name": "周口",
+      "province": "河南省",
+      "lat_deg": 33.6256,
+      "lon_deg": 114.6969,
+      "alt_m": 50.0,
+      "aliases": [
+        "周口市"
+      ]
+    },
+    {
+      "name": "驻马店",
+      "province": "河南省",
+      "lat_deg": 33.0141,
+      "lon_deg": 114.022,
+      "alt_m": 90.0,
+      "aliases": [
+        "驻马店市"
+      ]
+    },
+    {
+      "name": "济源",
+      "province": "河南省",
+      "lat_deg": 35.0903,
+      "lon_deg": 112.6027,
+      "alt_m": 180.0,
+      "aliases": [
+        "济源市"
+      ]
+    },
+    {
+      "name": "武汉",
+      "province": "湖北省",
+      "lat_deg": 30.5928,
+      "lon_deg": 114.3055,
+      "alt_m": 24.0,
+      "aliases": [
+        "武汉市",
+        "江城",
+        "汉口",
+        "武昌",
+        "汉阳"
+      ]
+    },
+    {
+      "name": "黄石",
+      "province": "湖北省",
+      "lat_deg": 30.2,
+      "lon_deg": 115.0389,
+      "alt_m": 30.0,
+      "aliases": [
+        "黄石市"
+      ]
+    },
+    {
+      "name": "十堰",
+      "province": "湖北省",
+      "lat_deg": 32.6294,
+      "lon_deg": 110.798,
+      "alt_m": 230.0,
+      "aliases": [
+        "十堰市",
+        "车城"
+      ]
+    },
+    {
+      "name": "宜昌",
+      "province": "湖北省",
+      "lat_deg": 30.6919,
+      "lon_deg": 111.2865,
+      "alt_m": 60.0,
+      "aliases": [
+        "宜昌市",
+        "峡口"
+      ]
+    },
+    {
+      "name": "襄阳",
+      "province": "湖北省",
+      "lat_deg": 32.009,
+      "lon_deg": 112.1224,
+      "alt_m": 70.0,
+      "aliases": [
+        "襄阳市",
+        "襄樊"
+      ]
+    },
+    {
+      "name": "鄂州",
+      "province": "湖北省",
+      "lat_deg": 30.3914,
+      "lon_deg": 114.8906,
+      "alt_m": 30.0,
+      "aliases": [
+        "鄂州市"
+      ]
+    },
+    {
+      "name": "荆门",
+      "province": "湖北省",
+      "lat_deg": 31.0354,
+      "lon_deg": 112.1993,
+      "alt_m": 80.0,
+      "aliases": [
+        "荆门市"
+      ]
+    },
+    {
+      "name": "孝感",
+      "province": "湖北省",
+      "lat_deg": 30.9246,
+      "lon_deg": 113.9169,
+      "alt_m": 30.0,
+      "aliases": [
+        "孝感市"
+      ]
+    },
+    {
+      "name": "荆州",
+      "province": "湖北省",
+      "lat_deg": 30.3269,
+      "lon_deg": 112.2414,
+      "alt_m": 40.0,
+      "aliases": [
+        "荆州市"
+      ]
+    },
+    {
+      "name": "黄冈",
+      "province": "湖北省",
+      "lat_deg": 30.4537,
+      "lon_deg": 114.8724,
+      "alt_m": 30.0,
+      "aliases": [
+        "黄冈市"
+      ]
+    },
+    {
+      "name": "咸宁",
+      "province": "湖北省",
+      "lat_deg": 29.8413,
+      "lon_deg": 114.3225,
+      "alt_m": 50.0,
+      "aliases": [
+        "咸宁市"
+      ]
+    },
+    {
+      "name": "随州",
+      "province": "湖北省",
+      "lat_deg": 31.6902,
+      "lon_deg": 113.3826,
+      "alt_m": 80.0,
+      "aliases": [
+        "随州市"
+      ]
+    },
+    {
+      "name": "恩施",
+      "province": "湖北省",
+      "lat_deg": 30.272,
+      "lon_deg": 109.4877,
+      "alt_m": 450.0,
+      "aliases": [
+        "恩施市",
+        "恩施土家族苗族自治州"
+      ]
+    },
+    {
+      "name": "长沙",
+      "province": "湖南省",
+      "lat_deg": 28.2282,
+      "lon_deg": 112.9388,
+      "alt_m": 45.0,
+      "aliases": [
+        "长沙市",
+        "星城"
+      ]
+    },
+    {
+      "name": "株洲",
+      "province": "湖南省",
+      "lat_deg": 27.8274,
+      "lon_deg": 113.1339,
+      "alt_m": 60.0,
+      "aliases": [
+        "株洲市"
+      ]
+    },
+    {
+      "name": "湘潭",
+      "province": "湖南省",
+      "lat_deg": 27.8298,
+      "lon_deg": 112.9445,
+      "alt_m": 50.0,
+      "aliases": [
+        "湘潭市"
+      ]
+    },
+    {
+      "name": "衡阳",
+      "province": "湖南省",
+      "lat_deg": 26.8932,
+      "lon_deg": 112.5719,
+      "alt_m": 60.0,
+      "aliases": [
+        "衡阳市"
+      ]
+    },
+    {
+      "name": "邵阳",
+      "province": "湖南省",
+      "lat_deg": 27.2389,
+      "lon_deg": 111.4676,
+      "alt_m": 250.0,
+      "aliases": [
+        "邵阳市"
+      ]
+    },
+    {
+      "name": "岳阳",
+      "province": "湖南省",
+      "lat_deg": 29.357,
+      "lon_deg": 113.1289,
+      "alt_m": 30.0,
+      "aliases": [
+        "岳阳市"
+      ]
+    },
+    {
+      "name": "常德",
+      "province": "湖南省",
+      "lat_deg": 29.0316,
+      "lon_deg": 111.6984,
+      "alt_m": 30.0,
+      "aliases": [
+        "常德市"
+      ]
+    },
+    {
+      "name": "张家界",
+      "province": "湖南省",
+      "lat_deg": 29.117,
+      "lon_deg": 110.4791,
+      "alt_m": 180.0,
+      "aliases": [
+        "张家界市",
+        "大庸"
+      ]
+    },
+    {
+      "name": "益阳",
+      "province": "湖南省",
+      "lat_deg": 28.5539,
+      "lon_deg": 112.355,
+      "alt_m": 40.0,
+      "aliases": [
+        "益阳市"
+      ]
+    },
+    {
+      "name": "郴州",
+      "province": "湖南省",
+      "lat_deg": 25.7706,
+      "lon_deg": 113.0148,
+      "alt_m": 180.0,
+      "aliases": [
+        "郴州市"
+      ]
+    },
+    {
+      "name": "永州",
+      "province": "湖南省",
+      "lat_deg": 26.4204,
+      "lon_deg": 111.6131,
+      "alt_m": 110.0,
+      "aliases": [
+        "永州市",
+        "零陵"
+      ]
+    },
+    {
+      "name": "怀化",
+      "province": "湖南省",
+      "lat_deg": 27.5698,
+      "lon_deg": 110.0016,
+      "alt_m": 220.0,
+      "aliases": [
+        "怀化市"
+      ]
+    },
+    {
+      "name": "娄底",
+      "province": "湖南省",
+      "lat_deg": 27.7281,
+      "lon_deg": 111.9944,
+      "alt_m": 130.0,
+      "aliases": [
+        "娄底市"
+      ]
+    },
+    {
+      "name": "吉首",
+      "province": "湖南省",
+      "lat_deg": 28.3143,
+      "lon_deg": 109.7398,
+      "alt_m": 250.0,
+      "aliases": [
+        "湘西",
+        "吉首市",
+        "湘西土家族苗族自治州"
+      ]
+    },
+    {
+      "name": "广州",
+      "province": "广东省",
+      "lat_deg": 23.1291,
+      "lon_deg": 113.2644,
+      "alt_m": 10.0,
+      "aliases": [
+        "广州市",
+        "羊城",
+        "穗"
+      ]
+    },
+    {
+      "name": "韶关",
+      "province": "广东省",
+      "lat_deg": 24.8103,
+      "lon_deg": 113.5972,
+      "alt_m": 60.0,
+      "aliases": [
+        "韶关市"
+      ]
+    },
+    {
+      "name": "深圳",
+      "province": "广东省",
+      "lat_deg": 22.5431,
+      "lon_deg": 114.0579,
+      "alt_m": 10.0,
+      "aliases": [
+        "深圳市",
+        "鹏城"
+      ]
+    },
+    {
+      "name": "珠海",
+      "province": "广东省",
+      "lat_deg": 22.2707,
+      "lon_deg": 113.5767,
+      "alt_m": 5.0,
+      "aliases": [
+        "珠海市"
+      ]
+    },
+    {
+      "name": "汕头",
+      "province": "广东省",
+      "lat_deg": 23.3535,
+      "lon_deg": 116.682,
+      "alt_m": 5.0,
+      "aliases": [
+        "汕头市"
+      ]
+    },
+    {
+      "name": "佛山",
+      "province": "广东省",
+      "lat_deg": 23.0215,
+      "lon_deg": 113.1214,
+      "alt_m": 10.0,
+      "aliases": [
+        "佛山市"
+      ]
+    },
+    {
+      "name": "江门",
+      "province": "广东省",
+      "lat_deg": 22.5789,
+      "lon_deg": 113.0819,
+      "alt_m": 10.0,
+      "aliases": [
+        "江门市"
+      ]
+    },
+    {
+      "name": "湛江",
+      "province": "广东省",
+      "lat_deg": 21.2707,
+      "lon_deg": 110.3594,
+      "alt_m": 10.0,
+      "aliases": [
+        "湛江市"
+      ]
+    },
+    {
+      "name": "茂名",
+      "province": "广东省",
+      "lat_deg": 21.6628,
+      "lon_deg": 110.9254,
+      "alt_m": 10.0,
+      "aliases": [
+        "茂名市"
+      ]
+    },
+    {
+      "name": "肇庆",
+      "province": "广东省",
+      "lat_deg": 23.0469,
+      "lon_deg": 112.4653,
+      "alt_m": 10.0,
+      "aliases": [
+        "肇庆市"
+      ]
+    },
+    {
+      "name": "惠州",
+      "province": "广东省",
+      "lat_deg": 23.1115,
+      "lon_deg": 114.4161,
+      "alt_m": 20.0,
+      "aliases": [
+        "惠州市"
+      ]
+    },
+    {
+      "name": "梅州",
+      "province": "广东省",
+      "lat_deg": 24.2886,
+      "lon_deg": 116.1176,
+      "alt_m": 90.0,
+      "aliases": [
+        "梅州市"
+      ]
+    },
+    {
+      "name": "汕尾",
+      "province": "广东省",
+      "lat_deg": 22.7869,
+      "lon_deg": 115.3753,
+      "alt_m": 5.0,
+      "aliases": [
+        "汕尾市"
+      ]
+    },
+    {
+      "name": "河源",
+      "province": "广东省",
+      "lat_deg": 23.7439,
+      "lon_deg": 114.7001,
+      "alt_m": 40.0,
+      "aliases": [
+        "河源市"
+      ]
+    },
+    {
+      "name": "阳江",
+      "province": "广东省",
+      "lat_deg": 21.8582,
+      "lon_deg": 111.9822,
+      "alt_m": 10.0,
+      "aliases": [
+        "阳江市"
+      ]
+    },
+    {
+      "name": "清远",
+      "province": "广东省",
+      "lat_deg": 23.6818,
+      "lon_deg": 113.0561,
+      "alt_m": 20.0,
+      "aliases": [
+        "清远市"
+      ]
+    },
+    {
+      "name": "东莞",
+      "province": "广东省",
+      "lat_deg": 23.0206,
+      "lon_deg": 113.7518,
+      "alt_m": 10.0,
+      "aliases": [
+        "东莞市"
+      ]
+    },
+    {
+      "name": "中山",
+      "province": "广东省",
+      "lat_deg": 22.517,
+      "lon_deg": 113.3927,
+      "alt_m": 5.0,
+      "aliases": [
+        "中山市"
+      ]
+    },
+    {
+      "name": "潮州",
+      "province": "广东省",
+      "lat_deg": 23.6567,
+      "lon_deg": 116.6226,
+      "alt_m": 10.0,
+      "aliases": [
+        "潮州市"
+      ]
+    },
+    {
+      "name": "揭阳",
+      "province": "广东省",
+      "lat_deg": 23.5497,
+      "lon_deg": 116.3727,
+      "alt_m": 10.0,
+      "aliases": [
+        "揭阳市"
+      ]
+    },
+    {
+      "name": "云浮",
+      "province": "广东省",
+      "lat_deg": 22.9149,
+      "lon_deg": 112.0444,
+      "alt_m": 40.0,
+      "aliases": [
+        "云浮市"
+      ]
+    },
+    {
+      "name": "南宁",
+      "province": "广西壮族自治区",
+      "lat_deg": 22.817,
+      "lon_deg": 108.3665,
+      "alt_m": 80.0,
+      "aliases": [
+        "南宁市",
+        "邕城"
+      ]
+    },
+    {
+      "name": "柳州",
+      "province": "广西壮族自治区",
+      "lat_deg": 24.3264,
+      "lon_deg": 109.4281,
+      "alt_m": 90.0,
+      "aliases": [
+        "柳州市"
+      ]
+    },
+    {
+      "name": "桂林",
+      "province": "广西壮族自治区",
+      "lat_deg": 25.2736,
+      "lon_deg": 110.29,
+      "alt_m": 150.0,
+      "aliases": [
+        "桂林市"
+      ]
+    },
+    {
+      "name": "梧州",
+      "province": "广西壮族自治区",
+      "lat_deg": 23.4768,
+      "lon_deg": 111.2791,
+      "alt_m": 30.0,
+      "aliases": [
+        "梧州市"
+      ]
+    },
+    {
+      "name": "北海",
+      "province": "广西壮族自治区",
+      "lat_deg": 21.4811,
+      "lon_deg": 109.1192,
+      "alt_m": 5.0,
+      "aliases": [
+        "北海市"
+      ]
+    },
+    {
+      "name": "防城港",
+      "province": "广西壮族自治区",
+      "lat_deg": 21.6869,
+      "lon_deg": 108.3547,
+      "alt_m": 5.0,
+      "aliases": [
+        "防城港市"
+      ]
+    },
+    {
+      "name": "钦州",
+      "province": "广西壮族自治区",
+      "lat_deg": 21.9797,
+      "lon_deg": 108.6541,
+      "alt_m": 5.0,
+      "aliases": [
+        "钦州市"
+      ]
+    },
+    {
+      "name": "贵港",
+      "province": "广西壮族自治区",
+      "lat_deg": 23.1115,
+      "lon_deg": 109.5987,
+      "alt_m": 40.0,
+      "aliases": [
+        "贵港市"
+      ]
+    },
+    {
+      "name": "玉林",
+      "province": "广西壮族自治区",
+      "lat_deg": 22.654,
+      "lon_deg": 110.1808,
+      "alt_m": 80.0,
+      "aliases": [
+        "玉林市"
+      ]
+    },
+    {
+      "name": "百色",
+      "province": "广西壮族自治区",
+      "lat_deg": 23.9021,
+      "lon_deg": 106.6163,
+      "alt_m": 130.0,
+      "aliases": [
+        "百色市"
+      ]
+    },
+    {
+      "name": "贺州",
+      "province": "广西壮族自治区",
+      "lat_deg": 24.4034,
+      "lon_deg": 111.5672,
+      "alt_m": 120.0,
+      "aliases": [
+        "贺州市"
+      ]
+    },
+    {
+      "name": "河池",
+      "province": "广西壮族自治区",
+      "lat_deg": 24.6959,
+      "lon_deg": 108.0854,
+      "alt_m": 200.0,
+      "aliases": [
+        "河池市",
+        "金城江"
+      ]
+    },
+    {
+      "name": "来宾",
+      "province": "广西壮族自治区",
+      "lat_deg": 23.7521,
+      "lon_deg": 109.2215,
+      "alt_m": 80.0,
+      "aliases": [
+        "来宾市"
+      ]
+    },
+    {
+      "name": "崇左",
+      "province": "广西壮族自治区",
+      "lat_deg": 22.3767,
+      "lon_deg": 107.3643,
+      "alt_m": 100.0,
+      "aliases": [
+        "崇左市"
+      ]
+    },
+    {
+      "name": "海口",
+      "province": "海南省",
+      "lat_deg": 20.0444,
+      "lon_deg": 110.1999,
+      "alt_m": 10.0,
+      "aliases": [
+        "海口市",
+        "椰城"
+      ]
+    },
+    {
+      "name": "三亚",
+      "province": "海南省",
+      "lat_deg": 18.2528,
+      "lon_deg": 109.5119,
+      "alt_m": 5.0,
+      "aliases": [
+        "三亚市",
+        "鹿城"
+      ]
+    },
+    {
+      "name": "儋州",
+      "province": "海南省",
+      "lat_deg": 19.5209,
+      "lon_deg": 109.5809,
+      "alt_m": 20.0,
+      "aliases": [
+        "儋州市"
+      ]
+    },
+    {
+      "name": "琼海",
+      "province": "海南省",
+      "lat_deg": 19.2581,
+      "lon_deg": 110.4742,
+      "alt_m": 10.0,
+      "aliases": [
+        "琼海市",
+        "博鳌"
+      ]
+    },
+    {
+      "name": "文昌",
+      "province": "海南省",
+      "lat_deg": 19.5433,
+      "lon_deg": 110.7978,
+      "alt_m": 10.0,
+      "aliases": [
+        "文昌市",
+        "文昌航天发射场",
+        "龙楼"
+      ]
+    },
+    {
+      "name": "万宁",
+      "province": "海南省",
+      "lat_deg": 18.7953,
+      "lon_deg": 110.3897,
+      "alt_m": 10.0,
+      "aliases": [
+        "万宁市"
+      ]
+    },
+    {
+      "name": "东方",
+      "province": "海南省",
+      "lat_deg": 19.1018,
+      "lon_deg": 108.6537,
+      "alt_m": 10.0,
+      "aliases": [
+        "东方市"
+      ]
+    },
+    {
+      "name": "五指山",
+      "province": "海南省",
+      "lat_deg": 18.7752,
+      "lon_deg": 109.5169,
+      "alt_m": 300.0,
+      "aliases": [
+        "五指山市",
+        "通什"
+      ]
+    },
+    {
+      "name": "成都",
+      "province": "四川省",
+      "lat_deg": 30.5728,
+      "lon_deg": 104.0668,
+      "alt_m": 500.0,
+      "aliases": [
+        "成都市",
+        "蓉城"
+      ]
+    },
+    {
+      "name": "自贡",
+      "province": "四川省",
+      "lat_deg": 29.3392,
+      "lon_deg": 104.7784,
+      "alt_m": 300.0,
+      "aliases": [
+        "自贡市"
+      ]
+    },
+    {
+      "name": "攀枝花",
+      "province": "四川省",
+      "lat_deg": 26.5823,
+      "lon_deg": 101.7187,
+      "alt_m": 1100.0,
+      "aliases": [
+        "攀枝花市"
+      ]
+    },
+    {
+      "name": "泸州",
+      "province": "四川省",
+      "lat_deg": 28.8717,
+      "lon_deg": 105.4433,
+      "alt_m": 250.0,
+      "aliases": [
+        "泸州市"
+      ]
+    },
+    {
+      "name": "德阳",
+      "province": "四川省",
+      "lat_deg": 31.1314,
+      "lon_deg": 104.3979,
+      "alt_m": 500.0,
+      "aliases": [
+        "德阳市"
+      ]
+    },
+    {
+      "name": "绵阳",
+      "province": "四川省",
+      "lat_deg": 31.4675,
+      "lon_deg": 104.6796,
+      "alt_m": 450.0,
+      "aliases": [
+        "绵阳市",
+        "科技城"
+      ]
+    },
+    {
+      "name": "广元",
+      "province": "四川省",
+      "lat_deg": 32.4355,
+      "lon_deg": 105.8433,
+      "alt_m": 500.0,
+      "aliases": [
+        "广元市"
+      ]
+    },
+    {
+      "name": "遂宁",
+      "province": "四川省",
+      "lat_deg": 30.5328,
+      "lon_deg": 105.5922,
+      "alt_m": 300.0,
+      "aliases": [
+        "遂宁市"
+      ]
+    },
+    {
+      "name": "内江",
+      "province": "四川省",
+      "lat_deg": 29.5801,
+      "lon_deg": 105.0584,
+      "alt_m": 350.0,
+      "aliases": [
+        "内江市",
+        "甜城"
+      ]
+    },
+    {
+      "name": "乐山",
+      "province": "四川省",
+      "lat_deg": 29.5521,
+      "lon_deg": 103.7656,
+      "alt_m": 400.0,
+      "aliases": [
+        "乐山市"
+      ]
+    },
+    {
+      "name": "南充",
+      "province": "四川省",
+      "lat_deg": 30.7954,
+      "lon_deg": 106.0847,
+      "alt_m": 300.0,
+      "aliases": [
+        "南充市"
+      ]
+    },
+    {
+      "name": "眉山",
+      "province": "四川省",
+      "lat_deg": 30.0753,
+      "lon_deg": 103.8484,
+      "alt_m": 400.0,
+      "aliases": [
+        "眉山市"
+      ]
+    },
+    {
+      "name": "宜宾",
+      "province": "四川省",
+      "lat_deg": 28.7518,
+      "lon_deg": 104.6428,
+      "alt_m": 300.0,
+      "aliases": [
+        "宜宾市"
+      ]
+    },
+    {
+      "name": "广安",
+      "province": "四川省",
+      "lat_deg": 30.4564,
+      "lon_deg": 106.6333,
+      "alt_m": 300.0,
+      "aliases": [
+        "广安市"
+      ]
+    },
+    {
+      "name": "达州",
+      "province": "四川省",
+      "lat_deg": 31.2096,
+      "lon_deg": 107.468,
+      "alt_m": 300.0,
+      "aliases": [
+        "达州市"
+      ]
+    },
+    {
+      "name": "雅安",
+      "province": "四川省",
+      "lat_deg": 30.0105,
+      "lon_deg": 103.0428,
+      "alt_m": 600.0,
+      "aliases": [
+        "雅安市"
+      ]
+    },
+    {
+      "name": "巴中",
+      "province": "四川省",
+      "lat_deg": 31.8676,
+      "lon_deg": 106.7478,
+      "alt_m": 400.0,
+      "aliases": [
+        "巴中市"
+      ]
+    },
+    {
+      "name": "资阳",
+      "province": "四川省",
+      "lat_deg": 30.1289,
+      "lon_deg": 104.6277,
+      "alt_m": 350.0,
+      "aliases": [
+        "资阳市"
+      ]
+    },
+    {
+      "name": "西昌",
+      "province": "四川省",
+      "lat_deg": 27.8945,
+      "lon_deg": 102.2644,
+      "alt_m": 1550.0,
+      "aliases": [
+        "西昌市",
+        "西昌卫星发射中心",
+        "航天城"
+      ]
+    },
+    {
+      "name": "贵阳",
+      "province": "贵州省",
+      "lat_deg": 26.647,
+      "lon_deg": 106.6302,
+      "alt_m": 1070.0,
+      "aliases": [
+        "贵阳市",
+        "林城"
+      ]
+    },
+    {
+      "name": "六盘水",
+      "province": "贵州省",
+      "lat_deg": 26.5925,
+      "lon_deg": 104.833,
+      "alt_m": 1800.0,
+      "aliases": [
+        "六盘水市",
+        "凉都"
+      ]
+    },
+    {
+      "name": "遵义",
+      "province": "贵州省",
+      "lat_deg": 27.7257,
+      "lon_deg": 106.927,
+      "alt_m": 850.0,
+      "aliases": [
+        "遵义市"
+      ]
+    },
+    {
+      "name": "安顺",
+      "province": "贵州省",
+      "lat_deg": 26.2455,
+      "lon_deg": 105.9476,
+      "alt_m": 1300.0,
+      "aliases": [
+        "安顺市"
+      ]
+    },
+    {
+      "name": "毕节",
+      "province": "贵州省",
+      "lat_deg": 27.2848,
+      "lon_deg": 105.2932,
+      "alt_m": 1500.0,
+      "aliases": [
+        "毕节市"
+      ]
+    },
+    {
+      "name": "铜仁",
+      "province": "贵州省",
+      "lat_deg": 27.7183,
+      "lon_deg": 109.1916,
+      "alt_m": 300.0,
+      "aliases": [
+        "铜仁市"
+      ]
+    },
+    {
+      "name": "兴义",
+      "province": "贵州省",
+      "lat_deg": 25.0881,
+      "lon_deg": 104.8979,
+      "alt_m": 1200.0,
+      "aliases": [
+        "黔西南",
+        "兴义市",
+        "黔西南布依族苗族自治州"
+      ]
+    },
+    {
+      "name": "凯里",
+      "province": "贵州省",
+      "lat_deg": 26.5835,
+      "lon_deg": 107.9775,
+      "alt_m": 700.0,
+      "aliases": [
+        "黔东南",
+        "凯里市",
+        "黔东南苗族侗族自治州"
+      ]
+    },
+    {
+      "name": "都匀",
+      "province": "贵州省",
+      "lat_deg": 26.2594,
+      "lon_deg": 107.517,
+      "alt_m": 800.0,
+      "aliases": [
+        "黔南",
+        "都匀市",
+        "黔南布依族苗族自治州"
+      ]
+    },
+    {
+      "name": "昆明",
+      "province": "云南省",
+      "lat_deg": 25.0389,
+      "lon_deg": 102.7183,
+      "alt_m": 1890.0,
+      "aliases": [
+        "昆明市",
+        "春城"
+      ]
+    },
+    {
+      "name": "曲靖",
+      "province": "云南省",
+      "lat_deg": 25.4899,
+      "lon_deg": 103.7962,
+      "alt_m": 1900.0,
+      "aliases": [
+        "曲靖市"
+      ]
+    },
+    {
+      "name": "玉溪",
+      "province": "云南省",
+      "lat_deg": 24.3515,
+      "lon_deg": 102.5466,
+      "alt_m": 1600.0,
+      "aliases": [
+        "玉溪市"
+      ]
+    },
+    {
+      "name": "保山",
+      "province": "云南省",
+      "lat_deg": 25.1119,
+      "lon_deg": 99.161,
+      "alt_m": 1650.0,
+      "aliases": [
+        "保山市"
+      ]
+    },
+    {
+      "name": "昭通",
+      "province": "云南省",
+      "lat_deg": 27.338,
+      "lon_deg": 103.7171,
+      "alt_m": 1900.0,
+      "aliases": [
+        "昭通市"
+      ]
+    },
+    {
+      "name": "丽江",
+      "province": "云南省",
+      "lat_deg": 26.8721,
+      "lon_deg": 100.2299,
+      "alt_m": 2400.0,
+      "aliases": [
+        "丽江市"
+      ]
+    },
+    {
+      "name": "普洱",
+      "province": "云南省",
+      "lat_deg": 22.8251,
+      "lon_deg": 100.966,
+      "alt_m": 1300.0,
+      "aliases": [
+        "普洱市",
+        "思茅"
+      ]
+    },
+    {
+      "name": "临沧",
+      "province": "云南省",
+      "lat_deg": 23.8776,
+      "lon_deg": 100.089,
+      "alt_m": 1450.0,
+      "aliases": [
+        "临沧市"
+      ]
+    },
+    {
+      "name": "楚雄",
+      "province": "云南省",
+      "lat_deg": 25.0419,
+      "lon_deg": 101.5459,
+      "alt_m": 1800.0,
+      "aliases": [
+        "楚雄市",
+        "楚雄彝族自治州"
+      ]
+    },
+    {
+      "name": "蒙自",
+      "province": "云南省",
+      "lat_deg": 23.396,
+      "lon_deg": 103.3748,
+      "alt_m": 1300.0,
+      "aliases": [
+        "红河",
+        "蒙自市",
+        "红河哈尼族彝族自治州"
+      ]
+    },
+    {
+      "name": "文山",
+      "province": "云南省",
+      "lat_deg": 23.3695,
+      "lon_deg": 104.244,
+      "alt_m": 1300.0,
+      "aliases": [
+        "文山市",
+        "文山壮族苗族自治州"
+      ]
+    },
+    {
+      "name": "景洪",
+      "province": "云南省",
+      "lat_deg": 22.0017,
+      "lon_deg": 100.7978,
+      "alt_m": 550.0,
+      "aliases": [
+        "西双版纳",
+        "景洪市",
+        "西双版纳傣族自治州"
+      ]
+    },
+    {
+      "name": "大理",
+      "province": "云南省",
+      "lat_deg": 25.6065,
+      "lon_deg": 100.2676,
+      "alt_m": 1970.0,
+      "aliases": [
+        "大理市",
+        "大理白族自治州"
+      ]
+    },
+    {
+      "name": "芒市",
+      "province": "云南省",
+      "lat_deg": 24.4332,
+      "lon_deg": 98.5849,
+      "alt_m": 900.0,
+      "aliases": [
+        "德宏",
+        "芒市",
+        "德宏傣族景颇族自治州"
+      ]
+    },
+    {
+      "name": "泸水",
+      "province": "云南省",
+      "lat_deg": 25.8529,
+      "lon_deg": 98.8566,
+      "alt_m": 800.0,
+      "aliases": [
+        "怒江",
+        "泸水市",
+        "怒江傈僳族自治州"
+      ]
+    },
+    {
+      "name": "香格里拉",
+      "province": "云南省",
+      "lat_deg": 27.8269,
+      "lon_deg": 99.7065,
+      "alt_m": 3280.0,
+      "aliases": [
+        "迪庆",
+        "香格里拉市",
+        "迪庆藏族自治州"
+      ]
+    },
+    {
+      "name": "拉萨",
+      "province": "西藏自治区",
+      "lat_deg": 29.652,
+      "lon_deg": 91.1721,
+      "alt_m": 3650.0,
+      "aliases": [
+        "拉萨市",
+        "日光城"
+      ]
+    },
+    {
+      "name": "日喀则",
+      "province": "西藏自治区",
+      "lat_deg": 29.2675,
+      "lon_deg": 88.881,
+      "alt_m": 3840.0,
+      "aliases": [
+        "日喀则市"
+      ]
+    },
+    {
+      "name": "昌都",
+      "province": "西藏自治区",
+      "lat_deg": 31.1406,
+      "lon_deg": 97.1722,
+      "alt_m": 3240.0,
+      "aliases": [
+        "昌都市"
+      ]
+    },
+    {
+      "name": "林芝",
+      "province": "西藏自治区",
+      "lat_deg": 29.6489,
+      "lon_deg": 94.3616,
+      "alt_m": 3000.0,
+      "aliases": [
+        "林芝市"
+      ]
+    },
+    {
+      "name": "山南",
+      "province": "西藏自治区",
+      "lat_deg": 29.2377,
+      "lon_deg": 91.7731,
+      "alt_m": 3560.0,
+      "aliases": [
+        "山南市",
+        "乃东"
+      ]
+    },
+    {
+      "name": "那曲",
+      "province": "西藏自治区",
+      "lat_deg": 31.476,
+      "lon_deg": 92.0517,
+      "alt_m": 4500.0,
+      "aliases": [
+        "那曲市"
+      ]
+    },
+    {
+      "name": "狮泉河",
+      "province": "西藏自治区",
+      "lat_deg": 32.5032,
+      "lon_deg": 80.1056,
+      "alt_m": 4270.0,
+      "aliases": [
+        "阿里",
+        "狮泉河镇",
+        "阿里地区"
+      ]
+    },
+    {
+      "name": "西安",
+      "province": "陕西省",
+      "lat_deg": 34.3416,
+      "lon_deg": 108.9398,
+      "alt_m": 400.0,
+      "aliases": [
+        "西安市",
+        "长安",
+        "古城"
+      ]
+    },
+    {
+      "name": "铜川",
+      "province": "陕西省",
+      "lat_deg": 34.8966,
+      "lon_deg": 108.9451,
+      "alt_m": 700.0,
+      "aliases": [
+        "铜川市"
+      ]
+    },
+    {
+      "name": "宝鸡",
+      "province": "陕西省",
+      "lat_deg": 34.3614,
+      "lon_deg": 107.2371,
+      "alt_m": 600.0,
+      "aliases": [
+        "宝鸡市"
+      ]
+    },
+    {
+      "name": "咸阳",
+      "province": "陕西省",
+      "lat_deg": 34.3296,
+      "lon_deg": 108.7093,
+      "alt_m": 400.0,
+      "aliases": [
+        "咸阳市"
+      ]
+    },
+    {
+      "name": "渭南",
+      "province": "陕西省",
+      "lat_deg": 34.4999,
+      "lon_deg": 109.5099,
+      "alt_m": 350.0,
+      "aliases": [
+        "渭南市"
+      ]
+    },
+    {
+      "name": "延安",
+      "province": "陕西省",
+      "lat_deg": 36.5853,
+      "lon_deg": 109.4898,
+      "alt_m": 960.0,
+      "aliases": [
+        "延安市"
+      ]
+    },
+    {
+      "name": "汉中",
+      "province": "陕西省",
+      "lat_deg": 33.0675,
+      "lon_deg": 107.0236,
+      "alt_m": 510.0,
+      "aliases": [
+        "汉中市"
+      ]
+    },
+    {
+      "name": "榆林",
+      "province": "陕西省",
+      "lat_deg": 38.2854,
+      "lon_deg": 109.7347,
+      "alt_m": 1060.0,
+      "aliases": [
+        "榆林市"
+      ]
+    },
+    {
+      "name": "安康",
+      "province": "陕西省",
+      "lat_deg": 32.6846,
+      "lon_deg": 109.0293,
+      "alt_m": 300.0,
+      "aliases": [
+        "安康市"
+      ]
+    },
+    {
+      "name": "商洛",
+      "province": "陕西省",
+      "lat_deg": 33.8704,
+      "lon_deg": 109.94,
+      "alt_m": 700.0,
+      "aliases": [
+        "商洛市",
+        "商州"
+      ]
+    },
+    {
+      "name": "兰州",
+      "province": "甘肃省",
+      "lat_deg": 36.0611,
+      "lon_deg": 103.8343,
+      "alt_m": 1520.0,
+      "aliases": [
+        "兰州市",
+        "金城"
+      ]
+    },
+    {
+      "name": "嘉峪关",
+      "province": "甘肃省",
+      "lat_deg": 39.772,
+      "lon_deg": 98.2891,
+      "alt_m": 1620.0,
+      "aliases": [
+        "嘉峪关市"
+      ]
+    },
+    {
+      "name": "金昌",
+      "province": "甘肃省",
+      "lat_deg": 38.5203,
+      "lon_deg": 102.188,
+      "alt_m": 1500.0,
+      "aliases": [
+        "金昌市"
+      ]
+    },
+    {
+      "name": "白银",
+      "province": "甘肃省",
+      "lat_deg": 36.5449,
+      "lon_deg": 104.1389,
+      "alt_m": 1700.0,
+      "aliases": [
+        "白银市"
+      ]
+    },
+    {
+      "name": "天水",
+      "province": "甘肃省",
+      "lat_deg": 34.5809,
+      "lon_deg": 105.7249,
+      "alt_m": 1150.0,
+      "aliases": [
+        "天水市"
+      ]
+    },
+    {
+      "name": "武威",
+      "province": "甘肃省",
+      "lat_deg": 37.9283,
+      "lon_deg": 102.6378,
+      "alt_m": 1530.0,
+      "aliases": [
+        "武威市",
+        "凉州"
+      ]
+    },
+    {
+      "name": "张掖",
+      "province": "甘肃省",
+      "lat_deg": 38.9259,
+      "lon_deg": 100.4498,
+      "alt_m": 1480.0,
+      "aliases": [
+        "张掖市",
+        "甘州"
+      ]
+    },
+    {
+      "name": "平凉",
+      "province": "甘肃省",
+      "lat_deg": 35.5428,
+      "lon_deg": 106.6653,
+      "alt_m": 1350.0,
+      "aliases": [
+        "平凉市"
+      ]
+    },
+    {
+      "name": "酒泉",
+      "province": "甘肃省",
+      "lat_deg": 39.7326,
+      "lon_deg": 98.4943,
+      "alt_m": 1480.0,
+      "aliases": [
+        "酒泉市",
+        "肃州"
+      ]
+    },
+    {
+      "name": "庆阳",
+      "province": "甘肃省",
+      "lat_deg": 35.709,
+      "lon_deg": 107.6422,
+      "alt_m": 1200.0,
+      "aliases": [
+        "庆阳市",
+        "西峰"
+      ]
+    },
+    {
+      "name": "定西",
+      "province": "甘肃省",
+      "lat_deg": 35.5806,
+      "lon_deg": 104.6263,
+      "alt_m": 1900.0,
+      "aliases": [
+        "定西市"
+      ]
+    },
+    {
+      "name": "陇南",
+      "province": "甘肃省",
+      "lat_deg": 33.401,
+      "lon_deg": 104.9218,
+      "alt_m": 1000.0,
+      "aliases": [
+        "陇南市",
+        "武都"
+      ]
+    },
+    {
+      "name": "临夏",
+      "province": "甘肃省",
+      "lat_deg": 35.6014,
+      "lon_deg": 103.211,
+      "alt_m": 1900.0,
+      "aliases": [
+        "临夏市",
+        "临夏回族自治州"
+      ]
+    },
+    {
+      "name": "合作",
+      "province": "甘肃省",
+      "lat_deg": 35.0003,
+      "lon_deg": 102.909,
+      "alt_m": 2950.0,
+      "aliases": [
+        "甘南",
+        "合作市",
+        "甘南藏族自治州"
+      ]
+    },
+    {
+      "name": "西宁",
+      "province": "青海省",
+      "lat_deg": 36.6171,
+      "lon_deg": 101.7782,
+      "alt_m": 2260.0,
+      "aliases": [
+        "西宁市",
+        "夏都"
+      ]
+    },
+    {
+      "name": "海东",
+      "province": "青海省",
+      "lat_deg": 36.5029,
+      "lon_deg": 102.1039,
+      "alt_m": 2200.0,
+      "aliases": [
+        "海东市",
+        "平安"
+      ]
+    },
+    {
+      "name": "德令哈",
+      "province": "青海省",
+      "lat_deg": 37.3696,
+      "lon_deg": 97.3706,
+      "alt_m": 2980.0,
+      "aliases": [
+        "海西",
+        "德令哈市",
+        "海西蒙古族藏族自治州"
+      ]
+    },
+    {
+      "name": "格尔木",
+      "province": "青海省",
+      "lat_deg": 36.4067,
+      "lon_deg": 94.9033,
+      "alt_m": 2780.0,
+      "aliases": [
+        "格尔木市"
+      ]
+    },
+    {
+      "name": "共和",
+      "province": "青海省",
+      "lat_deg": 36.2841,
+      "lon_deg": 100.62,
+      "alt_m": 2870.0,
+      "aliases": [
+        "海南州",
+        "共和县",
+        "海南藏族自治州"
+      ]
+    },
+    {
+      "name": "同仁",
+      "province": "青海省",
+      "lat_deg": 35.5177,
+      "lon_deg": 102.0152,
+      "alt_m": 2500.0,
+      "aliases": [
+        "黄南",
+        "同仁市",
+        "黄南藏族自治州"
+      ]
+    },
+    {
+      "name": "玛沁",
+      "province": "青海省",
+      "lat_deg": 34.4774,
+      "lon_deg": 100.2425,
+      "alt_m": 3720.0,
+      "aliases": [
+        "果洛",
+        "玛沁县",
+        "果洛藏族自治州"
+      ]
+    },
+    {
+      "name": "玉树",
+      "province": "青海省",
+      "lat_deg": 33.004,
+      "lon_deg": 97.0065,
+      "alt_m": 3700.0,
+      "aliases": [
+        "玉树市",
+        "玉树藏族自治州"
+      ]
+    },
+    {
+      "name": "银川",
+      "province": "宁夏回族自治区",
+      "lat_deg": 38.4872,
+      "lon_deg": 106.2309,
+      "alt_m": 1110.0,
+      "aliases": [
+        "银川市",
+        "凤凰城"
+      ]
+    },
+    {
+      "name": "石嘴山",
+      "province": "宁夏回族自治区",
+      "lat_deg": 38.9841,
+      "lon_deg": 106.3844,
+      "alt_m": 1100.0,
+      "aliases": [
+        "石嘴山市"
+      ]
+    },
+    {
+      "name": "吴忠",
+      "province": "宁夏回族自治区",
+      "lat_deg": 37.997,
+      "lon_deg": 106.1987,
+      "alt_m": 1130.0,
+      "aliases": [
+        "吴忠市"
+      ]
+    },
+    {
+      "name": "固原",
+      "province": "宁夏回族自治区",
+      "lat_deg": 36.0158,
+      "lon_deg": 106.2429,
+      "alt_m": 1750.0,
+      "aliases": [
+        "固原市"
+      ]
+    },
+    {
+      "name": "中卫",
+      "province": "宁夏回族自治区",
+      "lat_deg": 37.5,
+      "lon_deg": 105.1899,
+      "alt_m": 1230.0,
+      "aliases": [
+        "中卫市"
+      ]
+    },
+    {
+      "name": "乌鲁木齐",
+      "province": "新疆维吾尔自治区",
+      "lat_deg": 43.8256,
+      "lon_deg": 87.6168,
+      "alt_m": 800.0,
+      "aliases": [
+        "乌鲁木齐市",
+        "乌市"
+      ]
+    },
+    {
+      "name": "克拉玛依",
+      "province": "新疆维吾尔自治区",
+      "lat_deg": 45.5799,
+      "lon_deg": 84.8891,
+      "alt_m": 300.0,
+      "aliases": [
+        "克拉玛依市",
+        "油城"
+      ]
+    },
+    {
+      "name": "吐鲁番",
+      "province": "新疆维吾尔自治区",
+      "lat_deg": 42.9513,
+      "lon_deg": 89.1895,
+      "alt_m": 40.0,
+      "aliases": [
+        "吐鲁番市"
+      ]
+    },
+    {
+      "name": "哈密",
+      "province": "新疆维吾尔自治区",
+      "lat_deg": 42.8185,
+      "lon_deg": 93.5151,
+      "alt_m": 750.0,
+      "aliases": [
+        "哈密市"
+      ]
+    },
+    {
+      "name": "昌吉",
+      "province": "新疆维吾尔自治区",
+      "lat_deg": 44.0112,
+      "lon_deg": 87.3043,
+      "alt_m": 580.0,
+      "aliases": [
+        "昌吉市",
+        "昌吉回族自治州"
+      ]
+    },
+    {
+      "name": "博乐",
+      "province": "新疆维吾尔自治区",
+      "lat_deg": 44.9059,
+      "lon_deg": 82.0747,
+      "alt_m": 500.0,
+      "aliases": [
+        "博尔塔拉",
+        "博乐市",
+        "博尔塔拉蒙古自治州"
+      ]
+    },
+    {
+      "name": "库尔勒",
+      "province": "新疆维吾尔自治区",
+      "lat_deg": 41.764,
+      "lon_deg": 86.1459,
+      "alt_m": 950.0,
+      "aliases": [
+        "巴音郭楞",
+        "库尔勒市",
+        "巴音郭楞蒙古自治州"
+      ]
+    },
+    {
+      "name": "阿克苏",
+      "province": "新疆维吾尔自治区",
+      "lat_deg": 41.1688,
+      "lon_deg": 80.2603,
+      "alt_m": 1100.0,
+      "aliases": [
+        "阿克苏市",
+        "阿克苏地区"
+      ]
+    },
+    {
+      "name": "阿图什",
+      "province": "新疆维吾尔自治区",
+      "lat_deg": 39.7162,
+      "lon_deg": 76.1683,
+      "alt_m": 1300.0,
+      "aliases": [
+        "克孜勒苏",
+        "阿图什市",
+        "克孜勒苏柯尔克孜自治州"
+      ]
+    },
+    {
+      "name": "喀什",
+      "province": "新疆维吾尔自治区",
+      "lat_deg": 39.4704,
+      "lon_deg": 75.9898,
+      "alt_m": 1290.0,
+      "aliases": [
+        "喀什市",
+        "喀什地区"
+      ]
+    },
+    {
+      "name": "和田",
+      "province": "新疆维吾尔自治区",
+      "lat_deg": 37.114,
+      "lon_deg": 79.9225,
+      "alt_m": 1380.0,
+      "aliases": [
+        "和田市",
+        "和田地区"
+      ]
+    },
+    {
+      "name": "伊宁",
+      "province": "新疆维吾尔自治区",
+      "lat_deg": 43.9169,
+      "lon_deg": 81.3241,
+      "alt_m": 650.0,
+      "aliases": [
+        "伊犁",
+        "伊宁市",
+        "伊犁哈萨克自治州"
+      ]
+    },
+    {
+      "name": "塔城",
+      "province": "新疆维吾尔自治区",
+      "lat_deg": 46.7454,
+      "lon_deg": 82.9805,
+      "alt_m": 550.0,
+      "aliases": [
+        "塔城市",
+        "塔城地区"
+      ]
+    },
+    {
+      "name": "阿勒泰",
+      "province": "新疆维吾尔自治区",
+      "lat_deg": 47.8449,
+      "lon_deg": 88.1412,
+      "alt_m": 740.0,
+      "aliases": [
+        "阿勒泰市",
+        "阿勒泰地区"
+      ]
+    },
+    {
+      "name": "石河子",
+      "province": "新疆维吾尔自治区",
+      "lat_deg": 44.3068,
+      "lon_deg": 86.0804,
+      "alt_m": 450.0,
+      "aliases": [
+        "石河子市"
+      ]
+    },
+    {
+      "name": "五家渠",
+      "province": "新疆维吾尔自治区",
+      "lat_deg": 44.1673,
+      "lon_deg": 87.5261,
+      "alt_m": 500.0,
+      "aliases": [
+        "五家渠市"
+      ]
+    },
+    {
+      "name": "香港",
+      "province": "香港特别行政区",
+      "lat_deg": 22.3193,
+      "lon_deg": 114.1694,
+      "alt_m": 10.0,
+      "aliases": [
+        "香港特别行政区",
+        "港"
+      ]
+    },
+    {
+      "name": "澳门",
+      "province": "澳门特别行政区",
+      "lat_deg": 22.1987,
+      "lon_deg": 113.5439,
+      "alt_m": 5.0,
+      "aliases": [
+        "澳门特别行政区",
+        "澳"
+      ]
+    }
+  ]
+}

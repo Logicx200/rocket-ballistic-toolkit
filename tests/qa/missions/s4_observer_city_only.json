@@ -1,0 +1,23 @@
+{
+  "name": "场景4：观测点只写城市名「北京」（坐标/高程从城市库补全）",
+  "rocket_label": "长征二号丁",
+  "site_label": "太原 LC-9",
+  "t0_text": "2026-11-19 06:50",
+  "notams_mode": "off",
+  "observers": [
+    {"id": "obs_bj", "name": "北京"}
+  ],
+  "modules": {
+    "dem": true,
+    "invert": false,
+    "export": true,
+    "window": false,
+    "sky": true,
+    "appear": true,
+    "map": false,
+    "mc": false,
+    "kml": false,
+    "qc": true,
+    "report": true
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "_schema": "rocketkit.cities.v1",
+  "updated": "2026-11-23",
+  "cities": [
+    {
+      "name": "北京",
+      "province": "北京",
+      "lat_deg": 39.9042,
+      "lon_deg": 116.4074,
+      "alt_m": 44,
+      "aliases": []
+    },
+    {
+      "name": "太原",
+      "province": "山西",
+      "lat_deg": 37.8706,
+      "lon_deg": 112.5489,
+      "alt_m": 800,
+      "aliases": []
+    },
+    {
+      "name": "晋中",
+      "province": "山西",
+      "lat_deg": 37.687,
+      "lon_deg": 112.7528,
+      "alt_m": 800,
+      "aliases": []
+    },
+    {
+      "name": "西安",
+      "province": "陕西",
+      "lat_deg": 34.3416,
+      "lon_deg": 108.9398,
+      "alt_m": 405,
+      "aliases": []
+    },
+    {
+      "name": "兰州",
+      "province": "甘肃",
+      "lat_deg": 36.0611,
+      "lon_deg": 103.8343,
+      "alt_m": 1520,
+      "aliases": []
+    },
+    {
+      "name": "酒泉",
+      "province": "甘肃",
+      "lat_deg": 39.7326,
+      "lon_deg": 98.4941,
+      "alt_m": 1480,
+      "aliases": []
+    },
+    {
+      "name": "上海",
+      "province": "上海",
+      "lat_deg": 31.2304,
+      "lon_deg": 121.4737,
+      "alt_m": 4,
+      "aliases": []
+    },
+    {
+      "name": "广州",
+      "province": "广东",
+      "lat_deg": 23.1291,
+      "lon_deg": 113.2644,
+      "alt_m": 21,
+      "aliases": []
+    },
+    {
+      "name": "成都",
+      "province": "四川",
+      "lat_deg": 30.5728,
+      "lon_deg": 104.0668,
+      "alt_m": 500,
+      "aliases": []
+    },
+    {
+      "name": "武汉",
+      "province": "湖北",
+      "lat_deg": 30.5928,
+      "lon_deg": 114.3055,
+      "alt_m": 23,
+      "aliases": []
+    },
+    {
+      "name": "文昌",
+      "province": "海南",
+      "lat_deg": 19.5438,
+      "lon_deg": 110.7962,
+      "alt_m": 10,
+      "aliases": []
+    },
+    {
+      "name": "西昌",
+      "province": "四川",
+      "lat_deg": 27.8947,
+      "lon_deg": 102.2636,
+      "alt_m": 1500,
+      "aliases": []
+    }
+  ]
+}

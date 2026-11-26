@@ -1,0 +1,69 @@
+{
+  "schema": "rocketkit.stations.v1",
+  "updated": "2026-11-26",
+  "note": "空间站轨道数据：内置官方 CMSE/BACC 精密星历快照（覆盖 2026-11-20 ~ 2026-11-27）+ 一条 CelesTrak 公开 TLE 作长期回退。仅供公开信息分析与教学使用。",
+  "stations": [
+    {
+      "id": "css",
+      "name": "天宫空间站（天和核心舱）",
+      "aliases": [
+        "天宫",
+        "中国空间站",
+        "CSS",
+        "天和",
+        "Tiangong",
+        "Tianhe",
+        "神舟对接目标"
+      ],
+      "norad_id": 48274,
+      "object_id": "2021-035A",
+      "default": true,
+      "oem": {
+        "file": "CSS_OEM_20261120003641_0001.dat",
+        "format": "CCSDS_OEM_VERS 2.0",
+        "frame": "EME2000",
+        "time_system": "UTC",
+        "start_utc": "2026-11-20T00:00:00Z",
+        "stop_utc": "2026-11-27T00:00:00Z",
+        "step_s": 240,
+        "size_bytes": 360870,
+        "sha256": "4D730FF5FDC9C733D95A4900F534BF4597E885B525C33DEDA20A2005BD539920",
+        "sources": [
+          {
+            "url": "https://www.cmse.gov.cn/gfgg/zgkjzgdcs/202611/W020261120604308499237.zip",
+            "note": "中国载人航天工程办公室（CMSE）公开发布的空间站轨道根数/OEM 公告压缩包，2026-11-20 下载；解压后为 BACC 生成的 EME2000/UTC 精密星历",
+            "accessed": "2026-11-20"
+          }
+        ]
+      },
+      "tle": {
+        "epoch_utc": "2026-11-19T19:30:05Z",
+        "lines": [
+          "1 48274U 21035A   26323.81256295  .00021071  00000+0  24899-3 0  9995",
+          "2 48274  41.4687  96.2271 0004931 264.7589  95.2687 15.60787252317474"
+        ],
+        "sources": [
+          {
+            "url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=48274&FORMAT=TLE",
+            "note": "CelesTrak 公开 TLE（2026-11-21 获取）；仅作 OEM 不可用时的回退",
+            "accessed": "2026-11-21"
+          }
+        ]
+      },
+      "note": "OEM 为官方精密星历，优先使用；TLE 用于 OEM 覆盖期之外或用户指定。轨道倾角约 41.47°，高度约 380 km。"
+    }
+  ],
+  "cz2f_defaults": {
+    "station_id": "css",
+    "rendezvous": {
+      "target_time_h": 6.5,
+      "max_phasing_h": 13.0,
+      "dv_budget_mps": 300.0,
+      "final_approach_dv_mps": 10.0,
+      "final_approach_s": 1800.0,
+      "max_phasing_orbits": 10,
+      "min_phasing_orbits": 1
+    },
+    "note": "CZ-2F/神舟交会对接任务默认参数：目标交会时间 6.5 h（快速交会），ΔV 预算 300 m/s，最终逼近段 30 min / 10 m/s。均为工程估算量级，不是飞行程序。"
+  }
+}

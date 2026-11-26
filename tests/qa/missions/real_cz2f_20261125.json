@@ -1,0 +1,131 @@
+{
+  "name": "20261125神舟二十四号（离线）",
+  "rocket_id": "cz2f",
+  "rocket_label": "长征二号F（CZ-2F，含载人型）",
+  "site_id": "auto",
+  "site_label": "酒泉卫星发射中心",
+  "site_lat": null,
+  "site_lon": null,
+  "site_alt": null,
+  "t0_text": "",
+  "tz_hint": "auto",
+  "serial": "",
+  "payload_name": "神舟载人飞船",
+  "payload_kg": 8100.0,
+  "profile": "cz2f",
+  "station_enabled": true,
+  "station_source": "auto",
+  "rendezvous_h": 6.5,
+  "dv_budget_mps": 300.0,
+  "window_tolerance_deg": 0.2,
+  "window_search_hours": 48.0,
+  "orbit_alt_km": null,
+  "orbit_i_deg": null,
+  "notams_text": "FIR: ZXXX\nfrom: 2026-11-25T00:08:00Z / 2026/11/25 08:08:00 Local\nto: 2026-11-25T00:48:00Z / 2026/11/25 08:48:00 Local\nqcode: QRTCA\nA6094/26 NOTAMN  Q)ZXXX/QRTCA/IV/BO/W/000/999/3812N11017E516  A)ZLHW ZBPE ZHWH ZSHA B)2611250008 C)2611250048   E) A TEMPORARY RESTRICTED AREA ESTABLISHED BOUNDED BY:  N412353E1002512-N395035E1060947-N371214E1155429-N355443E1204041-  N350047E1200943-N361905E1152505-N385501E1055837-N403105E1000932,  BACK TO START.VERTICAL LIMITS:SFC-UNL.  AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.  F)SFC G)UNL    CREATED: 20 NOV 2026 03:00  SOURCE: ZBBBYNYX\n\nFIR: ZSHA\nfrom: 2026-11-25T00:08:00Z / 2026/11/25 08:08:00 Local\nto: 2026-11-25T00:50:00Z / 2026/11/25 08:50:00 Local\nqcode: QRTCA\nA6095/26 NOTAMN  Q)ZSHA/QRTCA/IV/BO/W/000/999/3433N12236E121  A)ZSHA B)2611250008 C)2611250050   E) A TEMPORARY RESTRICTED AREA ESTABLISHED BOUNDED BY:  N361240E1211236-N350524E1240000-N325506E1240000-N342956E1201258,  BACK TO START.VERTICAL LIMITS:SFC-UNL.  AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.  F)SFC G)UNL    CREATED: 20 NOV 2026 03:01  SOURCE: ZBBBYNYX",
+  "notams": [
+    {
+      "id": "A6094/26",
+      "b_utc": "2026-11-25T00:08:00Z",
+      "c_utc": "2026-11-25T00:48:00Z",
+      "q_line": "Q)ZXXX/QRTCA/IV/BO/W/000/999/3812N11017E516  A)ZLHW ZBPE ZHWH ZSHA B)2611250008 C)2611250048   E) A TEMPORARY RESTRICTED AREA ESTABLISHED BOUNDED BY:  N412353E1002512-N395035E1060947-N371214E1155429-N355443E1204041-  N350047E1200943-N361905E1152505-N385501E1055837-N403105E1000932,  BACK TO START.VERTICAL LIMITS:SFC-UNL.  AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.  F)SFC G)UNL    CREATED: 20 NOV 2026 03:00  SOURCE: ZBBBYNYX",
+      "fir": "ZXXX",
+      "polygon_latlon": [
+        [
+          41.39805556,
+          100.42
+        ],
+        [
+          39.84305556,
+          106.16305556
+        ],
+        [
+          37.20388889,
+          115.90805556
+        ],
+        [
+          35.91194444,
+          120.67805556
+        ],
+        [
+          35.01305556,
+          120.16194444
+        ],
+        [
+          36.31805556,
+          115.41805556
+        ],
+        [
+          38.91694444,
+          105.97694444
+        ],
+        [
+          40.51805556,
+          100.15888889
+        ]
+      ],
+      "stage_hint": "",
+      "raw_text": "A6094/26 NOTAMN  Q)ZXXX/QRTCA/IV/BO/W/000/999/3812N11017E516  A)ZLHW ZBPE ZHWH ZSHA B)2611250008 C)2611250048   E) A TEMPORARY RESTRICTED AREA ESTABLISHED BOUNDED BY:  N412353E1002512-N395035E1060947-N371214E1155429-N355443E1204041-  N350047E1200943-N361905E1152505-N385501E1055837-N403105E1000932,  BACK TO START.VERTICAL LIMITS:SFC-UNL.  AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.  F)SFC G)UNL    CREATED: 20 NOV 2026 03:00  SOURCE: ZBBBYNYX",
+      "verified": "用户粘贴原文（未逐字核对）"
+    },
+    {
+      "id": "A6095/26",
+      "b_utc": "2026-11-25T00:08:00Z",
+      "c_utc": "2026-11-25T00:50:00Z",
+      "q_line": "Q)ZSHA/QRTCA/IV/BO/W/000/999/3433N12236E121  A)ZSHA B)2611250008 C)2611250050   E) A TEMPORARY RESTRICTED AREA ESTABLISHED BOUNDED BY:  N361240E1211236-N350524E1240000-N325506E1240000-N342956E1201258,  BACK TO START.VERTICAL LIMITS:SFC-UNL.  AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.  F)SFC G)UNL    CREATED: 20 NOV 2026 03:01  SOURCE: ZBBBYNYX",
+      "fir": "ZSHA",
+      "polygon_latlon": [
+        [
+          36.21111111,
+          121.21
+        ],
+        [
+          35.09,
+          124.0
+        ],
+        [
+          32.91833333,
+          124.0
+        ],
+        [
+          34.49888889,
+          120.21611111
+        ]
+      ],
+      "stage_hint": "",
+      "raw_text": "A6095/26 NOTAMN  Q)ZSHA/QRTCA/IV/BO/W/000/999/3433N12236E121  A)ZSHA B)2611250008 C)2611250050   E) A TEMPORARY RESTRICTED AREA ESTABLISHED BOUNDED BY:  N361240E1211236-N350524E1240000-N325506E1240000-N342956E1201258,  BACK TO START.VERTICAL LIMITS:SFC-UNL.  AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.  F)SFC G)UNL    CREATED: 20 NOV 2026 03:01  SOURCE: ZBBBYNYX",
+      "verified": "用户粘贴原文（未逐字核对）"
+    }
+  ],
+  "notams_mode": "auto",
+  "observers": [
+    {
+      "id": "obs1",
+      "name": "9号天台",
+      "lat_deg": 37.76214439,
+      "lon_deg": 112.73166776,
+      "alt_m": null,
+      "note": ""
+    }
+  ],
+  "mode": "accurate",
+  "modules": {
+    "dem": true,
+    "invert": true,
+    "export": true,
+    "window": true,
+    "sky": true,
+    "appear": true,
+    "map": true,
+    "mc": false,
+    "kml": true,
+    "qc": true,
+    "report": true
+  },
+  "mc_n": 0,
+  "jobs": 0,
+  "dem_radius_km": 200.0,
+  "vehicle_overrides": {},
+  "inversion_maxiter": 20,
+  "inversion_popsize": 10,
+  "notes": ""
+}

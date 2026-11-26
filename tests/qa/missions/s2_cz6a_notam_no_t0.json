@@ -1,0 +1,20 @@
+{
+  "name": "场景2：长征六号甲 太原（只给箭型+发射场+航警原文，不给 T0）",
+  "rocket_label": "长征六号甲",
+  "site_label": "太原",
+  "notams_text": "A6107/26 NOTAMN\nQ)ZLHW/QRDCA/IV/BO/W/000/999/3800N10745E012\nA)ZLHW B)2611271253 C)2611271315\nE) A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY: N380800E1075600-N375700E1080000-N375100E1073300-N380200E1072900, BACK TO START. VERTICAL LIMITS:SFC-UNL. F)SFC G)UNL\n",
+  "notes": "真实 T0 = 2026-11-27T13:01:00Z（由任务卡提供，运行前不写入任务；用于核对推断值）",
+  "modules": {
+    "dem": false,
+    "invert": false,
+    "export": true,
+    "window": true,
+    "sky": false,
+    "appear": false,
+    "map": false,
+    "mc": false,
+    "kml": false,
+    "qc": true,
+    "report": true
+  }
+}

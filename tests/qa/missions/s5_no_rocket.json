@@ -1,0 +1,20 @@
+{
+  "name": "场景5：完全不给箭型（rocket_label 留空 → 通用模板 + 低置信度）",
+  "rocket_label": "",
+  "site_label": "太原 LC-9",
+  "t0_text": "2026-11-19 06:50",
+  "notams_mode": "off",
+  "modules": {
+    "dem": false,
+    "invert": false,
+    "export": true,
+    "window": false,
+    "sky": false,
+    "appear": false,
+    "map": false,
+    "mc": false,
+    "kml": false,
+    "qc": true,
+    "report": true
+  }
+}

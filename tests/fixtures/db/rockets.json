@@ -1,0 +1,420 @@
+{
+  "_schema": "rocketkit.rockets.v1",
+  "updated": "2026-11-23",
+  "rockets": [
+    {
+      "id": "cz2d",
+      "name": "长征二号丁",
+      "aliases": [
+        "CZ-2D",
+        "长二丁",
+        "长征二号丁",
+        "cz2d"
+      ],
+      "class": "medium_liquid",
+      "liftoff_mass_kg": 250660.0,
+      "leo_kg": null,
+      "sso_kg": null,
+      "default_payload_kg": 1000.0,
+      "typical_orbits": [
+        {
+          "name": "参考轨道",
+          "alt_km": 505.0,
+          "i_deg": 97.45
+        }
+      ],
+      "launch_sites": [
+        "tslc_lc9"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "t_v": 7.76385835688926,
+        "t_p": 169.07545191101238,
+        "pitch_power": 1.056200079950064,
+        "t_fairing": 206.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null,
+        "post_seco_s": 60.0,
+        "flow_scale": 1.0
+      },
+      "vehicle": {
+        "adapter_kg": 300.0,
+        "payload_kg": 1000.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 10000.0,
+            "prop_kg": 182000.0,
+            "engines": 4,
+            "thrust_sl_n": 740400.0,
+            "thrust_vac_n": 839000.0,
+            "isp_sl_s": 260.03,
+            "isp_vac_s": 294.7,
+            "pitch_end_deg": 27.566007200883384,
+            "cda_attached_m2": 11.2
+          },
+          {
+            "name": "二级",
+            "dry_kg": 3800.0,
+            "prop_kg": 52700.0,
+            "pitch_end_deg": -14.680018671659413,
+            "pitch_duration_s": 400.1972871030607,
+            "seco_met": 723.7810065598651,
+            "phases": [
+              {
+                "name": "主机",
+                "end_met": 324.1,
+                "thrusters": [
+                  {
+                    "n": 1,
+                    "thrust_vac_n": 742040.0,
+                    "isp_vac_s": 300.0
+                  },
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 288.98
+                  }
+                ],
+                "emit_event": true
+              },
+              {
+                "name": "游机",
+                "thrusters": [
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 288.98
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "boosters": null,
+        "fairing": {
+          "mass_kg": 860.0,
+          "halves": 2,
+          "sep_met": 206.0,
+          "cda_m2": 13.7
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 7.0,
+            "extra_mass_kg": 1500.0
+          },
+          "stage_1": {
+            "cda": 5.0,
+            "extra_mass_kg": 0.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": 320.0
+          },
+          "boosters": {
+            "cda": 8.0,
+            "extra_mass_kg": 500.0,
+            "divert_mps": 6.0
+          }
+        },
+        "ascent_cda_scale": 1.0
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "高",
+      "note": "由已交付历史算例 F:\\DeepSeek工作区\\火箭弹道工具箱_v2.0\\config.json 的 config.json 复制（参数来源见该算例 t0_note/coord_note 与 docs/验证_回归_CZ2D.md）",
+      "sources": [
+        {
+          "url": "F:\\DeepSeek工作区\\火箭弹道工具箱_v2.0\\config.json",
+          "accessed": "2026-11-23",
+          "what": "已交付算例配置"
+        }
+      ]
+    },
+    {
+      "id": "cz2f",
+      "name": "长征二号F/G",
+      "aliases": [
+        "CZ-2F",
+        "长二F",
+        "长征二号F",
+        "载人火箭",
+        "cz2f"
+      ],
+      "class": "crewed",
+      "liftoff_mass_kg": 479600.0,
+      "leo_kg": null,
+      "sso_kg": null,
+      "default_payload_kg": 8100.0,
+      "typical_orbits": [
+        {
+          "name": "参考轨道",
+          "alt_km": 200.0,
+          "i_deg": 41.47
+        }
+      ],
+      "launch_sites": [
+        "jq_921"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "t_v": 8.591225126343502,
+        "t_p": 159.40034352922422,
+        "pitch_power": 0.9717497623577005,
+        "t_fairing": 200.87,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": null,
+        "post_seco_s": 60.0,
+        "flow_scale": 1.0
+      },
+      "vehicle": {
+        "adapter_kg": 0.0,
+        "payload_kg": 8100.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 9400.0,
+            "prop_kg": 186600.0,
+            "engines": 4,
+            "thrust_sl_n": 740400.0,
+            "thrust_vac_n": 816285.0,
+            "isp_sl_s": 260.7,
+            "isp_vac_s": 291.0,
+            "pitch_end_deg": 20.329944354914474,
+            "cda_attached_m2": 11.5
+          },
+          {
+            "name": "二级",
+            "dry_kg": 5000.0,
+            "prop_kg": 84800.0,
+            "pitch_end_deg": -3.760353221130631,
+            "pitch_duration_s": 425.0,
+            "seco_met": 584.0,
+            "cda_attached_m2": 9.0,
+            "phases": [
+              {
+                "name": "主机",
+                "end_met": 461.0,
+                "thrusters": [
+                  {
+                    "n": 1,
+                    "thrust_vac_n": 746000.0,
+                    "isp_vac_s": 298.0
+                  },
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 296.8
+                  }
+                ],
+                "emit_event": true
+              },
+              {
+                "name": "游机",
+                "thrusters": [
+                  {
+                    "n": 4,
+                    "thrust_vac_n": 11775.0,
+                    "isp_vac_s": 296.8
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "boosters": {
+          "name": "助推器",
+          "count": 4,
+          "dry_kg_each": 3500.0,
+          "prop_kg_each": 41500.0,
+          "jettison_met": 153.0,
+          "thrusters": [
+            {
+              "n": 4,
+              "thrust_sl_n": 740400.0,
+              "thrust_vac_n": 816285.0,
+              "isp_sl_s": 260.7,
+              "isp_vac_s": 291.0
+            }
+          ]
+        },
+        "fairing": {
+          "mass_kg": 5700.0,
+          "halves": 2,
+          "sep_met": 200.87,
+          "cda_m2": 14.0,
+          "note": "2200 kg 整流罩 + 3500 kg 逃逸塔（模型不单列逃逸塔分离，合并到抛罩时刻一次抛离；质量账目正确，时刻比真实 T+120 s 晚约 80 s）"
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 7.0,
+            "extra_mass_kg": 1500.0
+          },
+          "fairing": {
+            "cda": 7.0,
+            "extra_mass_kg": -1750.0,
+            "note": "每半 5700/2-1750=1100 kg（公开整流罩约 2.2 t，两半各 1.1 t）"
+          },
+          "boosters": {
+            "cda": 8.0,
+            "extra_mass_kg": 500.0,
+            "divert_mps": 6.0
+          }
+        },
+        "ascent_cda_scale": 0.7
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "高",
+      "note": "由已交付历史算例 F:\\DeepSeek工作区\\弹道仿真工作区\\2026.11.25 CZ2-F\\config.json 的 config.json 复制（参数来源见该算例 t0_note/coord_note 与 docs/验证_回归_CZ2D.md）",
+      "sources": [
+        {
+          "url": "F:\\DeepSeek工作区\\弹道仿真工作区\\2026.11.25 CZ2-F\\config.json",
+          "accessed": "2026-11-23",
+          "what": "已交付算例配置"
+        }
+      ]
+    },
+    {
+      "id": "cz6a",
+      "name": "长征六号甲",
+      "aliases": [
+        "CZ-6A",
+        "长六甲",
+        "长征六号甲",
+        "cz6a"
+      ],
+      "class": "medium_liquid",
+      "liftoff_mass_kg": 524700.0,
+      "leo_kg": null,
+      "sso_kg": null,
+      "default_payload_kg": 3000.0,
+      "typical_orbits": [
+        {
+          "name": "参考轨道",
+          "alt_km": 823.1,
+          "i_deg": 142.0
+        }
+      ],
+      "launch_sites": [
+        "tslc_lc9a"
+      ],
+      "guidance_defaults": {
+        "mode": "shooting_plane",
+        "t_v": 8.011132026820905,
+        "t_p": 133.6845313598508,
+        "pitch_power": 0.7333818721267129,
+        "t_fairing": 179.0,
+        "fairing_divert_mps": 4.0,
+        "plane_keeping": false,
+        "yaw_tau": 150.0,
+        "i_target_deg": 141.28972474785593,
+        "yaw2_tau": 220.0,
+        "post_seco_s": 60.0,
+        "flow_scale": 1.0
+      },
+      "vehicle": {
+        "adapter_kg": 600.0,
+        "payload_kg": 3000.0,
+        "stages": [
+          {
+            "name": "一级",
+            "dry_kg": 17000.0,
+            "prop_kg": 192600.0,
+            "engines": 2,
+            "thrust_sl_n": 1188000.0,
+            "thrust_vac_n": 1340000.0,
+            "isp_sl_s": 300.0,
+            "isp_vac_s": 335.0,
+            "pitch_end_deg": 36.811276026928596,
+            "cda_attached_m2": 11.5
+          },
+          {
+            "name": "二级",
+            "dry_kg": 5000.0,
+            "prop_kg": 24000.0,
+            "pitch_end_deg": -11.101671364326789,
+            "pitch_duration_s": 252.4341002414477,
+            "seco_met": null,
+            "cda_attached_m2": 9.0,
+            "phases": [
+              {
+                "name": "主机",
+                "thrusters": [
+                  {
+                    "n": 1,
+                    "thrust_vac_n": 180000.0,
+                    "isp_vac_s": 342.0,
+                    "thrust_sl_n": 168000.0,
+                    "isp_sl_s": 319.0
+                  }
+                ],
+                "emit_event": false
+              }
+            ]
+          }
+        ],
+        "boosters": {
+          "name": "助推器",
+          "count": 4,
+          "dry_kg_each": 11700.0,
+          "prop_kg_each": 58300.0,
+          "jettison_met": null,
+          "thrusters": [
+            {
+              "n": 4,
+              "thrust_sl_n": 1214000.0,
+              "thrust_vac_n": 1283000.0,
+              "isp_sl_s": 244.0,
+              "isp_vac_s": 258.0
+            }
+          ],
+          "note": "2 m×15.1 m 两段式固体助推器：总重 70 t、装药 58.3 t、工作时间 115 s、海平面推力 1214 kN（卫星百科 SPB60；置信度高）；等效比冲由『平均推力 1241.66 kN×115 s ÷ 58.3 t』反算 ≈250 s（推算）"
+        },
+        "fairing": {
+          "mass_kg": 2500.0,
+          "halves": 2,
+          "sep_met": 179.0,
+          "cda_m2": 14.0,
+          "note": "标配整流罩直径 4.2 m、长 11 m（卫星百科，置信度高）；质量未确认，取 2.5 t 估值（同类 4.2 m 罩 2.2–3.0 t）"
+        },
+        "debris": {
+          "stage_0": {
+            "cda": 7.0,
+            "extra_mass_kg": 1500.0
+          },
+          "fairing": {
+            "cda": 8.0,
+            "extra_mass_kg": 0.0
+          },
+          "boosters": {
+            "cda": 8.0,
+            "extra_mass_kg": 500.0,
+            "divert_mps": 6.0
+          }
+        },
+        "ascent_cda_scale": 0.5,
+        "note_mass": "质量账目：液氧煤油芯级（一级 17 t 干重/192.6 t 推进剂，二级 5 t/29.3 t）+ 4×固体助推（干重 11.7 t/装药 58.3 t，公开）+ 整流罩 2.5 t + 载荷 3.0 t + 适配器 0.6 t = 530 t（与公开起飞重量一致）。一级推进剂由『2×YF-100 总流量 819.4 kg/s × 235 s』反算；二级推进剂由『240→813 s 二级工作段 × 53.6 kg/s』反算；干重为同类级取值（未确认）",
+        "ascent_cda_scale_note": "等效 CdA 缩放：配置的 cda_attached_m2(11.5/9.0)+fairing cda(14) 之和为 34.5 m^2，按 3.35 m 芯级+4×2 m 助推并联+4.2 m 整流罩的真实投影面积与 Cd 估算，等效 CdA 约 17 m^2，故 scale=0.5（对入轨半长轴影响显著，见 work/ 敏感性）"
+      },
+      "numerics": {
+        "mode": "accurate"
+      },
+      "confidence": "高",
+      "note": "由已交付历史算例 F:\\DeepSeek工作区\\弹道仿真工作区\\2026.11.27 CZ6-A\\config.json 的 config.json 复制（参数来源见该算例 t0_note/coord_note 与 docs/验证_回归_CZ2D.md）",
+      "sources": [
+        {
+          "url": "F:\\DeepSeek工作区\\弹道仿真工作区\\2026.11.27 CZ6-A\\config.json",
+          "accessed": "2026-11-23",
+          "what": "已交付算例配置"
+        }
+      ]
+    }
+  ]
+}

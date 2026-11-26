@@ -1,0 +1,552 @@
+{
+  "schema": "rocketkit.payloads.v1",
+  "updated": "2026-11-23",
+  "note": "载荷质量库：mass_kg 为单星或组合体总发射质量；min/max 为公开数据不确定性区间（工程估值时区间放宽）。用户给定 payload_kg 时以用户为准。",
+  "sources": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Shenzhou_(spacecraft)",
+      "note": "载人飞船质量",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Tianzhou_(spacecraft)",
+      "note": "货运飞船质量",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://zh.wikipedia.org/wiki/遥感卫星",
+      "note": "遥感系列质量公开报道汇总",
+      "accessed": "2026-11-23"
+    }
+  ],
+  "payloads": [
+    {
+      "id": "shenzhou",
+      "name": "神舟载人飞船",
+      "aliases": [
+        "神舟",
+        "Shenzhou"
+      ],
+      "mass_kg": 8100,
+      "min_kg": 7800,
+      "max_kg": 8500,
+      "confidence": "高",
+      "note": "神舟飞船（神舟十二号及以后）发射质量约 8.1 t（nextspaceflight 公开数据）；含轨道舱/返回舱/推进舱本体",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Shenzhou_(spacecraft)",
+          "note": "Shenzhou spacecraft",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://nextspaceflight.com/",
+          "note": "公开发射质量 8,100 kg",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "tianzhou",
+      "name": "天舟货运飞船",
+      "aliases": [
+        "天舟",
+        "Tianzhou"
+      ],
+      "mass_kg": 13500,
+      "min_kg": 12500,
+      "max_kg": 14000,
+      "confidence": "高",
+      "note": "天舟货运飞船发射质量约 13.5 t（公开报道量级 12.5-13.5 t，按后续改进型取 13.5 t）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Tianzhou_(spacecraft)",
+          "note": "Tianzhou spacecraft mass 12.9-13.5 t",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "tianhe",
+      "name": "天和号核心舱",
+      "aliases": [
+        "天和",
+        "天和核心舱",
+        "Tianhe"
+      ],
+      "mass_kg": 22500,
+      "min_kg": 22000,
+      "max_kg": 23000,
+      "confidence": "高",
+      "note": "天和核心舱发射质量约 22.5 t（公开数据）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Tianhe_core_module",
+          "note": "Tianhe core module mass",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "wentian",
+      "name": "问天实验舱",
+      "aliases": [
+        "问天",
+        "Wentian"
+      ],
+      "mass_kg": 23000,
+      "min_kg": 22000,
+      "max_kg": 23500,
+      "confidence": "高",
+      "note": "问天实验舱发射质量约 23 t（公开数据，长征五号B发射）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Wentian_module",
+          "note": "Wentian module",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "mengtian",
+      "name": "梦天实验舱",
+      "aliases": [
+        "梦天",
+        "Mengtian"
+      ],
+      "mass_kg": 23000,
+      "min_kg": 22000,
+      "max_kg": 23500,
+      "confidence": "高",
+      "note": "梦天实验舱发射质量约 23 t（公开数据，长征五号B发射）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Mengtian_module",
+          "note": "Mengtian module",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "yaogan_50",
+      "name": "遥感五十号（单星）",
+      "aliases": [
+        "遥感五十号",
+        "YG-50"
+      ],
+      "mass_kg": 3000,
+      "min_kg": 2000,
+      "max_kg": 3000,
+      "confidence": "低",
+      "note": "遥感五十号系列单星质量未正式公开；公开报道『卫星重量大概 2-3 吨』，按上限 3.0 t 计入（见 v2.0 CZ-6A 任务 config 的 payload_note）",
+      "sources": [
+        {
+          "url": "https://zh.wikipedia.org/wiki/遥感卫星",
+          "note": "遥感系列公开报道汇总",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "gaofen_1",
+      "name": "高分一号",
+      "aliases": [
+        "高分一号",
+        "GF-1"
+      ],
+      "mass_kg": 1060,
+      "min_kg": 1000,
+      "max_kg": 1100,
+      "confidence": "中",
+      "note": "高分一号卫星发射质量约 1.06 t（公开资料）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Gaofen_1",
+          "note": "Gaofen-1 mass 1,060 kg",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "gaofen_4",
+      "name": "高分四号",
+      "aliases": [
+        "高分四号",
+        "GF-4"
+      ],
+      "mass_kg": 4600,
+      "min_kg": 4500,
+      "max_kg": 4700,
+      "confidence": "中",
+      "note": "高分四号（地球静止轨道遥感卫星）发射质量约 4.6 t（公开资料）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Gaofen_4",
+          "note": "Gaofen-4 mass 4,600 kg",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "gaofen_7",
+      "name": "高分七号",
+      "aliases": [
+        "高分七号",
+        "GF-7"
+      ],
+      "mass_kg": 2800,
+      "min_kg": 2600,
+      "max_kg": 3000,
+      "confidence": "低",
+      "note": "高分七号发射质量未正式公布，按同类 1:10000 立体测绘卫星约 2.6-3.0 t 取 2.8 t（工程估值）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Gaofen_7",
+          "note": "Gaofen-7 (质量未公开，取同类量级)",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "huanjing_1a",
+      "name": "环境减灾一号A/B（单星）",
+      "aliases": [
+        "环境一号",
+        "HJ-1A",
+        "环境减灾"
+      ],
+      "mass_kg": 470,
+      "min_kg": 450,
+      "max_kg": 500,
+      "confidence": "中",
+      "note": "环境减灾一号 A/B 星单星质量约 470 kg（公开资料，一箭双星）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Huanjing_(satellite)",
+          "note": "Huanjing-1A/B mass",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "fy_3d",
+      "name": "风云三号D",
+      "aliases": [
+        "风云三号",
+        "FY-3D"
+      ],
+      "mass_kg": 2450,
+      "min_kg": 2300,
+      "max_kg": 2600,
+      "confidence": "中",
+      "note": "风云三号D 极轨气象卫星发射质量约 2.45 t（公开资料量级）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Fengyun-3",
+          "note": "Fengyun-3 series mass",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "fy_4a",
+      "name": "风云四号A",
+      "aliases": [
+        "风云四号",
+        "FY-4A"
+      ],
+      "mass_kg": 5400,
+      "min_kg": 5200,
+      "max_kg": 5500,
+      "confidence": "中",
+      "note": "风云四号A 静止轨道气象卫星发射质量约 5.4 t（公开资料）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Fengyun-4A",
+          "note": "Fengyun-4A mass 5,400 kg",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "beidou_meo",
+      "name": "北斗三号 MEO 卫星",
+      "aliases": [
+        "北斗三号",
+        "BDS-3 MEO",
+        "北斗"
+      ],
+      "mass_kg": 1014,
+      "min_kg": 1000,
+      "max_kg": 1100,
+      "confidence": "中",
+      "note": "北斗三号中圆轨道（MEO）单星质量约 1.01 t（公开资料）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/BeiDou-3",
+          "note": "BeiDou-3 MEO satellite mass ~1,014 kg",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "beidou_geo",
+      "name": "北斗三号 GEO 卫星",
+      "aliases": [
+        "北斗三号GEO",
+        "BDS-3 GEO"
+      ],
+      "mass_kg": 4600,
+      "min_kg": 4200,
+      "max_kg": 4800,
+      "confidence": "低",
+      "note": "北斗三号 GEO 单星质量公开数据不一致（4.2-4.8 t 量级），取 4.6 t 工程估值",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/BeiDou-3",
+          "note": "BeiDou-3 GEO mass（区间估计）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "shijian_20",
+      "name": "实践二十号",
+      "aliases": [
+        "实践二十号",
+        "SJ-20"
+      ],
+      "mass_kg": 8000,
+      "min_kg": 7800,
+      "max_kg": 8200,
+      "confidence": "中",
+      "note": "实践二十号大型通信技术试验卫星，发射质量约 8 t（公开报道）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Shijian-20",
+          "note": "Shijian-20 mass 8,000 kg",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "chinasat_16",
+      "name": "中星16号（实践十三号）",
+      "aliases": [
+        "中星16号",
+        "ChinaSat-16"
+      ],
+      "mass_kg": 4600,
+      "min_kg": 4500,
+      "max_kg": 4700,
+      "confidence": "中",
+      "note": "中星16号高通量通信卫星发射质量约 4.6 t（公开资料）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/ChinaSat_16",
+          "note": "ChinaSat-16 mass 4,600 kg",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "apstar_6d",
+      "name": "亚太6D",
+      "aliases": [
+        "亚太6D",
+        "Apstar-6D"
+      ],
+      "mass_kg": 5550,
+      "min_kg": 5400,
+      "max_kg": 5600,
+      "confidence": "中",
+      "note": "亚太6D 高通量通信卫星发射质量约 5.55 t（公开资料）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Apstar_6D",
+          "note": "Apstar-6D mass 5,550 kg",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "chang_e_5",
+      "name": "嫦娥五号探测器",
+      "aliases": [
+        "嫦娥五号",
+        "Chang'e 5"
+      ],
+      "mass_kg": 8200,
+      "min_kg": 8000,
+      "max_kg": 8400,
+      "confidence": "中",
+      "note": "嫦娥五号探测器（含着陆器/上升器/返回器/轨道器）发射质量约 8.2 t（公开资料）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Chang%27e_5",
+          "note": "Chang'e 5 mass 8,200 kg",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "chang_e_6",
+      "name": "嫦娥六号探测器",
+      "aliases": [
+        "嫦娥六号",
+        "Chang'e 6"
+      ],
+      "mass_kg": 8200,
+      "min_kg": 8000,
+      "max_kg": 8400,
+      "confidence": "中",
+      "note": "嫦娥六号探测器发射质量约 8.2 t（与嫦娥五号同平台，公开资料）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Chang%27e_6",
+          "note": "Chang'e 6 mass ~8,200 kg",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "chang_e_4",
+      "name": "嫦娥四号探测器",
+      "aliases": [
+        "嫦娥四号",
+        "Chang'e 4"
+      ],
+      "mass_kg": 3780,
+      "min_kg": 3600,
+      "max_kg": 3900,
+      "confidence": "中",
+      "note": "嫦娥四号探测器（着陆器+巡视器，不含中继星）发射质量约 3.78 t（公开资料）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Chang%27e_4",
+          "note": "Chang'e 4 mass 3,780 kg",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "tianwen_1",
+      "name": "天问一号探测器",
+      "aliases": [
+        "天问一号",
+        "Tianwen-1"
+      ],
+      "mass_kg": 5000,
+      "min_kg": 4800,
+      "max_kg": 5200,
+      "confidence": "中",
+      "note": "天问一号（环绕器+着陆巡视器）发射质量约 5 t（公开资料）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Tianwen-1",
+          "note": "Tianwen-1 mass ~5,000 kg",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "jilin1_gf02",
+      "name": "吉林一号高分02星",
+      "aliases": [
+        "吉林一号",
+        "Jilin-1 GF02"
+      ],
+      "mass_kg": 42,
+      "min_kg": 40,
+      "max_kg": 45,
+      "confidence": "低",
+      "note": "吉林一号高分02 系列单星质量约 40-45 kg（商业遥感小卫星，公开资料量级），取 42 kg",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Jilin-1",
+          "note": "Jilin-1 smallsat mass class",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "luojia_1",
+      "name": "珞珈一号01星",
+      "aliases": [
+        "珞珈一号",
+        "Luojia-1"
+      ],
+      "mass_kg": 20,
+      "min_kg": 18,
+      "max_kg": 22,
+      "confidence": "低",
+      "note": "珞珈一号科学试验卫星质量约 20 kg（微小卫星，工程估值）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Luojia-1",
+          "note": "Luojia-1 mass ~20 kg",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "minisat_1",
+      "name": "纳星一号",
+      "aliases": [
+        "纳星一号",
+        "NanoSat-1"
+      ],
+      "mass_kg": 25,
+      "min_kg": 20,
+      "max_kg": 30,
+      "confidence": "低",
+      "note": "纳星一号技术试验卫星质量约 25 kg（公开资料量级，工程估值）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Shiyan_(satellite)",
+          "note": "试验卫星系列（纳星一号属试验卫星系列，质量量级估计）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "tiangong_target",
+      "name": "天宫空间站组合体（三舱）",
+      "aliases": [
+        "天宫",
+        "空间站组合体"
+      ],
+      "mass_kg": 66000,
+      "min_kg": 60000,
+      "max_kg": 69000,
+      "confidence": "中",
+      "note": "天宫空间站三舱组合体在轨质量约 66-69 t（公开数据，供在轨/观测类任务参考，非单次发射质量）",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Tiangong_space_station",
+          "note": "Tiangong mass ~66 t",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "generic_remote_sensing_1t",
+      "name": "一颗典型 1 t 级遥感卫星（通用模板）",
+      "aliases": [
+        "通用1t遥感",
+        "generic_1t_sar"
+      ],
+      "mass_kg": 1000,
+      "min_kg": 800,
+      "max_kg": 1200,
+      "confidence": "中",
+      "note": "通用模板：1 t 级遥感/合成孔径雷达卫星，用户只给箭型未给载荷时的默认假设（不指向具体型号）",
+      "sources": [
+        {
+          "url": "https://zh.wikipedia.org/wiki/遥感卫星",
+          "note": "仅作量级参考；该条目为通用模板，不是具体型号数据",
+          "accessed": "2026-11-23"
+        }
+      ]
+    }
+  ]
+}

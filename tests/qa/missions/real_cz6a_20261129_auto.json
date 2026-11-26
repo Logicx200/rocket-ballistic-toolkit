@@ -1,0 +1,108 @@
+{
+  "name": "",
+  "rocket_id": "cz6a",
+  "rocket_label": "长征六号甲（CZ-6A）",
+  "site_id": "auto",
+  "site_label": "太原卫星发射中心",
+  "site_lat": null,
+  "site_lon": null,
+  "site_alt": null,
+  "t0_text": "",
+  "tz_hint": "auto",
+  "serial": "",
+  "payload_name": "",
+  "payload_kg": null,
+  "orbit_alt_km": null,
+  "orbit_i_deg": null,
+  "notams_text": "FIR: ZPKM\nfrom: 2026-11-29T03:46:00Z / 2026/11/29 11:46:00 Local\nto: 2026-11-29T04:15:00Z / 2026/11/29 12:15:00 Local\nqcode: QRDCA\nA6105/26 NOTAMN  Q)ZPKM/QRDCA/IV/BO/W/000/999/2813N10840E016  A)ZPKM B)2611290346 C)2611290415   E) A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY:  N282700E1083400-N282400E1085300-N275900E1084700-N280300E1082800,   BACK TO START.VERTICAL LIMITS:SFC-UNL.  AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.  F)SFC G)UNL    CREATED: 20 NOV 2026 11:28  SOURCE: ZBBBYNYX\n\nFIR: ZPKM\nfrom: 2026-11-29T03:47:00Z / 2026/11/29 11:47:00 Local\nto: 2026-11-29T04:19:00Z / 2026/11/29 12:19:00 Local\nqcode: QRDCA\nA6106/26 NOTAMN  Q)ZPKM/QRDCA/IV/BO/W/000/999/2734N10831E022  A)ZPKM B)2611290347 C)2611290419   E) A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY:  N275600E1082500-N275100E1084700-N271300E1083800-N271700E1081600  BACK TO START.VERTICAL LIMITS:SFC-UNL.  AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.  F)SFC G)UNL    CREATED: 20 NOV 2026 11:29  SOURCE: ZBBBYNYX",
+  "notams": [
+    {
+      "id": "A6105/26",
+      "b_utc": "2026-11-29T03:46:00Z",
+      "c_utc": "2026-11-29T04:15:00Z",
+      "q_line": "Q)ZPKM/QRDCA/IV/BO/W/000/999/2813N10840E016  A)ZPKM B)2611290346 C)2611290415   E) A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY:  N282700E1083400-N282400E1085300-N275900E1084700-N280300E1082800,   BACK TO START.VERTICAL LIMITS:SFC-UNL.  AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.  F)SFC G)UNL    CREATED: 20 NOV 2026 11:28  SOURCE: ZBBBYNYX",
+      "fir": "ZPKM",
+      "polygon_latlon": [
+        [
+          28.45,
+          108.56666667
+        ],
+        [
+          28.4,
+          108.88333333
+        ],
+        [
+          27.98333333,
+          108.78333333
+        ],
+        [
+          28.05,
+          108.46666667
+        ]
+      ],
+      "stage_hint": "",
+      "raw_text": "A6105/26 NOTAMN  Q)ZPKM/QRDCA/IV/BO/W/000/999/2813N10840E016  A)ZPKM B)2611290346 C)2611290415   E) A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY:  N282700E1083400-N282400E1085300-N275900E1084700-N280300E1082800,   BACK TO START.VERTICAL LIMITS:SFC-UNL.  AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.  F)SFC G)UNL    CREATED: 20 NOV 2026 11:28  SOURCE: ZBBBYNYX\n\nFIR: ZPKM\nfrom: 2026-11-29T03:47:00Z / 2026/11/29 11:47:00 Local\nto: 2026-11-29T04:19:00Z / 2026/11/29 12:19:00 Local\nqcode: QRDCA",
+      "verified": "用户粘贴原文（未逐字核对）"
+    },
+    {
+      "id": "A6106/26",
+      "b_utc": "2026-11-29T03:47:00Z",
+      "c_utc": "2026-11-29T04:19:00Z",
+      "q_line": "Q)ZPKM/QRDCA/IV/BO/W/000/999/2734N10831E022  A)ZPKM B)2611290347 C)2611290419   E) A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY:  N275600E1082500-N275100E1084700-N271300E1083800-N271700E1081600  BACK TO START.VERTICAL LIMITS:SFC-UNL.  AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.  F)SFC G)UNL    CREATED: 20 NOV 2026 11:29  SOURCE: ZBBBYNYX",
+      "fir": "ZPKM",
+      "polygon_latlon": [
+        [
+          27.93333333,
+          108.41666667
+        ],
+        [
+          27.85,
+          108.78333333
+        ],
+        [
+          27.21666667,
+          108.63333333
+        ],
+        [
+          27.28333333,
+          108.26666667
+        ]
+      ],
+      "stage_hint": "",
+      "raw_text": "A6106/26 NOTAMN  Q)ZPKM/QRDCA/IV/BO/W/000/999/2734N10831E022  A)ZPKM B)2611290347 C)2611290419   E) A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY:  N275600E1082500-N275100E1084700-N271300E1083800-N271700E1081600  BACK TO START.VERTICAL LIMITS:SFC-UNL.  AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.  F)SFC G)UNL    CREATED: 20 NOV 2026 11:29  SOURCE: ZBBBYNYX",
+      "verified": "用户粘贴原文（未逐字核对）"
+    }
+  ],
+  "notams_mode": "auto",
+  "observers": [
+    {
+      "id": "obs1",
+      "name": "9号天台",
+      "lat_deg": 37.76214439,
+      "lon_deg": 112.73166776,
+      "alt_m": null,
+      "note": ""
+    }
+  ],
+  "mode": "accurate",
+  "modules": {
+    "dem": true,
+    "invert": true,
+    "export": true,
+    "window": true,
+    "sky": true,
+    "appear": true,
+    "map": true,
+    "mc": false,
+    "kml": true,
+    "qc": true,
+    "report": true
+  },
+  "mc_n": 0,
+  "jobs": 0,
+  "dem_radius_km": 200.0,
+  "vehicle_overrides": {},
+  "inversion_maxiter": 0,
+  "inversion_popsize": 0,
+  "notes": ""
+}

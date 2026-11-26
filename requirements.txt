@@ -1,0 +1,20 @@
+# 火箭弹道工具箱 v3.0 运行期依赖（源码运行 / 自行打包）
+#
+# 说明：
+#   * numpy/scipy   —— 数值内核（RK4 积分、差分进化、轨道根数）
+#   * matplotlib    —— 所有出图（天空轨迹、全国地图、地形判读）
+#   * pillow        —— PNG 检查/图标处理（qc.py 与 KMZ 图标）
+#   * pandas        —— engine/scripts/plot_sky.py 的 CSV 读取（可直接 pip 安装）
+#   * python-docx   —— 可选：技术报告额外导出 .docx（不装则只出 .md）
+#
+# 安装：python -m pip install -r requirements.txt
+numpy>=1.26,<3
+scipy>=1.11,<2
+matplotlib>=3.7,<4
+pillow>=10,<13
+pandas>=2.0,<3
+python-docx>=1.1,<2
+sgp4>=2.20,<3
+
+# 仅重建 Natural Earth 底图（python _tools/fetch_ne.py）时需要：
+# pyshp>=2.3

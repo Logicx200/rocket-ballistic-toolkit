@@ -1,0 +1,10 @@
+{
+  "name": "场景7（附加）：任务 JSON 不写 modules + 命令行 --modules export（验证 --modules 是否真能关掉其它步骤）",
+  "rocket_label": "长征二号丁",
+  "site_label": "太原 LC-9",
+  "t0_text": "2026-11-19 06:50",
+  "notams_mode": "off",
+  "observers": [
+    {"id": "obs_bj", "name": "北京"}
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "_schema": "rocketkit.orbits.v1",
+  "updated": "2026-11-23",
+  "orbits": [
+    {
+      "id": "sso500",
+      "name": "太阳同步轨道 500 km",
+      "alt_km": 500.0,
+      "i_deg": 97.4,
+      "type": "SSO"
+    },
+    {
+      "id": "sso700",
+      "name": "太阳同步轨道 700 km",
+      "alt_km": 700.0,
+      "i_deg": 98.2,
+      "type": "SSO"
+    },
+    {
+      "id": "leo200",
+      "name": "近地轨道 200 km",
+      "alt_km": 200.0,
+      "i_deg": 41.5,
+      "type": "LEO"
+    },
+    {
+      "id": "leo400",
+      "name": "近地轨道 400 km",
+      "alt_km": 400.0,
+      "i_deg": 51.6,
+      "type": "LEO"
+    }
+  ]
+}

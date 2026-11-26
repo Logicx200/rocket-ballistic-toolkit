@@ -1,0 +1,897 @@
+{
+  "schema": "rocketkit.sites.v1",
+  "updated": "2026-11-23",
+  "note": "中国境内发射工位（含海上发射区）坐标与海拔。alt_m_ellipsoid 为海拔（正高；历史任务未做椭球高改正，场区大地水准面差对弹道影响可忽略）。confidence=低 的工位坐标为两位小数近似（约 1 km 量级）或未获工位级独立坐标源，使用前请看 coord_note。",
+  "sources": [
+    {
+      "url": "F:/DeepSeek工作区/火箭弹道工具箱_v3.0/engine/templates/config_cz2d.json",
+      "note": "三份历史任务 config 的 launch_site 坐标（CZ-2D/CZ-2F/CZ-6A 锚点）",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://orbitcodex.com/facilities/jiuquan-satellite-launch-center",
+      "note": "Orbit Codex 酒泉场区（40.95806N/100.29111E/1073m）与工位页",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://orbitcodex.com/facilities/taiyuan-satellite-launch-center",
+      "note": "Orbit Codex 太原场区（38.8490861N/111.6084972E/1500m）",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://orbitcodex.com/facilities/xichang-satellite-launch-center",
+      "note": "Orbit Codex 西昌场区（28.24556N/102.02667E）",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://aeropattern.com/space/pads",
+      "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://zh.wikipedia.org/wiki/海南商业航天发射场",
+      "note": "海南商业航天发射场场区坐标 19.60081N/110.93575E",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://zh.wikipedia.org/wiki/东方航天港",
+      "note": "东方航天港（海阳）母港坐标 36.67231N/121.23825E",
+      "accessed": "2026-11-23"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Jiuquan_Satellite_Launch_Center",
+      "note": "SLS-1/921 坐标与工位命名（LS-43/91）",
+      "accessed": "2026-11-23"
+    }
+  ],
+  "sites": [
+    {
+      "id": "jq_sls1_921",
+      "name": "酒泉卫星发射中心 921工位（SLS-1 / LC-43/91）",
+      "aliases": [
+        "酒泉921",
+        "921工位",
+        "SLS-1",
+        "LC-43",
+        "LC-91",
+        "LA-91",
+        "Jiuquan SLS-1",
+        "Jiuquan LA-91",
+        "载人航天发射场"
+      ],
+      "lat_deg": 40.957893,
+      "lon_deg": 100.290944,
+      "alt_m_ellipsoid": 1073.0,
+      "country": "中国",
+      "region": "甘肃省酒泉市/内蒙古额济纳旗",
+      "vehicles": [
+        "cz2f",
+        "cz2c",
+        "cz2d",
+        "cz4c",
+        "cz11"
+      ],
+      "confidence": "高",
+      "coord_note": "三份历史任务 config 锚点 40.957893N/100.290944E/1073m；Orbit Codex 40.95806N/100.29111E（差约 60 m）、AeroPattern 40.96N/100.29E、英文维基 40°57′28″N 100°17′27″E 四源一致。Orbit Codex 全称 SLS-1 / 921 (LC-43/91)，故「43」「91」为同一工位的编号别称",
+      "sources": [
+        {
+          "url": "F:/DeepSeek工作区/火箭弹道工具箱_v3.0/engine/templates/config_cz2d.json",
+          "note": "三份历史任务 config 的 launch_site 坐标（CZ-2D/CZ-2F/CZ-6A 锚点）",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://orbitcodex.com/facilities/jiuquan-satellite-launch-center",
+          "note": "Orbit Codex 酒泉场区（40.95806N/100.29111E/1073m）与工位页",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Jiuquan_Satellite_Launch_Center",
+          "note": "SLS-1/921 坐标与工位命名（LS-43/91）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "jq_sls2_94",
+      "name": "酒泉卫星发射中心 94工位（SLS-2 / 603）",
+      "aliases": [
+        "酒泉94",
+        "94工位",
+        "SLS-2",
+        "LC-94",
+        "603工位",
+        "LA-94",
+        "Jiuquan SLS-2"
+      ],
+      "lat_deg": 40.960671,
+      "lon_deg": 100.298186,
+      "alt_m_ellipsoid": 1073.0,
+      "country": "中国",
+      "region": "甘肃省酒泉市/内蒙古额济纳旗",
+      "vehicles": [
+        "cz2c",
+        "cz2d",
+        "cz4b",
+        "cz4c",
+        "cz2f"
+      ],
+      "confidence": "高",
+      "coord_note": "Orbit Codex 工位页 40.960671N/100.298186E（全称 Launch Complex 43/94 (SLS-2/603)）；AeroPattern 40.96N/100.30E 一致；海拔取场区 1073 m（两源一致量级）",
+      "sources": [
+        {
+          "url": "https://orbitcodex.com/facilities/jiuquan-satellite-launch-center",
+          "note": "Orbit Codex 酒泉场区（40.95806N/100.29111E/1073m）与工位页",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "jq_la95a",
+      "name": "酒泉卫星发射中心 LA-95A 工位",
+      "aliases": [
+        "95A工位",
+        "LA-95A",
+        "Jiuquan LA-95A"
+      ],
+      "lat_deg": 40.97,
+      "lon_deg": 100.34,
+      "alt_m_ellipsoid": 1060.0,
+      "country": "中国",
+      "region": "甘肃省酒泉市/内蒙古额济纳旗",
+      "vehicles": [],
+      "confidence": "低",
+      "coord_note": "AeroPattern 工位页 40.97N/100.34E（两位小数，约 1 km 量级不确定）；海拔按场区 1050-1080 m 取 1060 m（估值）；工位用途未逐一核实",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "jq_la96a",
+      "name": "酒泉卫星发射中心 LA-96A 工位",
+      "aliases": [
+        "96A工位",
+        "LA-96A",
+        "Jiuquan LA-96A"
+      ],
+      "lat_deg": 40.91,
+      "lon_deg": 100.25,
+      "alt_m_ellipsoid": 1060.0,
+      "country": "中国",
+      "region": "甘肃省酒泉市/内蒙古额济纳旗",
+      "vehicles": [],
+      "confidence": "中",
+      "coord_note": "AeroPattern 工位页 40.91N/100.25E（两位小数，约 1 km 量级不确定）；海拔按场区量级取 1060 m（估值）",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "jq_la96b",
+      "name": "酒泉卫星发射中心 LA-96B 工位",
+      "aliases": [
+        "96B工位",
+        "LA-96B",
+        "Jiuquan LA-96B"
+      ],
+      "lat_deg": 40.92,
+      "lon_deg": 100.25,
+      "alt_m_ellipsoid": 1060.0,
+      "country": "中国",
+      "region": "甘肃省酒泉市/内蒙古额济纳旗",
+      "vehicles": [],
+      "confidence": "中",
+      "coord_note": "AeroPattern 工位页 40.92N/100.25E（两位小数，约 1 km 量级不确定）；海拔按场区量级取 1060 m（估值）",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "jq_la120",
+      "name": "酒泉卫星发射中心 LA-120 工位（商业工位）",
+      "aliases": [
+        "120工位",
+        "LA-120",
+        "酒泉商业工位",
+        "Jiuquan LA-120"
+      ],
+      "lat_deg": 40.86,
+      "lon_deg": 100.2,
+      "alt_m_ellipsoid": 1050.0,
+      "country": "中国",
+      "region": "甘肃省酒泉市/内蒙古额济纳旗",
+      "vehicles": [],
+      "confidence": "低",
+      "coord_note": "AeroPattern 工位页 40.86N/100.20E（两位小数，约 1 km 量级不确定）；商业发射工位，具体使用方未核实；海拔为场区量级估值",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "jq_la130",
+      "name": "酒泉卫星发射中心 LA-130 工位",
+      "aliases": [
+        "130工位",
+        "LA-130",
+        "Jiuquan LA-130"
+      ],
+      "lat_deg": 40.82,
+      "lon_deg": 100.23,
+      "alt_m_ellipsoid": 1050.0,
+      "country": "中国",
+      "region": "甘肃省酒泉市/内蒙古额济纳旗",
+      "vehicles": [],
+      "confidence": "低",
+      "coord_note": "AeroPattern 工位页 40.82N/100.23E（两位小数，约 1 km 量级不确定）；海拔为场区量级估值",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "jq_la140",
+      "name": "酒泉卫星发射中心 LA-140 工位",
+      "aliases": [
+        "140工位",
+        "LA-140",
+        "Jiuquan LA-140"
+      ],
+      "lat_deg": 40.82,
+      "lon_deg": 100.22,
+      "alt_m_ellipsoid": 1050.0,
+      "country": "中国",
+      "region": "甘肃省酒泉市/内蒙古额济纳旗",
+      "vehicles": [],
+      "confidence": "低",
+      "coord_note": "AeroPattern 工位页 40.82N/100.22E（两位小数，约 1 km 量级不确定）；海拔为场区量级估值",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "jq_cz12_pad",
+      "name": "酒泉卫星发射中心 长征十二号系列工位",
+      "aliases": [
+        "长征十二号工位",
+        "CZ-12工位",
+        "Long March 12 series Pad"
+      ],
+      "lat_deg": 40.89,
+      "lon_deg": 100.22,
+      "alt_m_ellipsoid": 1050.0,
+      "country": "中国",
+      "region": "甘肃省酒泉市/内蒙古额济纳旗",
+      "vehicles": [
+        "cz12"
+      ],
+      "confidence": "低",
+      "coord_note": "AeroPattern 工位页 40.89N/100.22E（两位小数，约 1 km 量级不确定）；工位用途按 AeroPattern 命名，未与官方公开图对照",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "jq_pallas1_pad",
+      "name": "酒泉卫星发射中心 Pallas-1 工位",
+      "aliases": [
+        "Pallas-1工位",
+        "力箭工位",
+        "Pallas-1 Launch Pad"
+      ],
+      "lat_deg": 40.78,
+      "lon_deg": 100.11,
+      "alt_m_ellipsoid": 1050.0,
+      "country": "中国",
+      "region": "甘肃省酒泉市/内蒙古额济纳旗",
+      "vehicles": [],
+      "confidence": "低",
+      "coord_note": "AeroPattern 工位页 40.78N/100.11E（两位小数，约 1 km 量级不确定）；使用方未核实（AeroPattern 命名 Pallas-1）",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "jq_tianlong3_pad",
+      "name": "酒泉卫星发射中心 天龙三号工位",
+      "aliases": [
+        "天龙三号工位",
+        "Tianlong-3 Launch Pad"
+      ],
+      "lat_deg": 40.81,
+      "lon_deg": 100.14,
+      "alt_m_ellipsoid": 1050.0,
+      "country": "中国",
+      "region": "甘肃省酒泉市/内蒙古额济纳旗",
+      "vehicles": [],
+      "confidence": "低",
+      "coord_note": "AeroPattern 工位页 40.81N/100.14E（两位小数，约 1 km 量级不确定）；海拔为场区量级估值",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "jq_la2_138",
+      "name": "酒泉卫星发射中心 138工位（LC-2/LA-2，早期工位）",
+      "aliases": [
+        "138工位",
+        "LC-2",
+        "LA-2",
+        "酒泉2号工位",
+        "Jiuquan LC-2"
+      ],
+      "lat_deg": 41.3075,
+      "lon_deg": 100.315,
+      "alt_m_ellipsoid": 1000.0,
+      "country": "中国",
+      "region": "甘肃省酒泉市/内蒙古额济纳旗",
+      "vehicles": [
+        "cz2c"
+      ],
+      "confidence": "低",
+      "coord_note": "Wikidata Q113960876 坐标 41°18′27″N 100°18′54″E（41.3075N/100.315E），与场区中心相距约 40 km，未获 AeroPattern/Orbit Codex 交叉核对；海拔 1000 m 为地形量级估值；该工位为早期（1980-90 年代）使用，现役任务不从此工位发射",
+      "sources": [
+        {
+          "url": "https://www.wikidata.org/wiki/Q113960876",
+          "note": "Jiuquan Launch Area 2 坐标",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "ty_lc9",
+      "name": "太原卫星发射中心 LC-9 工位",
+      "aliases": [
+        "太原9号工位",
+        "LC-9",
+        "LA-9",
+        "TSLC LC-9",
+        "Taiyuan LC-9"
+      ],
+      "lat_deg": 38.8632,
+      "lon_deg": 111.5896,
+      "alt_m_ellipsoid": 1459.0,
+      "country": "中国",
+      "region": "山西省忻州市岢岚县",
+      "vehicles": [
+        "cz2c",
+        "cz2d",
+        "cz4b",
+        "cz4c",
+        "cz6"
+      ],
+      "confidence": "高",
+      "coord_note": "三份历史任务 config 锚点（CZ-2D 遥106）38.8632N/111.5896E/1459m；中文维基 38°51′48″N 111°35′23″E 与 AeroPattern 38.86N/111.59E 两源一致（差约 11 m）；海拔 SRTM 1459 m",
+      "sources": [
+        {
+          "url": "F:/DeepSeek工作区/火箭弹道工具箱_v3.0/engine/templates/config_cz2d.json",
+          "note": "三份历史任务 config 的 launch_site 坐标（CZ-2D/CZ-2F/CZ-6A 锚点）",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "ty_lc9a",
+      "name": "太原卫星发射中心 LC-9A 工位",
+      "aliases": [
+        "太原9A工位",
+        "LC-9A",
+        "LA-9A",
+        "TSLC LC-9A",
+        "Taiyuan LC-9A"
+      ],
+      "lat_deg": 38.858654,
+      "lon_deg": 111.584808,
+      "alt_m_ellipsoid": 1500.0,
+      "country": "中国",
+      "region": "山西省忻州市岢岚县",
+      "vehicles": [
+        "cz6a",
+        "cz6c",
+        "cz2d",
+        "cz6"
+      ],
+      "confidence": "高",
+      "coord_note": "三份历史任务 config 锚点（CZ-6A 遥29）38.858654N/111.584808E/1500m；Orbit Codex LC-9A 与 AeroPattern 38.86N/111.58E 一致（差约 0.44 km）；1500 m 为公开海拔（正高）",
+      "sources": [
+        {
+          "url": "F:/DeepSeek工作区/火箭弹道工具箱_v3.0/engine/templates/config_cz2d.json",
+          "note": "三份历史任务 config 的 launch_site 坐标（CZ-2D/CZ-2F/CZ-6A 锚点）",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://orbitcodex.com/facilities/taiyuan-satellite-launch-center",
+          "note": "Orbit Codex 太原场区（38.8490861N/111.6084972E/1500m）",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "ty_lc16",
+      "name": "太原卫星发射中心 LC-16 工位",
+      "aliases": [
+        "太原16号工位",
+        "LC-16",
+        "LA-16",
+        "Taiyuan LC-16"
+      ],
+      "lat_deg": 38.87,
+      "lon_deg": 111.58,
+      "alt_m_ellipsoid": 1500.0,
+      "country": "中国",
+      "region": "山西省忻州市岢岚县",
+      "vehicles": [
+        "cz6"
+      ],
+      "confidence": "中",
+      "coord_note": "AeroPattern 工位页 38.87N/111.58E（两位小数，约 1 km 量级不确定）；Orbit Codex 太原场区海拔 1500 m；该工位为长征六号系列使用（AeroPattern 标注 LC-16）",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://orbitcodex.com/facilities/taiyuan-satellite-launch-center",
+          "note": "Orbit Codex 太原场区（38.8490861N/111.6084972E/1500m）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "ty_lc7",
+      "name": "太原卫星发射中心 LC-7 工位",
+      "aliases": [
+        "太原7号工位",
+        "LC-7",
+        "LA-7",
+        "Taiyuan LC-7"
+      ],
+      "lat_deg": 38.86,
+      "lon_deg": 111.59,
+      "alt_m_ellipsoid": 1500.0,
+      "country": "中国",
+      "region": "山西省忻州市岢岚县",
+      "vehicles": [
+        "cz2c",
+        "cz4b"
+      ],
+      "confidence": "低",
+      "coord_note": "Orbit Codex 太原设施页列有 LC-7；坐标取 AeroPattern 太原 LC-9 量级 38.86N/111.59E（两位小数，约 1 km 量级不确定），未获该工位独立坐标源；海拔按场区 1500 m",
+      "sources": [
+        {
+          "url": "https://orbitcodex.com/facilities/taiyuan-satellite-launch-center",
+          "note": "Orbit Codex 太原场区（38.8490861N/111.6084972E/1500m）",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "xc_lc2",
+      "name": "西昌卫星发射中心 LC-2 工位",
+      "aliases": [
+        "西昌2号工位",
+        "LC-2",
+        "LA-2",
+        "XSLC LC-2",
+        "Xichang LC-2"
+      ],
+      "lat_deg": 28.2453,
+      "lon_deg": 102.0269,
+      "alt_m_ellipsoid": 1826.0,
+      "country": "中国",
+      "region": "四川省凉山州西昌市",
+      "vehicles": [
+        "cz3b",
+        "cz3c",
+        "cz2c"
+      ],
+      "confidence": "中",
+      "coord_note": "Orbit Codex 西昌场区 28.24556N/102.02667E；AeroPattern LC-2 28.25N/102.03E；工位级坐标按场区中心量级取 28.2453N/102.0269E（约 0.1-0.5 km 量级不确定）；海拔 1826 m 为公开场区海拔",
+      "sources": [
+        {
+          "url": "https://orbitcodex.com/facilities/xichang-satellite-launch-center",
+          "note": "Orbit Codex 西昌场区（28.24556N/102.02667E）",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "xc_lc3",
+      "name": "西昌卫星发射中心 LC-3 工位（LA-1）",
+      "aliases": [
+        "西昌3号工位",
+        "LC-3",
+        "LA-3",
+        "LA-1",
+        "XSLC LC-3",
+        "Xichang LC-3"
+      ],
+      "lat_deg": 28.24714,
+      "lon_deg": 102.02911,
+      "alt_m_ellipsoid": 1826.0,
+      "country": "中国",
+      "region": "四川省凉山州西昌市",
+      "vehicles": [
+        "cz3b",
+        "cz3c",
+        "cz2c",
+        "cz4c"
+      ],
+      "confidence": "中",
+      "coord_note": "英文维基 Xichang Launch Complex 3：28.24714N/102.02911E（28°14′50″N 102°01′45″E）；AeroPattern LC-3 28.25N/102.03E 一致；海拔 1826 m 为公开场区海拔",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Xichang_Satellite_Launch_Center",
+          "note": "西昌发射场与 LC-3（28.24714N/102.02911E）公开坐标",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "xc_mobile",
+      "name": "西昌卫星发射中心 移动发射工位",
+      "aliases": [
+        "西昌移动工位",
+        "Mobile Launcher Pad",
+        "XSLC mobile"
+      ],
+      "lat_deg": 28.24,
+      "lon_deg": 102.03,
+      "alt_m_ellipsoid": 1826.0,
+      "country": "中国",
+      "region": "四川省凉山州西昌市",
+      "vehicles": [],
+      "confidence": "低",
+      "coord_note": "AeroPattern 工位页 28.24N/102.03E（两位小数，约 1 km 量级不确定）；移动发射工位用途未核实；海拔按场区 1826 m",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "wc_lc101",
+      "name": "文昌航天发射场 101 工位",
+      "aliases": [
+        "文昌101",
+        "LC-101",
+        "101工位",
+        "Wenchang LC-101",
+        "WSLC 101"
+      ],
+      "lat_deg": 19.6144,
+      "lon_deg": 110.9511,
+      "alt_m_ellipsoid": 10.0,
+      "country": "中国",
+      "region": "海南省文昌市龙楼镇",
+      "vehicles": [
+        "cz5",
+        "cz5b"
+      ],
+      "confidence": "高",
+      "coord_note": "AeroPattern 工位页 19.61N/110.95E；公共资料/维基 19°36′52″N 110°57′04″E（约 19.6144N/110.9511E）；海拔约 10 m（沿海场区）",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Wenchang_Space_Launch_Site",
+          "note": "文昌发射场与 101/201 工位公开坐标",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "wc_lc201",
+      "name": "文昌航天发射场 201 工位",
+      "aliases": [
+        "文昌201",
+        "LC-201",
+        "201工位",
+        "Wenchang LC-201",
+        "WSLC 201"
+      ],
+      "lat_deg": 19.6112,
+      "lon_deg": 110.9509,
+      "alt_m_ellipsoid": 10.0,
+      "country": "中国",
+      "region": "海南省文昌市龙楼镇",
+      "vehicles": [
+        "cz7",
+        "cz7a",
+        "cz8"
+      ],
+      "confidence": "高",
+      "coord_note": "AeroPattern 工位页 19.62N/110.96E；公共资料/维基 19°36′40″N 110°57′03″E（约 19.6112N/110.9509E）；海拔约 10 m（沿海场区）",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Wenchang_Space_Launch_Site",
+          "note": "文昌发射场与 101/201 工位公开坐标",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "hn_lc1",
+      "name": "海南商业航天发射场 一号工位",
+      "aliases": [
+        "海南商业一号",
+        "商业一号工位",
+        "Commercial LC-1",
+        "Hainan Commercial LC-1"
+      ],
+      "lat_deg": 19.6,
+      "lon_deg": 110.93,
+      "alt_m_ellipsoid": 10.0,
+      "country": "中国",
+      "region": "海南省文昌市",
+      "vehicles": [
+        "cz8",
+        "cz8a",
+        "cz12"
+      ],
+      "confidence": "低",
+      "coord_note": "场区中心 19.60081N/110.93575E（中文维基）；AeroPattern 一号工位 19.60N/110.93E（两位小数，约 1 km 量级不确定）；工位级精确坐标未获，按上述两源取整",
+      "sources": [
+        {
+          "url": "https://zh.wikipedia.org/wiki/海南商业航天发射场",
+          "note": "海南商业航天发射场场区坐标 19.60081N/110.93575E",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "hn_lc2",
+      "name": "海南商业航天发射场 二号工位",
+      "aliases": [
+        "海南商业二号",
+        "商业二号工位",
+        "Commercial LC-2",
+        "Hainan Commercial LC-2"
+      ],
+      "lat_deg": 19.6,
+      "lon_deg": 110.94,
+      "alt_m_ellipsoid": 10.0,
+      "country": "中国",
+      "region": "海南省文昌市",
+      "vehicles": [
+        "cz12"
+      ],
+      "confidence": "低",
+      "coord_note": "场区中心 19.60081N/110.93575E（中文维基）；AeroPattern 二号工位 19.60N/110.94E（两位小数，约 1 km 量级不确定）；工位级精确坐标未获",
+      "sources": [
+        {
+          "url": "https://zh.wikipedia.org/wiki/海南商业航天发射场",
+          "note": "海南商业航天发射场场区坐标 19.60081N/110.93575E",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "hy_offshore",
+      "name": "海阳东方航天港 海上发射区（近海）",
+      "aliases": [
+        "海阳海上发射",
+        "东方航天港",
+        "黄海发射区",
+        "Haiyang offshore",
+        "Oriental Spaceport"
+      ],
+      "lat_deg": 36.63,
+      "lon_deg": 121.2,
+      "alt_m_ellipsoid": 0.0,
+      "country": "中国",
+      "region": "山东省烟台市海阳市近海",
+      "vehicles": [
+        "cz11",
+        "gsx1",
+        "jl3",
+        "kz1a"
+      ],
+      "confidence": "低",
+      "coord_note": "AeroPattern 海阳海上发射区 36.63N/121.20E（两位小数，约 1 km 量级）；东方航天港母港/总装测试区 36.67231N/121.23825E（中文维基）。海上发射平台机动，实际发射海区随任务变化，此坐标为代表值（alt=0）",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        },
+        {
+          "url": "https://zh.wikipedia.org/wiki/东方航天港",
+          "note": "东方航天港（海阳）母港坐标 36.67231N/121.23825E",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "rz_offshore",
+      "name": "日照近海 海上发射区",
+      "aliases": [
+        "日照海上发射",
+        "Rizhao offshore"
+      ],
+      "lat_deg": 35.39,
+      "lon_deg": 119.6,
+      "alt_m_ellipsoid": 0.0,
+      "country": "中国",
+      "region": "山东省日照市近海",
+      "vehicles": [
+        "gsx1",
+        "jl3"
+      ],
+      "confidence": "低",
+      "coord_note": "AeroPattern 日照海上发射区 35.39N/119.60E（两位小数，约 1 km 量级）；海上机动平台，坐标为代表值（alt=0）",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "scs_lc1",
+      "name": "南海 海上发射区 1",
+      "aliases": [
+        "南海发射区1",
+        "South China Sea launch location 1"
+      ],
+      "lat_deg": 21.28,
+      "lon_deg": 112.0,
+      "alt_m_ellipsoid": 0.0,
+      "country": "中国",
+      "region": "南海（海上机动平台）",
+      "vehicles": [
+        "jl3"
+      ],
+      "confidence": "低",
+      "coord_note": "AeroPattern 南海海上发射区 1：21.28N/112.00E（两位小数，约 1 km 量级）；海上机动平台，坐标为代表值（alt=0）",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "scs_lc2",
+      "name": "南海 海上发射区 2",
+      "aliases": [
+        "南海发射区2",
+        "South China Sea launch location 2"
+      ],
+      "lat_deg": 21.57,
+      "lon_deg": 112.03,
+      "alt_m_ellipsoid": 0.0,
+      "country": "中国",
+      "region": "南海（海上机动平台）",
+      "vehicles": [
+        "jl3"
+      ],
+      "confidence": "低",
+      "coord_note": "AeroPattern 南海海上发射区 2：21.57N/112.03E（两位小数，约 1 km 量级）；海上机动平台，坐标为代表值（alt=0）",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "ys_lc5",
+      "name": "黄海 海上发射区 5",
+      "aliases": [
+        "黄海发射区5",
+        "Yellow Sea launch location 5"
+      ],
+      "lat_deg": 31.2,
+      "lon_deg": 123.7,
+      "alt_m_ellipsoid": 0.0,
+      "country": "中国",
+      "region": "黄海（海上机动平台）",
+      "vehicles": [
+        "jl3",
+        "gsx1"
+      ],
+      "confidence": "低",
+      "coord_note": "AeroPattern 黄海海上发射区 5：31.20N/123.70E（两位小数，约 1 km 量级）；该坐标位于长江口外海，与『黄海』命名可能不符（AeroPattern 数据原样），使用时请核对；alt=0",
+      "sources": [
+        {
+          "url": "https://aeropattern.com/space/pads",
+          "note": "AeroPattern 工位页坐标（多数为两位小数，约 1 km 量级不确定）",
+          "accessed": "2026-11-23"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "_schema": "rocketkit.sites.v1",
+  "updated": "2026-11-23",
+  "sites": [
+    {
+      "id": "tslc_lc9",
+      "name": "太原卫星发射中心 九号工位（TSLC LC-9）",
+      "aliases": [
+        "太原卫星发射中心九号工位 (TSLC LC-9)"
+      ],
+      "lat_deg": 38.8632,
+      "lon_deg": 111.5896,
+      "alt_m_ellipsoid": 1459.0,
+      "country": "CN",
+      "region": "山西",
+      "vehicles": [
+        "cz2d"
+      ],
+      "confidence": "高",
+      "coord_note": "中文维基 38°51′48″N 111°35′23″E 与 AeroPattern 38.86N/111.59E 两源一致（差约 11 m）；海拔 SRTM 1459 m",
+      "sources": [
+        {
+          "url": "F:\\DeepSeek工作区\\火箭弹道工具箱_v2.0\\config.json",
+          "accessed": "2026-11-23",
+          "what": "已交付算例配置"
+        }
+      ]
+    },
+    {
+      "id": "jq_921",
+      "name": "酒泉卫星发射中心 921 工位（LC-91 / SLS-1）",
+      "aliases": [
+        "酒泉卫星发射中心 921工位（Launch Area 91 / SLS-1）"
+      ],
+      "lat_deg": 40.957893,
+      "lon_deg": 100.290944,
+      "alt_m_ellipsoid": 1073.0,
+      "country": "CN",
+      "region": "甘肃/内蒙古",
+      "vehicles": [
+        "cz2f"
+      ],
+      "confidence": "高",
+      "coord_note": "Orbit Codex: 40.957893N / 100.290944E / 1073 m；中文维基酒泉条目 40°57′28″N 100°17′30″E（与前者差约 60 m）。1073 m 为海拔（正高），椭球高未改正（该区大地水准面差约 -30 m，对弹道影响可忽略）",
+      "sources": [
+        {
+          "url": "F:\\DeepSeek工作区\\弹道仿真工作区\\2026.11.25 CZ2-F\\config.json",
+          "accessed": "2026-11-23",
+          "what": "已交付算例配置"
+        }
+      ]
+    },
+    {
+      "id": "tslc_lc9a",
+      "name": "太原卫星发射中心 9A 工位（TSLC LC-9A）",
+      "aliases": [
+        "太原卫星发射中心 9A 工位（TSLC LC-9A）"
+      ],
+      "lat_deg": 38.858654,
+      "lon_deg": 111.584808,
+      "alt_m_ellipsoid": 1500.0,
+      "country": "CN",
+      "region": "山西",
+      "vehicles": [
+        "cz6a"
+      ],
+      "confidence": "高",
+      "coord_note": "Orbit Codex LC-9A：38.858654N / 111.584808E / 1500 m；AeroPattern LC-9A：38.86N / 111.58E（与前者差约 0.44 km）；场区中心（中文维基）38°50′56.71″N / 111°36′30.59″E 与 LC-9A 差约 2.3 km。1500 m 为公开海拔（正高），未做大地水准面改正（山西 EGM96 起伏约 −25…−30 m，对弹道影响可忽略）",
+      "sources": [
+        {
+          "url": "F:\\DeepSeek工作区\\弹道仿真工作区\\2026.11.27 CZ6-A\\config.json",
+          "accessed": "2026-11-23",
+          "what": "已交付算例配置"
+        }
+      ]
+    }
+  ]
+}

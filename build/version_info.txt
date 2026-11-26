@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+# PyInstaller 版本资源：exe 属性页（右键 → 属性 → 详细信息）
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    filevers=(4, 3, 0, 0),
+    prodvers=(4, 3, 0, 0),
+    mask=0x3f,
+    flags=0x0,
+    OS=0x40004,
+    fileType=0x1,
+    subtype=0x0,
+    date=(0, 0)
+  ),
+  kids=[
+    StringFileInfo(
+      [
+        StringTable(
+          '080404b0',
+          [
+            StringStruct('CompanyName', '火箭弹道工具箱'),
+            StringStruct('FileDescription', '火箭弹道工具箱 v4.3.0 离线版（常规发射 / 载人交会 / 返回舱返回）'),
+            StringStruct('FileVersion', '4.3.0'),
+            StringStruct('InternalName', 'rocketkit'),
+            StringStruct('LegalCopyright', '仅供公开信息分析与教学使用'),
+            StringStruct('OriginalFilename', '火箭弹道工具箱.exe'),
+            StringStruct('ProductName', '火箭弹道工具箱'),
+            StringStruct('ProductVersion', '4.3.0'),
+            StringStruct('Comments', '3-DOF 弹道、落区、发射窗口、天空可见性、三维 KMZ 与中文技术报告；全程离线')
+          ]
+        )
+      ]
+    ),
+    VarFileInfo([VarStruct('Translation', [2052, 1200])])
+  ]
+)
