@@ -50,3 +50,7 @@ build/.git-credentials
 
 # DEM 运行状态（运行期会改写）
 engine/data/dem/dem_mode.json
+
+# 发布产物（本地打包 zip / 站点工作副本）
+build/release/
+build/site_work_README.md
