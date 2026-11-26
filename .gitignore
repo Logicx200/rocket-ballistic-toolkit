@@ -47,3 +47,6 @@ _gh_work/
 # ---- 临时凭据（仅本机，绝不提交）----
 build/.gh_*
 build/.git-credentials
+
+# DEM 运行状态（运行期会改写）
+engine/data/dem/dem_mode.json

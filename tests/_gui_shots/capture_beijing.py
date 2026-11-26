@@ -2,7 +2,7 @@
 """README / 主页展示图：用「北京示例」任务截取 v4 GUI 的 8 个步骤页。
 
 与 ``capture_v4.py`` 的区别：不载入内置示例（太原），而是读
-``examples/北京示例_任务输入.json``，让界面里的地点全部是北京：
+``examples/北京观测示例_任务输入.json``，让界面里的地点全部是北京：
 任务名带“北京”、发射场为北京北部坐标、观测点为北京天安门。
 
 用法（在项目根目录）::
@@ -33,7 +33,7 @@ from app.core.model import MissionInput  # noqa: E402
 from app.gui.main_window import STEPS, MainWindow, enable_dpi_awareness  # noqa: E402
 
 OUT = os.path.join(ROOT, "docs", "showcase")
-MISSION = os.path.join(ROOT, "examples", "北京示例_任务输入.json")
+MISSION = os.path.join(ROOT, "examples", "北京观测示例_任务输入.json")
 PAGES = [s["key"] for s in STEPS]
 
 

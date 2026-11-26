@@ -1,0 +1,45 @@
+{
+  "name": "示例：太原 LC-9 发射 · 北京观测（示意）",
+  "mission_type": "auto",
+  "rocket_label": "长征二号丁",
+  "rocket_id": "auto",
+  "site_id": "auto",
+  "site_label": "太原 LC-9",
+  "t0_text": "2026-11-19 06:50",
+  "tz_hint": "auto",
+  "serial": "遥106",
+  "payload_name": "示例载荷",
+  "payload_kg": 1000.0,
+  "orbit_alt_km": 505.0,
+  "orbit_i_deg": 97.45,
+  "notams_text": "A5897/26 NOTAMN\nQ)ZXXX/QRDCA/IV/BO/W/000/999/3322N11036E013\nA)ZXXX B)2611182243 C)2611182305\nE) DANGER AREA ESTABLISHED BOUNDED BY: N333400E1103100-N333200E1104400-N331000E1104100-N331100E1102700. VERTICAL LIMITS:SFC-UNL.\n\nA5898/26 NOTAMN\nQ)ZHWH/QRDCA/IV/BO/W/000/999/3015N11004E022\nA)ZHWH B)2611182244 C)2611182310\nE) DANGER AREA ESTABLISHED BOUNDED BY: N303500E1095700-N303300E1101900-N295400E1101300-N295700E1095000. VERTICAL LIMITS:SFC-UNL.\n",
+  "observers": [
+    {
+      "id": "beijing",
+      "name": "北京（天安门观测点）",
+      "lat_deg": 39.9042,
+      "lon_deg": 116.4074,
+      "alt_m": 44.0,
+      "note": "示例观测地点"
+    }
+  ],
+  "mode": "accurate",
+  "mc_n": 0,
+  "modules": {
+    "dem": false,
+    "invert": true,
+    "export": true,
+    "window": true,
+    "station": false,
+    "docking": false,
+    "return": false,
+    "sky": true,
+    "appear": true,
+    "map": true,
+    "mc": false,
+    "kml": true,
+    "summary": true,
+    "qc": true,
+    "report": true
+  }
+}

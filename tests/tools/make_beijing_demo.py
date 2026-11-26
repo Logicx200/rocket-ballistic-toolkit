@@ -1,17 +1,15 @@
 # -*- coding: utf-8 -*-
-"""生成 README/主页展示用的「北京示例」任务输入（虚构示例，非真实发射）。
+"""生成 README/主页展示用的「北京观测」示例任务输入。
 
-用途
+设定
 ----
-* README 与个人主页的展示图统一用北京作为示例地点：
-  发射场设在北京北部（自定义坐标），观测点设在北京天安门，航警区设在东北方向；
-* 载荷 1600 kg、目标轨道 480 km / 44°，使「长征二号丁」从北京向东发射时接近圆轨道
-  （单纯换经纬度会因地球自转加成让入轨偏心；这里是按标定结果调的展示参数）；
-* 该任务**不是真实发射任务**，只用于演示软件能力与出图效果。
+* **发射工位用真实的太原卫星发射中心 LC-9**（内置库，38.8632°N, 111.5896°E）；
+* **观测点改成北京天安门**（39.9042°N, 116.4074°E，海拔 44 m）——展示“异地观测”；
+* 航警用内置示例的两条禁区（真实任务格式）；这是一次**示例任务**，不是真实发射。
 
 用法::
 
-    python tests/tools/make_beijing_demo.py            # 写入 examples/北京示例_任务输入.json
+    python tests/tools/make_beijing_demo.py     # 写入 examples/北京观测示例_任务输入.json
 """
 from __future__ import annotations
 
@@ -21,48 +19,43 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-OUT = os.path.join(ROOT, "examples", "北京示例_任务输入.json")
+OUT = os.path.join(ROOT, "examples", "北京观测示例_任务输入.json")
 
-#: 示意发射场：北京北部（40.35°N, 116.20°E，海拔 60 m）
-SITE_LAT, SITE_LON, SITE_ALT = 40.3500, 116.2000, 60.0
-#: 示例观测点：北京天安门（39.9042°N, 116.4074°E，海拔 44 m）
+#: 观测点：北京天安门（示例观测地点）
 OBS_LAT, OBS_LON, OBS_ALT = 39.9042, 116.4074, 44.0
 
-#: 两条航警区（一级残骸 / 整流罩），位置取自本任务标定后的自然落点附近
+#: 内置示例的两条航警区（与 app/main.py 的 DEMO_CZ2D 一致）
 NOTAMS = (
-    "A1101/26 NOTAMN\n"
-    "Q)ZBPE/QRDCA/IV/BO/W/000/999/4150N12200E040\n"
-    "A)ZBPE B)2611182243 C)2611182305\n"
-    "E) DANGER AREA ESTABLISHED BOUNDED BY: N421000E1215000-N420500E1223000-"
-    "N414500E1220000-N415500E1212000. VERTICAL LIMITS:SFC-UNL.\n\n"
-    "A1102/26 NOTAMN\n"
-    "Q)ZBPE/QRDCA/IV/BO/W/000/999/4235N12540E045\n"
-    "A)ZBPE B)2611182241 C)2611182310\n"
-    "E) DANGER AREA ESTABLISHED BOUNDED BY: N425500E1254000-N424500E1262000-"
-    "N422000E1254000-N423500E1245000. VERTICAL LIMITS:SFC-UNL.\n"
+    "A5897/26 NOTAMN\n"
+    "Q)ZXXX/QRDCA/IV/BO/W/000/999/3322N11036E013\n"
+    "A)ZXXX B)2611182243 C)2611182305\n"
+    "E) DANGER AREA ESTABLISHED BOUNDED BY: N333400E1103100-N333200E1104400-"
+    "N331000E1104100-N331100E1102700. VERTICAL LIMITS:SFC-UNL.\n\n"
+    "A5898/26 NOTAMN\n"
+    "Q)ZHWH/QRDCA/IV/BO/W/000/999/3015N11004E022\n"
+    "A)ZHWH B)2611182244 C)2611182310\n"
+    "E) DANGER AREA ESTABLISHED BOUNDED BY: N303500E1095700-N303300E1101900-"
+    "N295400E1101300-N295700E1095000. VERTICAL LIMITS:SFC-UNL.\n"
 )
 
 MISSION = {
-    "name": "示例：北京 · 长征二号丁（虚构示意弹道）",
+    "name": "示例：太原 LC-9 发射 · 北京观测（示意）",
     "mission_type": "auto",
     "rocket_label": "长征二号丁",
     "rocket_id": "auto",
-    "site_id": "custom",
-    "site_label": "北京（示意发射场）",
-    "site_lat": SITE_LAT,
-    "site_lon": SITE_LON,
-    "site_alt": SITE_ALT,
+    "site_id": "auto",
+    "site_label": "太原 LC-9",
     "t0_text": "2026-11-19 06:50",
     "tz_hint": "auto",
-    "serial": "示例",
+    "serial": "遥106",
     "payload_name": "示例载荷",
-    "payload_kg": 1600.0,
-    "orbit_alt_km": 480.0,
-    "orbit_i_deg": 44.0,
+    "payload_kg": 1000.0,
+    "orbit_alt_km": 505.0,
+    "orbit_i_deg": 97.45,
     "notams_text": NOTAMS,
     "observers": [
-        {"id": "beijing", "name": "北京（天安门示例点）", "lat_deg": OBS_LAT,
-         "lon_deg": OBS_LON, "alt_m": OBS_ALT, "note": "示例观测点"},
+        {"id": "beijing", "name": "北京（天安门观测点）", "lat_deg": OBS_LAT,
+         "lon_deg": OBS_LON, "alt_m": OBS_ALT, "note": "示例观测地点"},
     ],
     "mode": "accurate",
     "mc_n": 0,
@@ -80,7 +73,7 @@ def main() -> int:
     with open(OUT, "w", encoding="utf-8") as fh:
         json.dump(MISSION, fh, ensure_ascii=False, indent=2)
     print("written:", OUT)
-    print("hint: python -m app.main --cli --mission \"%s\" --workdir \"作品\\示例_北京_2026-11-19\""
+    print("hint: python -m app.main --cli --mission \"%s\" --workdir \"作品\\示例_太原发射_北京观测\""
           % os.path.relpath(OUT, ROOT))
     return 0
 
