@@ -193,6 +193,9 @@ GUI 冒烟、冻结 exe 冒烟均通过。
 
 ## 9. 打包免安装版
 
+**直接下载**：[Releases · v4.3.0](https://github.com/Logicx200/rocket-ballistic-toolkit/releases/latest)
+（Windows x64 免安装版，约 98 MB，解压后双击 `火箭弹道工具箱.exe` 即用，不需要安装 Python）。
+
 `build\` 下提供 PyInstaller 一键打包（one-folder，约 209 MB，带全部科学计算依赖）：
 
 ```powershell
