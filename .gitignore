@@ -43,3 +43,7 @@ tests/_gui_shots/_smoke*
 # ---- 临时/外部工作目录 ----
 _gh_work/
 *.tmp
+
+# ---- 临时凭据（仅本机，绝不提交）----
+build/.gh_*
+build/.git-credentials
